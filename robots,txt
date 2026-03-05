@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# If you have any build artefacts, admin, or internal tooling paths, block them here.
+Disallow: /assets/
+# Optional: if /docs is your public docs app, do NOT block it.
+# Disallow: /docs
+
+Sitemap: https://trustsurface.org/sitemap.xml

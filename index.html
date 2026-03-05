@@ -11,235 +11,15 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- Use the docs base styling so home + docs feel like one product -->
+  <!-- Base docs shell -->
   <link rel="stylesheet" href="/assets/app.css" />
-
-  <style>
-    /* Home overrides (avoid class collisions by using home-* only) */
-    :root{
-      --accent: #0b4f8a;
-      --accentSoft: rgba(11,79,138,0.10);
-      --accentBorder: rgba(11,79,138,0.22);
-      --line: #e2e8f0;
-      --soft: #f8fafc;
-      --fg: #0f172a;
-      --muted: #475569;
-      --subtle: #64748b;
-    }
-
-    body{
-      background:
-        radial-gradient(1200px 600px at 18% -12%, rgba(11,79,138,0.12) 0%, rgba(11,79,138,0) 62%),
-        radial-gradient(900px 500px at 110% 14%, rgba(14,165,233,0.10) 0%, rgba(14,165,233,0) 58%),
-        #fff;
-    }
-
-    /* Keep the docs shell, but make home content tighter */
-    .homeMain { padding: 18px 18px 26px; }
-    @media (min-width: 920px){ .homeMain { padding: 22px 22px 28px; } }
-
-    .homeHero{
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,0.86);
-      border-radius: 18px;
-      padding: 18px;
-      box-shadow: 0 1px 0 rgba(15,23,42,0.02);
-      backdrop-filter: blur(6px);
-    }
-
-    .homeTitle{
-      font-size: 38px;
-      line-height: 1.08;
-      letter-spacing: -0.02em;
-      margin: 2px 0 10px;
-      color: var(--fg);
-    }
-    .homeLead{
-      font-size: 16px;
-      line-height: 1.6;
-      color: var(--muted);
-      max-width: 78ch;
-      margin: 0 0 10px;
-    }
-    .homeHint{
-      font-size: 13px;
-      color: var(--subtle);
-      margin: 0 0 14px;
-    }
-    .homeHint a{ color: var(--accent); text-decoration: underline; }
-
-    .homeBtns{
-      display:flex; flex-wrap:wrap; gap:10px;
-      margin-top: 12px;
-    }
-    .homeBtn{
-      display:inline-flex; align-items:center; gap:10px;
-      border-radius: 12px;
-      border: 1px solid var(--line);
-      background: #fff;
-      padding: 10px 12px;
-      font-weight: 700;
-      font-size: 14px;
-      color: var(--fg);
-      text-decoration:none;
-    }
-    .homeBtnPrimary{
-      background: var(--accent);
-      border-color: var(--accent);
-      color:#fff;
-    }
-    .homeBtn:hover{ text-decoration:none; filter:brightness(0.99); }
-    .homeBtn svg{ width:18px; height:18px; }
-
-    .homeGrid{
-      margin-top: 14px;
-      display:grid;
-      gap: 14px;
-      grid-template-columns: 1fr;
-    }
-    @media (min-width: 920px){
-      .homeGrid{ grid-template-columns: 1.15fr 0.85fr; }
-    }
-
-    .homeCard{
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,0.86);
-      border-radius: 18px;
-      padding: 16px;
-      box-shadow: 0 1px 0 rgba(15,23,42,0.02);
-      backdrop-filter: blur(6px);
-    }
-
-    .homeSectionTitle{
-      display:flex; align-items:center; gap:10px;
-      font-weight: 900;
-      letter-spacing: -0.01em;
-      color: var(--fg);
-      margin: 0 0 10px;
-      font-size: 16px;
-    }
-    .homeSectionTitle svg{ width:18px; height:18px; color: var(--accent); }
-
-    .homePills{ display:flex; flex-wrap:wrap; gap:10px; }
-    .homePill{
-      border: 1px solid var(--line);
-      background: var(--soft);
-      color: var(--muted);
-      padding: 10px 12px;
-      border-radius: 999px;
-      font-size: 13px;
-      line-height: 1.25;
-      display:inline-flex;
-      gap:8px;
-      align-items:center;
-      text-decoration:none;
-      font-weight: 600;
-    }
-    .homePill strong{ color: var(--fg); font-weight: 800; }
-    .homePill:hover{ text-decoration:none; background: #fff; }
-
-    .homeDocsList{ display:grid; gap:10px; margin-top: 10px; }
-    .homeDocItem{
-      border: 1px solid var(--line);
-      background:#fff;
-      border-radius: 14px;
-      padding: 12px;
-    }
-    .homeDocItem a{
-      color: var(--accent);
-      text-decoration: underline;
-      font-weight: 800;
-      display:inline-block;
-      margin-bottom: 4px;
-    }
-    .homeDocMeta{
-      display:flex; flex-wrap:wrap; gap:8px; align-items:center;
-      font-size: 12px;
-      color: var(--muted);
-    }
-    .homeTag{
-      border: 1px solid var(--line);
-      background: var(--soft);
-      border-radius: 999px;
-      padding: 4px 8px;
-      font-weight: 800;
-      font-size: 12px;
-      color: var(--muted);
-    }
-    .homeMono{ font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
-
-    .homeDiagram{
-      margin-top: 12px;
-      border: 1px solid var(--line);
-      border-radius: 16px;
-      overflow:hidden;
-      background:#fff;
-    }
-    .homeDiagramHead{
-      display:flex; align-items:center; justify-content:space-between;
-      padding: 10px 12px;
-      border-bottom: 1px solid var(--line);
-      background: linear-gradient(90deg, var(--accentSoft), rgba(255,255,255,0));
-    }
-    .homeDiagramHead .label{ font-weight: 900; color: var(--fg); }
-    .homeDiagramHead a{ font-size: 13px; color: var(--accent); text-decoration: underline; }
-    .homeDiagramBody{ padding: 12px; }
-    .homeDiagramBody img{
-      width:100%; height:auto; display:block;
-      border-radius: 12px; border: 1px solid var(--line);
-    }
-    .homeSmall{ font-size: 13px; color: var(--subtle); line-height: 1.6; }
-
-    /* Fix: logo/wordmark */
-    .homeBrandLine{
-      display:flex; align-items:center; justify-content:space-between;
-      gap: 10px;
-      padding: 10px 12px;
-      border-bottom: 1px solid var(--line);
-      background: rgba(255,255,255,0.75);
-      backdrop-filter: blur(6px);
-    }
-    .homeBrand{
-      display:flex; align-items:center; gap:10px;
-      min-width: 0;
-    }
-    .homeLogo{
-      width: 22px; height: 22px; flex: 0 0 auto;
-      color: var(--fg);
-    }
-    .homeWordmark{
-      font-weight: 900;
-      letter-spacing: -0.01em;
-      color: var(--accent);
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      max-width: 240px;
-    }
-    .homeBadge{
-      display:inline-flex; align-items:center; gap:8px;
-      border: 1px solid var(--accentBorder);
-      border-radius: 999px;
-      padding: 6px 10px;
-      color: var(--muted);
-      font-size: 13px;
-      white-space: nowrap;
-    }
-    .homeDot{
-      width:9px; height:9px; border-radius: 999px;
-      background:#16a34a;
-      box-shadow: 0 0 0 4px rgba(22,163,74,0.12);
-      display:inline-block;
-    }
-
-    /* If app.css sets these, keep home safe */
-    .shell{ min-height: 100vh; }
-  </style>
+  <!-- Home-specific (keep this LAST) -->
+  <link rel="stylesheet" href="/assets/home.css" />
 </head>
 
-<body>
+<body class="tsf-home">
   <div class="shell">
-    <!-- Sidebar (same mental model as docs) -->
+    <!-- Sidebar -->
     <aside class="side">
       <div class="brand">
         <div class="mark" aria-hidden="true">
@@ -276,134 +56,197 @@
     </aside>
 
     <!-- Main -->
-    <main class="main homeMain">
-      <div class="homeBrandLine">
-        <div class="homeBrand">
-          <svg class="homeLogo" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <path d="M12 3l8 4v6c0 5-3.4 9-8 8-4.6 1-8-3-8-8V7l8-4z" stroke="currentColor" stroke-width="1.8"/>
-            <path d="M7.5 10.5h9M7.5 13.5h9M9.5 16.5h5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-          </svg>
-          <div class="homeWordmark">trustsurface.org</div>
-        </div>
-
-        <div class="homeBadge">
-          <span class="homeDot" aria-hidden="true"></span>
-          Draft v0.1 • Open consultation
-        </div>
-      </div>
-
-      <section class="homeHero" style="margin-top:14px;">
-        <div class="homeTitle">Trust Surface Framework <span style="color:var(--muted)">(TSF)</span></div>
-        <p class="homeLead">
-          Understanding and governing the digital signals organisations emit.
-          TSF identifies where trust is experienced, measures observable trust signals,
-          and improves trust posture over time.
-        </p>
-        <p class="homeHint">
-          For boards: start with <a href="/docs?doc=BOARD-QUESTIONS.md">Board Questions</a>.
-          For practitioners: start with <a href="/docs?doc=FRAMEWORK-MAP.md">Framework Map</a>.
-        </p>
-
-        <div class="homeBtns">
-          <a class="homeBtn homeBtnPrimary" href="/docs">
-            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-              <path d="M7 4h10v16H7z" stroke="currentColor" stroke-width="1.8"/>
-              <path d="M9 8h6M9 12h6M9 16h4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+    <main class="main">
+      <!-- Centre all home content so we don’t get the “dead right side” -->
+      <div class="homeWrap">
+        <!-- Top strip -->
+        <div class="homeTop">
+          <div class="homeTopLeft">
+            <svg class="homeLogo" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M12 3l8 4v6c0 5-3.4 9-8 8-4.6 1-8-3-8-8V7l8-4z" stroke="currentColor" stroke-width="1.8"/>
+              <path d="M7.5 10.5h9M7.5 13.5h9M9.5 16.5h5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
             </svg>
-            Read the framework
-          </a>
-
-          <a class="homeBtn" href="/docs?doc=BOARD-QUESTIONS.md">Board questions</a>
-          <a class="homeBtn" href="/docs?doc=FRAMEWORK-MAP.md">Framework map</a>
-          <a class="homeBtn" href="/docs?doc=CONTRIBUTING.md">Contribute feedback</a>
-        </div>
-      </section>
-
-      <div class="homeGrid">
-        <!-- Left: Start here + featured docs -->
-        <section class="homeCard">
-          <div class="homeSectionTitle">
-            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-              <path d="M4 12h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-              <path d="M12 4v16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-            </svg>
-            Start here
+            <div>
+              <div class="homeDomain">trustsurface.org</div>
+              <div class="homeStatus">Draft v0.1 • Open consultation</div>
+            </div>
           </div>
 
-          <div class="homePills">
-            <a class="homePill" href="/docs?doc=BOARD-QUESTIONS.md"><strong>Board</strong> → Ask better questions (2–5 min)</a>
-            <a class="homePill" href="/docs?doc=FRAMEWORK-MAP.md"><strong>Exec</strong> → Model + how it fits (5–10 min)</a>
-            <a class="homePill" href="/docs?doc=framework/05-trust-signal-catalogue.md"><strong>Practitioner</strong> → Trust signals catalogue (10+ min)</a>
+          <div class="homePillBadge" title="Draft status">
+            <span class="homeDot" aria-hidden="true"></span>
+            Draft v0.1
           </div>
+        </div>
 
-          <div style="height:14px;"></div>
+        <!-- Hero -->
+        <section class="card homeHero">
+          <h1 class="homeH1">Trust Surface Framework <span class="homeH1Muted">(TSF)</span></h1>
+          <p class="homeLead">
+            Understanding and governing the digital signals organisations emit.
+            TSF identifies where trust is experienced, measures observable trust signals, and improves trust posture over time.
+          </p>
+          <p class="homeHint">
+            For boards: start with <a href="/docs?doc=BOARD-QUESTIONS.md">Board Questions</a>.
+            For practitioners: start with <a href="/docs?doc=FRAMEWORK-MAP.md">Framework Map</a>.
+          </p>
 
-          <div class="homeSectionTitle">
-            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-              <path d="M7 4h10v16H7z" stroke="currentColor" stroke-width="1.8"/>
-              <path d="M9 8h6M9 12h6M9 16h4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-            </svg>
-            Featured docs
-          </div>
-
-          <div id="homeDocsStatus" class="homeSmall">Loading…</div>
-          <div id="homeDocsList" class="homeDocsList" aria-live="polite"></div>
-
-          <div class="homeSmall" style="margin-top:12px;">
-            Tip: share links like <span class="homeMono">/docs?doc=BOARD-QUESTIONS.md</span>
+          <div class="homeCtas">
+            <a class="btn primary" href="/docs">Read the framework</a>
+            <a class="btn" href="/docs?doc=BOARD-QUESTIONS.md">Board questions</a>
+            <a class="btn" href="/docs?doc=FRAMEWORK-MAP.md">Framework map</a>
+            <a class="btn" href="/docs?doc=CONTRIBUTING.md">Contribute feedback</a>
           </div>
         </section>
 
-        <!-- Right: Model + core premise -->
-        <aside class="homeCard">
-          <div class="homeSectionTitle" style="margin-bottom:8px;">
-            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-              <path d="M12 3l9 5-9 5-9-5 9-5Z" stroke="currentColor" stroke-width="1.8"/>
-              <path d="M3 8v8l9 5 9-5V8" stroke="currentColor" stroke-width="1.8"/>
-            </svg>
-            Core premise
-          </div>
+        <!-- Main grid -->
+        <div class="homeGrid">
+          <!-- Left -->
+          <section class="card">
+            <div class="homeSectionTitle">Start here</div>
 
-          <div class="homeSmall" style="margin-bottom:10px;">
-            Most organisations invest heavily in cybersecurity — yet still emit weak trust signals at the digital edge:
-            domains, email, services, platforms, and vendors.
-          </div>
-
-          <div style="font-weight:900; border-left:3px solid var(--accent); padding-left:12px; margin: 12px 0 12px; color: var(--fg);">
-            Trust is not declared. It is observed.
-          </div>
-
-          <div class="homeDiagram">
-            <div class="homeDiagramHead">
-              <div class="label">The Trust Surface Model</div>
-              <a href="/diagrams/trust-surface.svg" target="_blank" rel="noopener noreferrer">Open SVG</a>
+            <div class="homeStartRow">
+              <a class="homeStartChip" href="/docs?doc=BOARD-QUESTIONS.md"><strong>Board</strong> → Ask better questions (2–5 min)</a>
+              <a class="homeStartChip" href="/docs?doc=FRAMEWORK-MAP.md"><strong>Exec</strong> → Model + how it fits (5–10 min)</a>
+              <a class="homeStartChip" href="/docs?doc=framework/05-trust-signal-catalogue.md"><strong>Practitioner</strong> → Trust signals catalogue (10+ min)</a>
             </div>
-            <div class="homeDiagramBody">
-              <img src="/diagrams/trust-surface.svg" alt="Trust Surface Framework model diagram">
-              <div class="homeSmall" style="margin-top:10px;">
-                Minimal, board-readable model: Organisation → Trust Surface domains → Trust Signals → Stakeholder Trust.
+
+            <div class="homeSectionTitle homeSectionTitleTight">Featured docs</div>
+            <div id="homeDocsStatus" class="homeSmall">Loading…</div>
+            <div id="homeDocsList" class="homeDocsList" aria-live="polite"></div>
+
+            <div class="homeSmall homeTip">
+              Tip: share links like <span class="mono">/docs?doc=BOARD-QUESTIONS.md</span>
+            </div>
+
+            <div class="homeDiagram">
+              <div class="homeDiagramHead">
+                <div class="homeDiagramLabel">The Trust Surface Model</div>
+                <a href="/diagrams/trust-surface.svg" target="_blank" rel="noopener noreferrer">Open SVG</a>
+              </div>
+              <div class="homeDiagramBody">
+                <img src="/diagrams/trust-surface.svg" alt="Trust Surface Framework model diagram">
               </div>
             </div>
-          </div>
+          </section>
 
-          <div class="homeSectionTitle" style="margin-top:16px;">
-            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-              <path d="M6 18V9M12 18V6M18 18v-8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-            </svg>
-            Quick cite
-          </div>
-          <div class="homeSmall"><span class="homeMono">Trust Surface Framework (TSF), Chetcuti 2026.</span></div>
-        </aside>
-      </div>
+          <!-- Right -->
+          <aside class="card">
+            <div class="homeSectionTitle">What TSF is</div>
 
-      <footer class="footer" style="margin-top:18px;">
-        <div>© 2026 • Trust Surface Framework (TSF) • CC BY 4.0</div>
-        <div>
-          <a href="/docs?doc=CONSULTATION.md">Consultation</a> ·
-          <a href="/docs?doc=CITATION.md">Citation</a> ·
-          <a href="/docs?doc=LICENSE.md">Licence</a>
+            <ul class="homeBullets">
+              <li><strong>Trust Surface</strong>: the systems where trust is experienced (not declared).</li>
+              <li><strong>Trust Signals</strong>: observable indicators you can measure and improve.</li>
+              <li><strong>Lifecycle</strong>: Discover → Assess → Harden → Govern → Signal.</li>
+            </ul>
+
+            <div class="quote homeQuote">Trust is not declared. It is observed.</div>
+
+            <div class="homeSectionTitle homeSectionTitleTight">Trust Surface domains</div>
+            <p class="homeSmall">
+              A simple set of domains so boards and delivery teams talk about the same thing — and can attach evidence to each domain.
+            </p>
+
+            <div class="homeDomainList">
+              <a class="homeDomainItem" href="/docs?doc=framework/03-trust-surface-definition.md">
+                <span class="homeIcon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none">
+                    <path d="M12 12a4 4 0 1 0-4-4 4 4 0 0 0 4 4Z" stroke="currentColor" stroke-width="1.8"/>
+                    <path d="M4 21c1.6-4 14.4-4 16 0" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                  </svg>
+                </span>
+                <span>
+                  <span class="homeDomainLabel">Identity</span>
+                  <span class="homeDomainDesc">Proving who/what is interacting.</span>
+                </span>
+              </a>
+
+              <a class="homeDomainItem" href="/docs?doc=framework/05-trust-signal-catalogue.md">
+                <span class="homeIcon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none">
+                    <path d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18Z" stroke="currentColor" stroke-width="1.8"/>
+                    <path d="M3 12h18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                    <path d="M12 3c3 3 3 15 0 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                  </svg>
+                </span>
+                <span>
+                  <span class="homeDomainLabel">Domains &amp; DNS</span>
+                  <span class="homeDomainDesc">Public trust boundary and routing.</span>
+                </span>
+              </a>
+
+              <a class="homeDomainItem" href="/docs?doc=framework/05-trust-signal-catalogue.md">
+                <span class="homeIcon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none">
+                    <path d="M4 7h16v10H4z" stroke="currentColor" stroke-width="1.8"/>
+                    <path d="M4 7l8 6 8-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </span>
+                <span>
+                  <span class="homeDomainLabel">Email integrity</span>
+                  <span class="homeDomainDesc">Spoofing controls and deliverability.</span>
+                </span>
+              </a>
+
+              <a class="homeDomainItem" href="/docs?doc=framework/04-trust-surface-map.md">
+                <span class="homeIcon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none">
+                    <path d="M7 4h10v16H7z" stroke="currentColor" stroke-width="1.8"/>
+                    <path d="M9 8h6M9 12h6M9 16h4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                  </svg>
+                </span>
+                <span>
+                  <span class="homeDomainLabel">Digital services</span>
+                  <span class="homeDomainDesc">Web apps, portals, API edges.</span>
+                </span>
+              </a>
+
+              <a class="homeDomainItem" href="/docs?doc=framework/04-trust-surface-map.md">
+                <span class="homeIcon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none">
+                    <path d="M4 6h16v4H4zM4 14h16v4H4z" stroke="currentColor" stroke-width="1.8"/>
+                    <path d="M7 8h.01M7 16h.01" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+                  </svg>
+                </span>
+                <span>
+                  <span class="homeDomainLabel">Infrastructure &amp; platforms</span>
+                  <span class="homeDomainDesc">Cloud, identity, hosting layers.</span>
+                </span>
+              </a>
+
+              <a class="homeDomainItem" href="/docs?doc=framework/04-trust-surface-map.md">
+                <span class="homeIcon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none">
+                    <path d="M6 12a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" stroke="currentColor" stroke-width="1.8"/>
+                    <path d="M18 18a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" stroke="currentColor" stroke-width="1.8"/>
+                    <path d="M8.5 10.5l7 3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                  </svg>
+                </span>
+                <span>
+                  <span class="homeDomainLabel">Third-party ecosystem</span>
+                  <span class="homeDomainDesc">Vendors, SaaS, supply-chain trust.</span>
+                </span>
+              </a>
+            </div>
+
+            <div class="homeSectionTitle homeSectionTitleTight">Quick cite</div>
+            <div class="mono">Trust Surface Framework (TSF), Chetcuti 2026.</div>
+
+            <div class="homeSectionTitle homeSectionTitleTight">Consultation</div>
+            <p class="homeSmall" style="margin:0;">
+              Feedback is welcome — especially on board usability, signal quality, lifecycle practicality, and terminology.
+            </p>
+          </aside>
         </div>
-      </footer>
+
+        <footer class="footer homeFooter">
+          <div>© 2026 • Trust Surface Framework (TSF) • CC BY 4.0</div>
+          <div>
+            <a href="/docs?doc=CONSULTATION.md">Consultation</a> ·
+            <a href="/docs?doc=CITATION.md">Citation</a> ·
+            <a href="/docs?doc=LICENSE.md">Licence</a>
+          </div>
+        </footer>
+      </div>
 
       <script src="/assets/home.js"></script>
     </main>

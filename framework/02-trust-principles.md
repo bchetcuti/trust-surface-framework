@@ -1,18 +1,3 @@
-Good — the **principles** are what elevate this from *a model* to *a doctrine*.
-
-Frameworks that last always have **clear principles** that guide interpretation. Without them, people treat the framework as a checklist. With them, it becomes a **way of thinking**.
-
-For the **Trust Surface Framework**, the principles should be:
-
-* simple
-* memorable
-* explainable to non-technical leaders
-* clearly tied to real incidents
-
-Below is a **v1 set that fits the philosophy you’ve been developing**.
-
----
-
 # Trust Surface Framework
 
 ## Trust Principles v1.0
