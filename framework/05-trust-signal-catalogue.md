@@ -1,138 +1,325 @@
-# Trust Signal Catalogue (v0.1)
+# Trust Signal Catalogue
 
-The Trust Signal Catalogue defines the observable indicators used to assess an organisation’s digital trust posture.
+The **Trust Signal Catalogue** defines the observable indicators used to assess an organisation’s digital trust posture.
 
-Signals may be externally observable (e.g. DNS records) or internally verifiable (e.g. privileged access governance).
+Trust Signals represent measurable evidence that digital systems are:
 
-## Signal structure
+* authentic
+* well-governed
+* resilient
+* responsibly managed
 
-| Attribute | Description |
-|---|---|
-| Signal Name | The observable indicator |
-| Domain | Trust Surface domain |
-| Observation Method | How it can be observed/verified |
-| Trust Implication | What it reveals about trust posture |
+Signals may be:
 
-## Identity
+* externally observable (e.g. DNS records)
+* internally verifiable (e.g. identity governance controls)
 
-### Multi-factor authentication enforcement
-- **Domain:** Identity
-- **Observation:** internal verification of policies and coverage
-- **Implication:** reduces account compromise risk
+Together, these signals provide insight into how trustworthy an organisation’s digital environment appears to stakeholders.
 
-### Privileged access governance
-- **Domain:** Identity
-- **Observation:** access control, monitoring, and periodic review
-- **Implication:** prevents unmanaged admin access
+---
 
-### Identity lifecycle management
-- **Domain:** Identity
-- **Observation:** joiner/mover/leaver controls and audit trails
-- **Implication:** reduces orphaned accounts and access drift
+# Trust Signal Structure
 
-## Domains & DNS
+Each Trust Signal is defined by four attributes.
 
-### Domain ownership integrity
-- **Domain:** Domains & DNS
-- **Observation:** registrar controls, locks, expiry monitoring
-- **Implication:** reduces takeover/impersonation risk
+| Attribute          | Description                                       |
+| ------------------ | ------------------------------------------------- |
+| Signal Name        | The observable indicator                          |
+| Domain             | The Trust Surface domain where the signal applies |
+| Observation Method | How the signal can be observed or verified        |
+| Trust Implication  | What the signal reveals about trust posture       |
 
-### DNS integrity
-- **Domain:** Domains & DNS
-- **Observation:** authoritative DNS configuration review
-- **Implication:** reduces tampering and misrouting risk
+Signals are evaluated using a **maturity model** described later in this document.
 
-### DNSSEC adoption
-- **Domain:** Domains & DNS
-- **Observation:** DNSSEC status
-- **Implication:** strengthens DNS authenticity where supported
+---
 
-## Email Integrity
+# Identity Signals
 
-### SPF policy integrity
-- **Domain:** Email Integrity
-- **Observation:** SPF record validity and sending sources
-- **Implication:** reduces spoofing via unauthorised senders
+## Multi-Factor Authentication Enforcement
 
-### DKIM signing
-- **Domain:** Email Integrity
-- **Observation:** DKIM selectors/signatures validation
-- **Implication:** improves message authenticity and integrity
+| Attribute          | Value                                                      |
+| ------------------ | ---------------------------------------------------------- |
+| Domain             | Identity                                                   |
+| Observation Method | Internal verification of authentication policies           |
+| Trust Implication  | Reduces risk of account compromise and unauthorised access |
 
-### DMARC enforcement
-- **Domain:** Email Integrity
-- **Observation:** DMARC policy and reporting
-- **Implication:** prevents unauthorised use of domain in email
+Strong MFA enforcement is one of the most important identity trust signals.
 
-### Mail transport security
-- **Domain:** Email Integrity
-- **Observation:** SMTP TLS capability / policy where applicable
-- **Implication:** improves confidentiality and integrity in transit
+---
 
-## Digital Services
+## Privileged Access Governance
 
-### HTTPS enforcement
-- **Domain:** Digital Services
-- **Observation:** HTTPS/TLS presence and redirects
-- **Implication:** protects users and improves trust signals
+| Attribute          | Value                                                          |
+| ------------------ | -------------------------------------------------------------- |
+| Domain             | Identity                                                       |
+| Observation Method | Internal review of privileged access policies                  |
+| Trust Implication  | Ensures administrative privileges are controlled and monitored |
 
-### Certificate hygiene
-- **Domain:** Digital Services
-- **Observation:** validity, automation, configuration
-- **Implication:** avoids visible trust failures (expired/misconfigured certs)
+Weak privileged access controls often lead to major security incidents.
 
-### Security headers baseline
-- **Domain:** Digital Services
-- **Observation:** HSTS/CSP/frame/referrer policies (as appropriate)
-- **Implication:** reduces common browser-facing risks
+---
 
-### Service reliability
-- **Domain:** Digital Services
-- **Observation:** monitoring and incident visibility
-- **Implication:** trust is reinforced by consistency and transparency
+## Identity Lifecycle Management
 
-## Infrastructure & Platforms
+| Attribute          | Value                                           |
+| ------------------ | ----------------------------------------------- |
+| Domain             | Identity                                        |
+| Observation Method | Internal policy and operational review          |
+| Trust Implication  | Prevents orphaned accounts and unmanaged access |
 
-### Patch hygiene
-- **Domain:** Infrastructure & Platforms
-- **Observation:** patching cadence and coverage
-- **Implication:** reduces exploitability and operational risk
+Organisations must demonstrate that identities are properly provisioned and removed.
 
-### Resilience readiness
-- **Domain:** Infrastructure & Platforms
-- **Observation:** backups, recovery testing, failover readiness
-- **Implication:** reduces outage impact and improves confidence
+---
 
-### Network exposure discipline
-- **Domain:** Infrastructure & Platforms
-- **Observation:** external exposure review (ports/services)
-- **Implication:** reduces unnecessary risk at the edge
+# Domain & DNS Signals
 
-## Third-Party Ecosystem
+## Domain Ownership Integrity
 
-### Vendor security attestation
-- **Domain:** Third-Party Ecosystem
-- **Observation:** SOC2/ISO statements, disclosures, security posture evidence
-- **Implication:** strengthens confidence in critical vendors
+| Attribute          | Value                                             |
+| ------------------ | ------------------------------------------------- |
+| Domain             | Domains & DNS                                     |
+| Observation Method | Domain registry and ownership verification        |
+| Trust Implication  | Ensures domain ownership is secure and controlled |
 
-### Vendor dependency awareness
-- **Domain:** Third-Party Ecosystem
-- **Observation:** inventory of critical vendors/integrations
-- **Implication:** reduces “unknown dependency” risk
+Weak domain governance enables impersonation and fraud.
 
-### Data handling transparency
-- **Domain:** Third-Party Ecosystem
-- **Observation:** privacy/data processing clarity and controls
-- **Implication:** reduces reputational and regulatory exposure
+---
 
-## Maturity model
+## DNS Integrity
 
-Signals should be assessed using a simple scale:
+| Attribute          | Value                                                       |
+| ------------------ | ----------------------------------------------------------- |
+| Domain             | Domains & DNS                                               |
+| Observation Method | DNS configuration analysis                                  |
+| Trust Implication  | Indicates that domain resolution infrastructure is reliable |
 
-| Level | Description |
-|---|---|
-| 0 | Unknown / not assessed |
-| 1 | Weak or absent |
-| 2 | Basic implementation |
-| 3 | Strong implementation |
-| 4 | Leading practice |
+DNS misconfiguration can undermine service reliability and trust.
+
+---
+
+## DNSSEC Adoption
+
+| Attribute          | Value                                     |
+| ------------------ | ----------------------------------------- |
+| Domain             | Domains & DNS                             |
+| Observation Method | DNS record inspection                     |
+| Trust Implication  | Protects domain resolution from tampering |
+
+DNSSEC adoption strengthens the integrity of domain infrastructure.
+
+---
+
+# Email Integrity Signals
+
+## SPF Policy Integrity
+
+| Attribute          | Value                                                  |
+| ------------------ | ------------------------------------------------------ |
+| Domain             | Email Integrity                                        |
+| Observation Method | DNS SPF record inspection                              |
+| Trust Implication  | Indicates legitimate email sending sources are defined |
+
+Weak SPF policies enable spoofing and impersonation.
+
+---
+
+## DKIM Signing
+
+| Attribute          | Value                                           |
+| ------------------ | ----------------------------------------------- |
+| Domain             | Email Integrity                                 |
+| Observation Method | DKIM signature verification                     |
+| Trust Implication  | Demonstrates message authenticity and integrity |
+
+DKIM helps recipients verify the origin of email communications.
+
+---
+
+## DMARC Enforcement
+
+| Attribute          | Value                                                        |
+| ------------------ | ------------------------------------------------------------ |
+| Domain             | Email Integrity                                              |
+| Observation Method | DMARC DNS record inspection                                  |
+| Trust Implication  | Prevents unauthorised use of organisational domains in email |
+
+DMARC enforcement is one of the strongest trust signals in email systems.
+
+---
+
+## Mail Transport Security
+
+| Attribute          | Value                                                   |
+| ------------------ | ------------------------------------------------------- |
+| Domain             | Email Integrity                                         |
+| Observation Method | SMTP TLS capability analysis                            |
+| Trust Implication  | Indicates email communications are transmitted securely |
+
+Secure transport protects email communications from interception.
+
+---
+
+# Digital Service Signals
+
+## HTTPS Enforcement
+
+| Attribute          | Value                                                           |
+| ------------------ | --------------------------------------------------------------- |
+| Domain             | Digital Services                                                |
+| Observation Method | Web service inspection                                          |
+| Trust Implication  | Demonstrates encrypted communication between users and services |
+
+HTTPS is a foundational trust signal for modern web services.
+
+---
+
+## Certificate Hygiene
+
+| Attribute          | Value                                                  |
+| ------------------ | ------------------------------------------------------ |
+| Domain             | Digital Services                                       |
+| Observation Method | TLS certificate inspection                             |
+| Trust Implication  | Indicates responsible certificate lifecycle management |
+
+Expired or misconfigured certificates reduce trust in digital services.
+
+---
+
+## Security Headers
+
+| Attribute          | Value                                                  |
+| ------------------ | ------------------------------------------------------ |
+| Domain             | Digital Services                                       |
+| Observation Method | HTTP header inspection                                 |
+| Trust Implication  | Demonstrates attention to secure service configuration |
+
+Security headers reduce risk of common web-based attacks.
+
+---
+
+## Service Reliability
+
+| Attribute          | Value                                                 |
+| ------------------ | ----------------------------------------------------- |
+| Domain             | Digital Services                                      |
+| Observation Method | Monitoring and uptime reporting                       |
+| Trust Implication  | Indicates operational reliability of digital services |
+
+Frequent outages erode stakeholder confidence.
+
+---
+
+# Infrastructure Signals
+
+## Patch Hygiene
+
+| Attribute          | Value                                                |
+| ------------------ | ---------------------------------------------------- |
+| Domain             | Infrastructure & Platforms                           |
+| Observation Method | Internal patch management review                     |
+| Trust Implication  | Demonstrates that systems are maintained and updated |
+
+Unpatched infrastructure increases risk of compromise.
+
+---
+
+## Resilience Readiness
+
+| Attribute          | Value                                              |
+| ------------------ | -------------------------------------------------- |
+| Domain             | Infrastructure & Platforms                         |
+| Observation Method | Disaster recovery and backup capability review     |
+| Trust Implication  | Indicates preparedness for operational disruptions |
+
+Resilient systems support continuity and trust.
+
+---
+
+## Network Exposure
+
+| Attribute          | Value                                       |
+| ------------------ | ------------------------------------------- |
+| Domain             | Infrastructure & Platforms                  |
+| Observation Method | External network scanning                   |
+| Trust Implication  | Identifies unnecessary exposure of services |
+
+Excessive network exposure increases attack risk.
+
+---
+
+# Third-Party Trust Signals
+
+## Vendor Security Attestation
+
+| Attribute          | Value                                 |
+| ------------------ | ------------------------------------- |
+| Domain             | Third-Party Ecosystem                 |
+| Observation Method | Vendor documentation review           |
+| Trust Implication  | Demonstrates vendor security maturity |
+
+Vendor failures often become organisational trust failures.
+
+---
+
+## Vendor Dependency Awareness
+
+| Attribute          | Value                                                                 |
+| ------------------ | --------------------------------------------------------------------- |
+| Domain             | Third-Party Ecosystem                                                 |
+| Observation Method | Vendor inventory review                                               |
+| Trust Implication  | Indicates whether organisations understand their digital dependencies |
+
+Lack of vendor visibility increases operational risk.
+
+---
+
+## Data Handling Transparency
+
+| Attribute          | Value                                              |
+| ------------------ | -------------------------------------------------- |
+| Domain             | Third-Party Ecosystem                              |
+| Observation Method | Privacy and compliance documentation review        |
+| Trust Implication  | Demonstrates responsible data governance practices |
+
+Transparent data practices strengthen stakeholder confidence.
+
+---
+
+# Trust Signal Maturity Model
+
+Each signal can be assessed using a simple maturity scale.
+
+| Level   | Description             |
+| ------- | ----------------------- |
+| Level 0 | Unknown or not assessed |
+| Level 1 | Weak or absent          |
+| Level 2 | Basic implementation    |
+| Level 3 | Strong implementation   |
+| Level 4 | Leading practice        |
+
+This model enables organisations to quantify trust posture across domains.
+
+---
+
+# Example Trust Signal Scorecard
+
+An organisation’s trust posture may be summarised as follows.
+
+| Domain           | Maturity |
+| ---------------- | -------- |
+| Identity         | Level 3  |
+| Domains & DNS    | Level 4  |
+| Email Integrity  | Level 2  |
+| Digital Services | Level 3  |
+| Infrastructure   | Level 2  |
+| Third-Party      | Level 1  |
+
+This scorecard provides a simple way for executives to understand digital trust risk.
+
+---
+
+# Status of This Document
+
+This catalogue forms part of the **Trust Surface Framework draft**, published for consultation and discussion.
+
+The signal set may evolve as organisations apply the framework and identify additional indicators.

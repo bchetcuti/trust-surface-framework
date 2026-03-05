@@ -1,6 +1,6 @@
 # Contributing
 
-Thanks for reviewing the Trust Surface Framework (TSF).
+Thanks for taking the time to review the Trust Surface Framework (TSF).
 
 This repository is published for **consultation and improvement**.
 Contributions are welcome, particularly from:
@@ -24,7 +24,7 @@ Please focus on practical, adoption-oriented critique:
    - Are they too technical or too vague?
 
 3. **Lifecycle practicality**
-   - Can organisations realistically apply TSF without a major program?
+   - Can organisations realistically implement this without a major program?
 
 4. **Language and framing**
    - Does “Trust Surface” land as intended?
@@ -37,7 +37,7 @@ Create an Issue using one of these prefixes:
 
 - **[Clarity]** confusing wording, definitions, structure
 - **[Signal]** add/remove/refine trust signals
-- **[Lifecycle]** improvements to lifecycle/adoption
+- **[Lifecycle]** improvements to the lifecycle/adoption model
 - **[Governance]** board/reporting/risk integration changes
 - **[Example]** suggested use-case or scenario to include
 
@@ -53,14 +53,16 @@ If you want to propose text changes directly:
 - Prefer **clarity over completeness**
 - Prefer **observable/measurable** over theoretical
 - Prefer **small additions** over long lists
-- Avoid turning TSF into a compliance checklist
+- Avoid turning the framework into a compliance checklist
 
 ## Scope boundaries (for now)
 
-To keep v0.x coherent, these are out of scope unless explicitly planned:
+To keep v0.x coherent, the following are out of scope unless explicitly planned:
 
 - formal certification programs
 - scoring that implies a definitive “safe/unsafe” label
 - vulnerability scanning guidance (this is not a pentest framework)
+
+## Code of Conduct
 
 Be constructive and respectful. Assume good intent. Focus critique on the framework, not individuals.
