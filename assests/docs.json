@@ -1,0 +1,19 @@
+{
+    "title": "Trust Surface Framework (TSF)",
+    "repo": "https://github.com/Bchetcuti/trust-surface-framework",
+    "items": [
+      { "label": "Start here: Framework Map", "path": "FRAMEWORK-MAP.md", "icon": "map" },
+      { "label": "Board Questions", "path": "BOARD-QUESTIONS.md", "icon": "board" },
+      { "label": "The Problem", "path": "framework/01-digital-trust-problem.md", "icon": "alert" },
+      { "label": "Trust Principles", "path": "framework/02-trust-principles.md", "icon": "spark" },
+      { "label": "Trust Surface Definition", "path": "framework/03-trust-surface-definition.md", "icon": "shield" },
+      { "label": "Trust Surface Map", "path": "framework/04-trust-surface-map.md", "icon": "layers" },
+      { "label": "Trust Signal Catalogue", "path": "framework/05-trust-signal-catalogue.md", "icon": "signals" },
+      { "label": "Trust Surface Lifecycle", "path": "framework/06-trust-surface-lifecycle.md", "icon": "cycle" },
+      { "label": "Trust Signal Gap", "path": "framework/07-trust-signal-gap.md", "icon": "gap" },
+      { "label": "Maturity Model", "path": "framework/08-digital-trust-maturity-model.md", "icon": "chart" },
+      { "label": "Consultation", "path": "CONSULTATION.md", "icon": "chat" },
+      { "label": "Contributing", "path": "CONTRIBUTING.md", "icon": "plus" },
+      { "label": "Citation", "path": "CITATION.md", "icon": "quote" }
+    ]
+  }
