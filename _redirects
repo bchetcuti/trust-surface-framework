@@ -1,0 +1,11 @@
+# Pretty doc URLs (serve docs app, keep clean URL)
+ /board-questions            /docs?doc=BOARD-QUESTIONS.md                                  200
+ /framework-map              /docs?doc=FRAMEWORK-MAP.md                                    200
+ /maturity-model             /docs?doc=framework/08-digital-trust-maturity-model.md        200
+ /trust-signal-catalogue     /docs?doc=framework/05-trust-signal-catalogue.md              200
+ /consultation               /docs?doc=CONSULTATION.md                                     200
+ /citation                   /docs?doc=CITATION.md                                         200
+ /licence                    /docs?doc=LICENSE.md                                          200
+
+# Optional: diagram shortcut
+ /model-diagram              /diagrams/trust-surface.svg                                   200

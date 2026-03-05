@@ -5,6 +5,33 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>TSF Docs • Trust Surface Framework</title>
   <meta name="description" content="Trust Surface Framework (TSF) documentation hub." />
+  <link rel="canonical" href="https://trustsurface.org/docs">
+<script>
+(() => {
+  const prettyByDoc = {
+    "BOARD-QUESTIONS.md": "/board-questions",
+    "FRAMEWORK-MAP.md": "/framework-map",
+    "framework/08-digital-trust-maturity-model.md": "/maturity-model",
+    "framework/05-trust-signal-catalogue.md": "/trust-signal-catalogue",
+    "CONSULTATION.md": "/consultation",
+    "CITATION.md": "/citation",
+    "LICENSE.md": "/licence"
+  };
+
+  const url = new URL(window.location.href);
+  const doc = url.searchParams.get("doc") || "";
+  const pretty = prettyByDoc[doc];
+
+  const canonicalHref = (window.location.origin + (pretty || window.location.pathname)).replace(/\/+$/,"") + "/";
+  let link = document.querySelector('link[rel="canonical"]');
+  if (!link) {
+    link = document.createElement("link");
+    link.rel = "canonical";
+    document.head.appendChild(link);
+  }
+  link.href = canonicalHref;
+})();
+</script>
 
   <!-- Poppins -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
