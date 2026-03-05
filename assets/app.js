@@ -311,4 +311,4 @@
       statusEl.textContent = "Error loading docs.";
       docEl.innerHTML = `<p class="small">Error: ${escapeHtml(e.message || String(e))}</p>`;
     });
-  })();
+  })(); 
