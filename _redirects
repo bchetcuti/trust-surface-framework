@@ -1,53 +1,49 @@
-# Core pages (pretty URLs)
- /docs        /docs.html        200
- /docs/       /docs.html        200
- /framework   /framework.html   200
- /framework/  /framework.html   200
- /app         /app.html         200
- /app/        /app.html         200
+/docs /docs.html 200
+/docs/ /docs.html 200
+/framework /framework.html 200
+/framework/ /framework.html 200
+/app /app.html 200
+/app/ /app.html 200
 
-# Docs app views (clean URLs served by /docs.html, pathname preserved)
- /spec                 /docs.html 200
- /spec/                /docs.html 200
- /example              /docs.html 200
- /example/             /docs.html 200
- /origin               /docs.html 200
- /origin/              /docs.html 200
- /board-questions       /docs.html 200
- /board-questions/      /docs.html 200
- /framework-map         /docs.html 200
- /framework-map/        /docs.html 200
- /maturity-model        /docs.html 200
- /maturity-model/       /docs.html 200
- /trust-signal-catalogue  /docs.html 200
- /trust-signal-catalogue/ /docs.html 200
- /consultation          /docs.html 200
- /consultation/         /docs.html 200
- /citation              /docs.html 200
- /citation/             /docs.html 200
- /licence               /docs.html 200
- /licence/              /docs.html 200
- /contributing          /docs.html 200
- /contributing/         /docs.html 200
+/spec /docs.html 200
+/spec/ /docs.html 200
+/example /docs.html 200
+/example/ /docs.html 200
+/origin /docs.html 200
+/origin/ /docs.html 200
+/framework-map /docs.html 200
+/framework-map/ /docs.html 200
+/board-questions /docs.html 200
+/board-questions/ /docs.html 200
+/consultation /docs.html 200
+/consultation/ /docs.html 200
+/citation /docs.html 200
+/citation/ /docs.html 200
+/licence /docs.html 200
+/licence/ /docs.html 200
+/contributing /docs.html 200
+/contributing/ /docs.html 200
 
-# Canonical framework pages (served by /docs.html; framework stands alone from the tool)
- /framework/problem      /docs.html 200
- /framework/problem/     /docs.html 200
- /framework/principles   /docs.html 200
- /framework/principles/  /docs.html 200
- /framework/definition   /docs.html 200
- /framework/definition/  /docs.html 200
- /framework/domains      /docs.html 200
- /framework/domains/     /docs.html 200
- /framework/signals      /docs.html 200
- /framework/signals/     /docs.html 200
- /framework/lifecycle    /docs.html 200
- /framework/lifecycle/   /docs.html 200
- /framework/gap          /docs.html 200
- /framework/gap/         /docs.html 200
- /framework/maturity     /docs.html 200
- /framework/maturity/    /docs.html 200
+/framework/problem /docs.html 200
+/framework/problem/ /docs.html 200
+/framework/principles /docs.html 200
+/framework/principles/ /docs.html 200
+/framework/definition /docs.html 200
+/framework/definition/ /docs.html 200
+/framework/domains /docs.html 200
+/framework/domains/ /docs.html 200
+/framework/signals /docs.html 200
+/framework/signals/ /docs.html 200
+/framework/lifecycle /docs.html 200
+/framework/lifecycle/ /docs.html 200
+/framework/gap /docs.html 200
+/framework/gap/ /docs.html 200
+/framework/maturity /docs.html 200
+/framework/maturity/ /docs.html 200
 
-# Diagram shortcut
- /model-diagram   /diagrams/trust-surface.svg 200
- /model-diagram/  /diagrams/trust-surface.svg 200
+/maturity-model /docs.html 200
+/maturity-model/ /docs.html 200
+/trust-signal-catalogue /docs.html 200
+/trust-signal-catalogue/ /docs.html 200
+/model-diagram /diagrams/trust-surface.svg 200
+/model-diagram/ /diagrams/trust-surface.svg 200
