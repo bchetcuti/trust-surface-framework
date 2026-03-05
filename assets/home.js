@@ -1,47 +1,73 @@
-/* Home hub: render a small docs index from /assets/docs.json
-   - CSP friendly (no inline script required)
-   - Assumes docs.json shape: { items: [{ path, label, group, tags }] }
+/* Home: featured docs from /assets/docs.json
+   - shows up to 6 items
+   - prioritises known key docs; falls back to first items
 */
 
 (function () {
-    const statusEl = document.getElementById("docsStatus");
-    const listEl = document.getElementById("docsList");
+    const statusEl = document.getElementById("homeDocsStatus");
+    const listEl = document.getElementById("homeDocsList");
     if (!statusEl || !listEl) return;
   
     const escapeHtml = (s) =>
-      String(s)
+      String(s ?? "")
         .replaceAll("&", "&amp;")
         .replaceAll("<", "&lt;")
         .replaceAll(">", "&gt;")
         .replaceAll('"', "&quot;")
         .replaceAll("'", "&#039;");
   
+    const prefer = [
+      "BOARD-QUESTIONS.md",
+      "FRAMEWORK-MAP.md",
+      "framework/08-digital-trust-maturity-model.md",
+      "framework/05-trust-signal-catalogue.md",
+      "CONSULTATION.md",
+      "CONTRIBUTING.md",
+    ];
+  
+    const pickFeatured = (items) => {
+      const byPath = new Map(items.map(i => [i.path, i]));
+      const featured = [];
+      for (const p of prefer) {
+        if (byPath.has(p)) featured.push(byPath.get(p));
+      }
+      // Top-up if needed
+      if (featured.length < 6) {
+        for (const i of items) {
+          if (featured.length >= 6) break;
+          if (!i?.path) continue;
+          if (featured.some(f => f.path === i.path)) continue;
+          featured.push(i);
+        }
+      }
+      return featured.slice(0, 6);
+    };
+  
     const render = (items) => {
-      const top = items.slice(0, 8); // keep it tight on home
-      const html = top
-        .map((i) => {
-          const label = escapeHtml(i.label || i.path || "Untitled");
-          const path = i.path || "";
-          const docUrl = `/docs?doc=${encodeURIComponent(path)}`;
+      const featured = pickFeatured(items);
   
-          const tags = Array.isArray(i.tags) ? i.tags.slice(0, 3) : [];
-          const group = i.group ? `<span class="tag">${escapeHtml(i.group)}</span>` : "";
-          const tagHtml = tags.map((t) => `<span class="tag">${escapeHtml(t)}</span>`).join("");
+      const html = featured.map((i) => {
+        const label = escapeHtml(i.label || i.path);
+        const path = i.path || "";
+        const url = `/docs?doc=${encodeURIComponent(path)}`;
   
-          return `
-            <div class="docItem">
-              <a href="${docUrl}">${label}</a>
-              <div class="docMeta">
-                ${group}
-                ${tagHtml}
-                <span class="tag mono">${escapeHtml(path)}</span>
-              </div>
+        const group = i.group ? `<span class="homeTag">${escapeHtml(i.group)}</span>` : "";
+        const tags = Array.isArray(i.tags) ? i.tags.slice(0, 2) : [];
+        const tagHtml = tags.map(t => `<span class="homeTag">${escapeHtml(t)}</span>`).join("");
+  
+        return `
+          <div class="homeDocItem">
+            <a href="${url}">${label}</a>
+            <div class="homeDocMeta">
+              ${group}
+              ${tagHtml}
+              <span class="homeTag homeMono">${escapeHtml(path)}</span>
             </div>
-          `;
-        })
-        .join("");
+          </div>
+        `;
+      }).join("");
   
-      listEl.innerHTML = html || `<div class="small">No docs found in <span class="mono">/assets/docs.json</span>.</div>`;
+      listEl.innerHTML = html || `<div class="homeSmall">No docs found.</div>`;
       statusEl.textContent = "";
     };
   
@@ -59,7 +85,7 @@
         if (!items.length) return fail("No docs found.");
         render(items);
       } catch (e) {
-        fail("Could not load docs list.");
+        fail("Could not load featured docs.");
       }
     })();
   })();
