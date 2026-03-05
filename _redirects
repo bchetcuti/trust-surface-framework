@@ -1,11 +1,55 @@
-# Pretty doc URLs (serve docs app, keep clean URL)
- /board-questions            /docs?doc=BOARD-QUESTIONS.md                                  200
- /framework-map              /docs?doc=FRAMEWORK-MAP.md                                    200
- /maturity-model             /docs?doc=framework/08-digital-trust-maturity-model.md        200
- /trust-signal-catalogue     /docs?doc=framework/05-trust-signal-catalogue.md              200
- /consultation               /docs?doc=CONSULTATION.md                                     200
- /citation                   /docs?doc=CITATION.md                                         200
- /licence                    /docs?doc=LICENSE.md                                          200
+# Core pages (pretty URLs)
+/docs        /docs.html 200
+/docs/       /docs.html 200
+/framework   /framework.html 200
+/framework/  /framework.html 200
+/app         /app.html 200
+/app/        /app.html 200
 
-# Optional: diagram shortcut
- /model-diagram              /diagrams/trust-surface.svg                                   200
+# Docs app views (clean URLs served by /docs.html)
+/spec                 /docs 200
+/spec/                /docs 200
+/example               /docs 200
+/example/              /docs 200
+/origin                /docs 200
+/origin/               /docs 200
+
+/board-questions        /docs 200
+/board-questions/       /docs 200
+/framework-map          /docs 200
+/framework-map/         /docs 200
+/maturity-model         /docs 200
+/maturity-model/        /docs 200
+/trust-signal-catalogue /docs 200
+/trust-signal-catalogue/ /docs 200
+
+/consultation           /docs 200
+/consultation/          /docs 200
+/citation               /docs 200
+/citation/              /docs 200
+/licence                /docs 200
+/licence/               /docs 200
+/contributing           /docs 200
+/contributing/          /docs 200
+
+# Canonical framework pages (framework stands alone from the tool)
+/framework/problem      /docs 200
+/framework/problem/     /docs 200
+/framework/principles   /docs 200
+/framework/principles/  /docs 200
+/framework/definition   /docs 200
+/framework/definition/  /docs 200
+/framework/domains      /docs 200
+/framework/domains/     /docs 200
+/framework/signals      /docs 200
+/framework/signals/     /docs 200
+/framework/lifecycle    /docs 200
+/framework/lifecycle/   /docs 200
+/framework/gap          /docs 200
+/framework/gap/         /docs 200
+/framework/maturity     /docs 200
+/framework/maturity/    /docs 200
+
+# Diagram shortcut
+/model-diagram          /diagrams/trust-surface.svg 200
+/model-diagram/         /diagrams/trust-surface.svg 200

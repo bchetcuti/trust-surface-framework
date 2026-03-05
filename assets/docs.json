@@ -1,19 +1,27 @@
 {
-    "title": "Trust Surface Framework (TSF)",
-    "repo": "https://github.com/Bchetcuti/trust-surface-framework",
-    "items": [
-      { "label": "Start here: Framework Map", "path": "FRAMEWORK-MAP.md", "icon": "map" },
-      { "label": "Board Questions", "path": "BOARD-QUESTIONS.md", "icon": "board" },
-      { "label": "The Problem", "path": "framework/01-digital-trust-problem.md", "icon": "alert" },
-      { "label": "Trust Principles", "path": "framework/02-trust-principles.md", "icon": "spark" },
-      { "label": "Trust Surface Definition", "path": "framework/03-trust-surface-definition.md", "icon": "shield" },
-      { "label": "Trust Surface Map", "path": "framework/04-trust-surface-map.md", "icon": "layers" },
-      { "label": "Trust Signal Catalogue", "path": "framework/05-trust-signal-catalogue.md", "icon": "signals" },
-      { "label": "Trust Surface Lifecycle", "path": "framework/06-trust-surface-lifecycle.md", "icon": "cycle" },
-      { "label": "Trust Signal Gap", "path": "framework/07-trust-signal-gap.md", "icon": "gap" },
-      { "label": "Maturity Model", "path": "framework/08-digital-trust-maturity-model.md", "icon": "chart" },
-      { "label": "Consultation", "path": "CONSULTATION.md", "icon": "chat" },
-      { "label": "Contributing", "path": "CONTRIBUTING.md", "icon": "plus" },
-      { "label": "Citation", "path": "CITATION.md", "icon": "quote" }
-    ]
-  } 
+  "title": "TrustSurface Framework",
+  "site": "https://trustsurface.org",
+  "repo": "https://github.com/Bchetcuti/trust-surface-framework",
+  "items": [
+    { "group": "Start here", "label": "One-page specification", "path": "SPECIFICATION.md", "icon": "doc", "tags": ["Spec"] },
+    { "group": "Start here", "label": "Framework map", "path": "FRAMEWORK-MAP.md", "icon": "map", "tags": ["Model"] },
+    { "group": "Start here", "label": "Worked example: Email trust", "path": "WORKED-EXAMPLE-EMAIL-TRUST.md", "icon": "example", "tags": ["Example"] },
+    { "group": "Start here", "label": "Origin", "path": "ORIGIN.md", "icon": "quote", "tags": ["Narrative"] },
+
+    { "group": "Core framework", "label": "The digital trust problem", "path": "framework/01-digital-trust-problem.md", "icon": "alert" },
+    { "group": "Core framework", "label": "Trust principles", "path": "framework/02-trust-principles.md", "icon": "spark" },
+    { "group": "Core framework", "label": "Trust surface definition", "path": "framework/03-trust-surface-definition.md", "icon": "shield" },
+    { "group": "Core framework", "label": "Trust surface domains", "path": "framework/04-trust-surface-map.md", "icon": "layers" },
+    { "group": "Core framework", "label": "Trust signal catalogue", "path": "framework/05-trust-signal-catalogue.md", "icon": "signals" },
+    { "group": "Core framework", "label": "Trust surface lifecycle", "path": "framework/06-trust-surface-lifecycle.md", "icon": "cycle" },
+    { "group": "Core framework", "label": "The trust signal gap", "path": "framework/07-trust-signal-gap.md", "icon": "gap" },
+    { "group": "Core framework", "label": "Digital trust maturity model", "path": "framework/08-digital-trust-maturity-model.md", "icon": "chart" },
+
+    { "group": "Governance prompts", "label": "Board questions", "path": "BOARD-QUESTIONS.md", "icon": "board", "tags": ["Governance"] },
+
+    { "group": "Adoption", "label": "Consultation", "path": "CONSULTATION.md", "icon": "chat" },
+    { "group": "Adoption", "label": "Contributing", "path": "CONTRIBUTING.md", "icon": "plus" },
+    { "group": "Adoption", "label": "Citation", "path": "CITATION.md", "icon": "quote" },
+    { "group": "Adoption", "label": "Licence", "path": "LICENSE.md", "icon": "doc" }
+  ]
+}

@@ -1,16 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://trustsurface.org/</loc></url>
+  <url><loc>https://trustsurface.org/framework/</loc></url>
+  <url><loc>https://trustsurface.org/app/</loc></url>
   <url><loc>https://trustsurface.org/docs/</loc></url>
 
-  <url><loc>https://trustsurface.org/board-questions/</loc></url>
+  <url><loc>https://trustsurface.org/spec/</loc></url>
+  <url><loc>https://trustsurface.org/example/</loc></url>
+  <url><loc>https://trustsurface.org/origin/</loc></url>
+
   <url><loc>https://trustsurface.org/framework-map/</loc></url>
-  <url><loc>https://trustsurface.org/maturity-model/</loc></url>
-  <url><loc>https://trustsurface.org/trust-signal-catalogue/</loc></url>
+  <url><loc>https://trustsurface.org/board-questions/</loc></url>
+  <url><loc>https://trustsurface.org/model-diagram/</loc></url>
+
+  <url><loc>https://trustsurface.org/framework/problem/</loc></url>
+  <url><loc>https://trustsurface.org/framework/principles/</loc></url>
+  <url><loc>https://trustsurface.org/framework/definition/</loc></url>
+  <url><loc>https://trustsurface.org/framework/domains/</loc></url>
+  <url><loc>https://trustsurface.org/framework/signals/</loc></url>
+  <url><loc>https://trustsurface.org/framework/lifecycle/</loc></url>
+  <url><loc>https://trustsurface.org/framework/gap/</loc></url>
+  <url><loc>https://trustsurface.org/framework/maturity/</loc></url>
 
   <url><loc>https://trustsurface.org/consultation/</loc></url>
   <url><loc>https://trustsurface.org/citation/</loc></url>
   <url><loc>https://trustsurface.org/licence/</loc></url>
-
-  <url><loc>https://trustsurface.org/model-diagram/</loc></url>
+  <url><loc>https://trustsurface.org/contributing/</loc></url>
 </urlset>

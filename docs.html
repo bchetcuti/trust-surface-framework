@@ -3,46 +3,24 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>TSF Docs • Trust Surface Framework</title>
-  <meta name="description" content="Trust Surface Framework (TSF) documentation hub." />
-  <link rel="canonical" href="https://trustsurface.org/docs">
-<script>
-(() => {
-  const prettyByDoc = {
-    "BOARD-QUESTIONS.md": "/board-questions",
-    "FRAMEWORK-MAP.md": "/framework-map",
-    "framework/08-digital-trust-maturity-model.md": "/maturity-model",
-    "framework/05-trust-signal-catalogue.md": "/trust-signal-catalogue",
-    "CONSULTATION.md": "/consultation",
-    "CITATION.md": "/citation",
-    "LICENSE.md": "/licence"
-  };
-
-  const url = new URL(window.location.href);
-  const doc = url.searchParams.get("doc") || "";
-  const pretty = prettyByDoc[doc];
-
-  const canonicalHref = (window.location.origin + (pretty || window.location.pathname)).replace(/\/+$/,"") + "/";
-  let link = document.querySelector('link[rel="canonical"]');
-  if (!link) {
-    link = document.createElement("link");
-    link.rel = "canonical";
-    document.head.appendChild(link);
-  }
-  link.href = canonicalHref;
-})();
-</script>
+  <title>TrustSurface Library</title>
+  <meta name="description" content="TrustSurface Framework library: definitions, principles, catalogue, maturity model, examples, and governance prompts." />
 
   <!-- Poppins -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- App CSS -->
   <link rel="stylesheet" href="/assets/app.css" />
+
+  <!-- Canonical is set dynamically by assets/app.js (CSP-safe) -->
+  <link rel="canonical" href="https://trustsurface.org/docs/" id="canonicalLink" />
 </head>
-<body>
-  <div class="shell">
+
+<body class="drawer">
+<div class="shell">
+
+    <!-- Sidebar -->
     <aside class="side">
       <div class="brand">
         <div class="mark" aria-hidden="true">
@@ -52,85 +30,84 @@
           </svg>
         </div>
         <div>
-          <div class="brandTitle">Trust Surface Framework</div>
-          <div class="brandSub">Docs • TSF</div>
+          <div class="brandTitle">TrustSurface</div>
+          <div class="brandSub">Library • Documents</div>
         </div>
       </div>
 
       <div class="sideControls">
-        <input id="q" class="search" placeholder="Filter docs…" autocomplete="off" />
         <div class="sideLinks">
           <a class="link" href="/">Home</a>
-          <a class="link" id="repoLink" href="https://github.com/Bchetcuti/trust-surface-framework">GitHub</a>
+          <a class="link" href="/framework">Framework</a>
+          <a class="link" href="/spec">Spec</a>
+          <a class="link" href="/example">Example</a>
+          <a class="link" href="/origin">Origin</a>
         </div>
+
+        <input id="q" class="search" type="search" placeholder="Filter documents…" autocomplete="off" />
       </div>
 
-      <nav id="nav" class="nav" aria-label="Documentation navigation"></nav>
+      <nav id="nav" class="nav" aria-label="Documents"></nav>
 
       <div class="sideFooter">
-        <div class="small">Tip: share links like</div>
-        <div class="mono">/docs?doc=BOARD-QUESTIONS.md</div>
+        <div class="small">Core framework content: <a class="link" href="/licence">CC BY 4.0</a> • <a class="link" href="/citation">Citation</a></div>
+        <div class="small">Source: <a class="link" id="repoLink" href="#" target="_blank" rel="noopener noreferrer">GitHub</a></div>
       </div>
     </aside>
 
+    <div class="navBackdrop" id="navBackdrop" aria-hidden="true"></div>
+
+    <!-- Main -->
     <main class="main">
-      <header class="topbar">
+      <div class="topbar">
         <div class="crumbs">
-          <a href="/" class="crumb">trustsurface.org</a>
+          <a class="crumb" href="/framework">Framework</a>
           <span class="sep">/</span>
-          <a href="/docs" class="crumb">docs</a>
-          <span class="sep">/</span>
-          <span id="docLabel" class="crumbCurrent">Loading…</span>
+          <span id="docLabel" class="crumbCurrent">Document</span>
+          <span class="sep">•</span>
+          <span id="status" class="status">Loading…</span>
         </div>
 
         <div class="actions">
-          <a id="openRaw" class="btn" href="#" title="Open the raw Markdown">Raw</a>
-          <a id="editGitHub" class="btn" href="#" title="Edit this page on GitHub">Edit</a>
-          <a id="raiseIssue" class="btn primary" href="#" title="Raise an issue about this page">Raise issue</a>
+          <a class="btn" id="menuBtn" href="#">Menu</a>
+          <a class="btn" id="copyLink" href="#">Copy link</a>
+          <a class="btn" id="openRaw" href="#" target="_blank" rel="noopener noreferrer">Open raw</a>
+          <a class="btn" id="editGitHub" href="#" target="_blank" rel="noopener noreferrer">Edit</a>
+          <a class="btn primary" id="raiseIssue" href="#" target="_blank" rel="noopener noreferrer">Raise issue</a>
         </div>
-      </header>
+      </div>
 
       <div class="contentGrid">
         <article class="doc">
-          <div id="status" class="status">Loading…</div>
           <div id="doc" class="markdown"></div>
         </article>
 
-        <aside class="toc">
+        <aside id="toc" class="toc" aria-label="On this page">
           <div class="tocHead">
             <div class="tocTitle">On this page</div>
-            <a id="copyLink" class="tocLink" href="#" title="Copy link to this doc">Copy link</a>
+            <a class="tocLink" href="#top" id="toTop">Top</a>
           </div>
-          <nav id="toc" class="tocNav" aria-label="Table of contents"></nav>
-
+          <nav class="tocNav" id="tocNav"></nav>
           <div class="tocBlock">
-            <div class="small"><strong>Diagram</strong></div>
-            <a class="tocCard" href="/diagrams/trust-surface.svg">
-              <div class="tocCardTitle">Trust Surface Model (SVG)</div>
-              <div class="small">Open the minimal diagram</div>
+            <div class="small">Suggested reading:</div>
+            <a class="tocCard" href="/spec">
+              <div class="tocCardTitle">One-page specification</div>
+              <div class="small">Printable summary of definitions, domains, and rhythm.</div>
             </a>
           </div>
         </aside>
       </div>
 
-      <footer class="footer">
-        <div>© 2026 • Trust Surface Framework (TSF) • CC BY 4.0</div>
-        <div class="footerLinks">
-          <a href="/docs?doc=CONSULTATION.md">Consultation</a>
-          <span>·</span>
-          <a href="/docs?doc=CITATION.md">Citation</a>
-          <span>·</span>
-          <a href="/docs?doc=LICENSE.md">Licence</a>
-        </div>
-      </footer>
+      <div class="footer">
+        <div>© 2026 Bryan Chetcuti</div>
+        <div class="footerLinks"><a href="/licence">CC BY 4.0</a> <span class="sep">•</span> <a href="/consultation">Consultation</a> <span class="sep">•</span> <a href="/citation">Citation</a></div>
+      </div>
     </main>
   </div>
 
-  <!-- Vendor libs (self-hosted) -->
-  <script src="/assets/marked.min.js"></script>
-  <script src="/assets/purify.min.js"></script>
-
-  <!-- App -->
-  <script src="/assets/app.js"></script>
+  <script src="/assets/marked.min.js" defer></script>
+  <script src="/assets/purify.min.js" defer></script>
+  <script src="/assets/app.js" defer></script>
+  <script src="/assets/site.js" defer></script>
 </body>
 </html>

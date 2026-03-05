@@ -1,38 +1,55 @@
-# Board Questions: Digital Trust & the Trust Surface (TSF)
+# Board Questions
 
-These questions help boards and executives identify whether an organisation is emitting weak trust signals at the digital edge.
+These questions help a board or executive committee govern digital trust using evidence.
+They are written to be used in a 10–20 minute discussion, supported by a one‑page TrustSurface scorecard.
 
-## Identity
-1. Are privileged accounts protected with enforced multi-factor authentication?
-2. Do we regularly review who has administrative access, and why?
+## 1) What is our trust surface?
+- Do we have a current inventory of trust‑critical systems (domains, identity providers, email sending platforms, public services/APIs, critical vendors)?
+- Who owns each trust surface domain (decision rights and accountability, not “support”)?
 
-## Domains & DNS
-3. Do we have a complete inventory of domains we own (including “parked” and legacy domains)?
-4. Are domains governed with registrar locks, strong access controls, and expiry monitoring?
-5. Do we know which teams own domain changes and DNS configuration?
+## 2) What do we signal to the outside world?
+- If an external party tries to validate us (email, website, portals), what *evidence* do they see?
+- Where are the trust signals weak, inconsistent, or out of date?
 
-## Email Integrity
-6. Can our primary domain be impersonated via spoofed email today?
-7. Are we enforcing DMARC (quarantine/reject) across all high-risk domains?
-8. Do we monitor for lookalike domains and brand impersonation?
+## 3) Where is the trust signal gap highest?
+- Which trust signal gaps create the largest combined impact across **reputation, fraud risk, and operational disruption**?
+- Which gaps are “between teams” (i.e., nobody is truly accountable)?
 
-## Digital Services
-9. Are our public-facing services consistently encrypted and correctly configured (TLS/cert hygiene)?
-10. Do we publish service status and communicate outages clearly?
+## 4) How do we prevent regressions?
+- What controls prevent trust posture from drifting (DNS changes, IdP changes, new vendors, new email senders)?
+- Do we treat trust regressions as operational events with clear escalation?
 
-## Infrastructure & Platforms
-11. Are backup and recovery capabilities tested, not assumed?
-12. Do we have clear resilience expectations for critical digital services?
+## 5) How do we evidence and report trust posture?
+- Can we produce a trust scorecard with evidence links within 48 hours?
+- Is trust posture reported in an appropriate cadence alongside cyber risk and operational resilience?
 
-## Third-Party Ecosystem
-13. Do we maintain an inventory of critical SaaS vendors and integrations?
-14. Are vendor trust signals (attestations, incident history, data handling) reviewed before adoption?
-15. Do we understand which vendors could materially damage stakeholder trust if they fail?
+## Domain prompts (use selectively)
+### Identity boundary
+- Are privileged accounts protected with strong MFA and monitored access?
+- Do we know where identity is delegated (SaaS logins, federations, shared admin accounts)?
 
-## Governance
-16. Do we have a board-readable view of digital trust posture (not just cyber maturity)?
-17. Who is accountable for improving trust signals over time?
-18. Are trust signal weaknesses tracked as governance items (risk register / remediation plan)?
+### Domains & DNS
+- Are registrar controls strong enough to prevent domain hijack?
+- Do we maintain an inventory of subdomains and ownership?
 
-## Closing question
-19. If a stakeholder questioned our digital trustworthiness tomorrow, could we show evidence — quickly?
+### Email integrity
+- Can our primary domains be spoofed today?
+- Are SPF/DKIM/DMARC aligned and enforced for major sending streams? citeturn27search0turn27search1turn27search2
+
+### Digital services
+- Are public services consistently secured (TLS posture, headers, availability signalling)?
+- Do we have a predictable incident communication pathway?
+
+### Infrastructure & platforms
+- Are trust‑critical assets covered by change control, monitoring, and recovery testing?
+
+### Third‑party ecosystem
+- Do we know which vendors could materially damage trust if compromised?
+- Do we have a clear offboarding and access revocation process?
+
+## Output to request
+Ask for a **one‑page TrustSurface scorecard** summarising:
+
+- maturity by domain
+- top 5 trust signal gaps (with owners and due dates)
+- the next review date

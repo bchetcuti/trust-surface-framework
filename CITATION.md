@@ -1,8 +1,17 @@
 # Citation
 
-If you reference the Trust Surface Framework (TSF), please cite it as:
+If you reference TrustSurface in writing, presentations, or derivative work, use the following citation.
 
-Chetcuti, B. (2026). *Trust Surface Framework (TSF) v0.1*. Retrieved from https://github.com/Bchetcuti/trust-surface-framework
+## Recommended citation
+Chetcuti, Bryan. (2026). *TrustSurface Framework* (Version 0.2, Public Draft). trustsurface.org.
 
-Short reference:
-Trust Surface Framework (TSF), Chetcuti 2026.
+Repository: https://github.com/Bchetcuti/trust-surface-framework
+
+## Attribution guidance (CC BY 4.0)
+Attribution should include:
+
+- author name (Bryan Chetcuti)
+- title (TrustSurface Framework)
+- version (if applicable)
+- link to trustsurface.org or the repository
+- indication of changes (if you modified the material)

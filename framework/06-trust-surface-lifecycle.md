@@ -1,189 +1,62 @@
-# Trust Surface Lifecycle
+# 06 — TrustSurface Operating Rhythm
 
-The **Trust Surface Lifecycle** provides a structured process for identifying, assessing, improving, and governing an organisation’s digital trust posture.
+TrustSurface is designed to be run as a repeatable operating rhythm.
+Trust posture changes with systems, vendors, and configuration drift; therefore trust must be *maintained*.
 
-Digital trust is not a static state.
-Changes in infrastructure, vendors, domains, or services can continuously alter the signals emitted by an organisation’s digital environment.
+## The cycle
 
-The lifecycle model ensures that digital trust is **actively maintained rather than assumed**.
+**Discover → Assess → Harden → Govern → Signal → (repeat)**
 
----
+## 1) Discover
+**Objective:** establish what exists at the trust surface.
 
-# Lifecycle Overview
+**Minimum outputs:**
+- Trust Surface Inventory (domains, identity providers, email services, public apps/APIs, key vendors)
+- Ownership map (who owns what)
 
-The Trust Surface Framework uses a five-stage lifecycle:
+**Success condition:** nothing trust‑critical is “unknown” or “owned by nobody”.
 
-```id="m3r1bt"
-Discover → Assess → Harden → Govern → Signal
-```
+## 2) Assess
+**Objective:** evaluate posture using observable trust signals.
 
-Each stage contributes to understanding and maintaining digital trust posture.
+**Minimum outputs:**
+- Trust Signal Scorecard (baseline signals by domain)
+- Evidence links (what proves the score)
 
----
+**Success condition:** posture is evidence‑backed, not opinion‑based.
 
-# Lifecycle Model
+## 3) Harden
+**Objective:** close the highest‑impact trust signal gaps.
 
-```mermaid id="9tt2l0"
-graph LR
-A[Discover] --> B[Assess]
-B --> C[Harden]
-C --> D[Govern]
-D --> E[Signal]
-E --> A
-```
+**Minimum outputs:**
+- Prioritised hardening backlog (likelihood × trust impact)
+- A 30/60/90‑day hardening plan
 
-The lifecycle is continuous.
-Trust posture should be reviewed and improved regularly.
+**Success condition:** gaps are treated as work with owners, not “known issues”.
 
----
+## 4) Govern
+**Objective:** keep trust posture stable under change.
 
-# Stage 1 — Discover
+**Minimum outputs:**
+- TrustSurface ownership + decision rights
+- Change controls for trust‑critical assets (DNS, IdP, email auth, public endpoints)
+- Reporting cadence and escalation paths
 
-The **Discover** stage focuses on identifying the systems that make up the organisation’s Trust Surface.
+This stage aligns naturally with enterprise risk governance models and the “Govern” function in contemporary cyber frameworks. citeturn27search3turn27search11
 
-Many organisations do not maintain a complete inventory of digital systems that influence trust.
+**Success condition:** trust regressions are prevented by design, not detected late.
 
-Examples include:
+## 5) Signal
+**Objective:** communicate posture in a stable, verifiable way.
 
-* registered domains
-* DNS infrastructure
-* email platforms
-* websites and digital services
-* cloud platforms
-* third-party SaaS providers
+**Minimum outputs (context dependent):**
+- published policy (e.g., email authentication, security contact)
+- service status transparency
+- executive/board reporting artefacts
 
-The outcome of this stage is the creation of a **Trust Surface Inventory**.
+**Success condition:** stakeholders can validate trust posture without bespoke assurance work.
 
-This inventory forms the foundation for assessing digital trust posture.
-
----
-
-# Stage 2 — Assess
-
-The **Assess** stage evaluates the Trust Surface using the **Trust Signal Catalogue**.
-
-Signals are observed or verified to determine how well each domain demonstrates trustworthy behaviour.
-
-Examples include:
-
-* DMARC enforcement
-* TLS configuration
-* DNS integrity
-* service reliability
-* vendor security attestations
-
-The outcome of this stage is a **Trust Signal Scorecard** and an overall **Digital Trust Posture assessment**.
-
-This provides a clear picture of where trust signals are strong and where weaknesses exist.
-
----
-
-# Stage 3 — Harden
-
-The **Harden** stage focuses on strengthening weak or inconsistent trust signals.
-
-Typical actions include:
-
-* enforcing DMARC policies
-* improving domain governance
-* strengthening authentication mechanisms
-* improving service reliability
-* addressing vendor governance gaps
-
-The goal is to reduce the likelihood of trust failures occurring at the organisation’s digital edge.
-
-The outcome of this stage is a **Trust Hardening Plan**.
-
----
-
-# Stage 4 — Govern
-
-The **Govern** stage integrates digital trust into organisational governance practices.
-
-This ensures that trust signals remain consistent over time and are not weakened by organisational change.
-
-Governance mechanisms may include:
-
-* assigning accountability for Trust Surface domains
-* incorporating trust signals into risk reporting
-* integrating trust posture into vendor review processes
-* establishing regular Trust Surface reviews
-
-The outcome of this stage is a **Digital Trust Governance Model** aligned with existing organisational risk practices.
-
----
-
-# Stage 5 — Signal
-
-The **Signal** stage focuses on communicating digital trust posture to stakeholders.
-
-Trust signals are not only technical indicators but also opportunities to demonstrate transparency and accountability.
-
-Examples include:
-
-* service status transparency
-* security transparency reporting
-* clear communication during incidents
-* demonstrating adoption of best practices
-
-When organisations openly communicate trust posture, stakeholder confidence can increase.
-
----
-
-# Continuous Improvement
-
-The Trust Surface Lifecycle is continuous.
-
-Changes in infrastructure, technology platforms, or organisational structure can alter trust posture over time.
-
-Regular reassessment ensures that trust signals remain strong and consistent.
-
-Organisations should periodically repeat the lifecycle to maintain and improve digital trust.
-
----
-
-# Relationship to Governance
-
-The lifecycle complements existing governance and risk management frameworks.
-
-It provides a practical mechanism for translating technical signals into governance insights.
-
-Executives and boards can use lifecycle outputs to understand:
-
-* where digital trust risks exist
-* how effectively trust signals are maintained
-* where governance improvements may be required
-
----
-
-# Lifecycle Outputs
-
-Each lifecycle stage produces tangible outputs.
-
-| Stage    | Output                         |
-| -------- | ------------------------------ |
-| Discover | Trust Surface Inventory        |
-| Assess   | Trust Signal Scorecard         |
-| Harden   | Trust Hardening Plan           |
-| Govern   | Digital Trust Governance Model |
-| Signal   | Trust Transparency Mechanisms  |
-
-These outputs provide a structured record of how digital trust is managed.
-
----
-
-# Why the Lifecycle Matters
-
-Without a lifecycle approach, organisations often address digital trust issues only after incidents occur.
-
-The Trust Surface Lifecycle encourages proactive identification and governance of trust signals.
-
-By continuously observing and improving the Trust Surface, organisations can strengthen digital trust before failures occur.
-
----
-
-# Status of This Document
-
-This document forms part of the **Trust Surface Framework draft**, published for consultation and discussion.
-
-The lifecycle model may evolve as organisations apply the framework and identify practical improvements.
+## Operating guidance
+- Run the full cycle at least quarterly for high‑change environments; otherwise semi‑annually.
+- Run a lightweight check after any trust‑critical change (DNS, email sending sources, IdP changes, new vendor integrations).
+- Treat evidence as a first‑class artefact; if it isn’t evidenced, it doesn’t exist.

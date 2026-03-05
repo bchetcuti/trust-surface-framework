@@ -1,116 +1,46 @@
-# Trust Surface Framework
+# 02 — Trust Principles
 
-## Trust Principles v1.0
+These principles are the normative backbone of TrustSurface.
+They are written as *constraints* that keep the framework neutral, evidence‑led, and governance‑aligned.
 
-### Principle 1
+## P1 — Trust must be observable
+Trust cannot rely on intent, reputation, or internal assurances.
+It must be supported by **observable signals** (evidence).
 
-## Trust Must Be Observable
+Implication: if a claim cannot be evidenced at the surface (e.g., email authentication, TLS posture, published policy, uptime), it should not be treated as a trust control.
 
-Digital trust cannot rely on assurances alone.
-It must be supported by **observable signals**.
+## P2 — Trust failures occur at the surface
+Most trust-impacting failures occur where systems meet the outside world:
 
-Examples include:
+- impersonation and spoofing
+- weak or inconsistent DNS and domain ownership
+- exposed services and misconfiguration
+- brittle integrations and vendor dependencies
 
-* email authentication records
-* domain integrity controls
-* encryption posture
-* service availability indicators
+Implication: governance must prioritise the systems and signals that external parties actually interact with.
 
-If trust cannot be observed, it cannot be verified.
+## P3 — Trust is an organisational responsibility
+Trust surfaces cut across functions (technology, risk, procurement, legal, comms, operations).
+If ownership is fragmented, trust posture degrades.
 
-**Implication**
+Implication: TrustSurface work is cross‑functional by design; it cannot be delegated to a single team and expected to stick.
 
-Organisations must ensure that the digital signals they emit accurately reflect their security and operational posture.
+## P4 — Trust must be maintained, not “achieved”
+Digital trust is not a one‑time project.
+It decays through change: new vendors, new services, new DNS, new identity flows.
 
----
+Implication: TrustSurface requires an operating rhythm (review, evidence refresh, and continuous improvement).
 
-### Principle 2
+## P5 — Trust should be signalled transparently
+Stakeholders increasingly expect organisations to demonstrate accountability.
+Where appropriate, trust posture should be communicated through stable mechanisms (status pages, published policies, incident communications, and verifiable controls).
 
-## Trust Failures Occur at the Surface
+Implication: trust signals are not only defensive; they reduce friction in procurement, compliance, and partnership.
 
-Most digital trust failures occur where systems interact with the outside world.
+## In plain language
 
-Examples include:
-
-* email spoofing
-* DNS misconfiguration
-* exposed services
-* insecure integrations
-
-These failures happen at the **trust surface**, where external stakeholders experience the organisation’s digital presence.
-
-**Implication**
-
-Trust governance must focus on **observable exposure points**, not only internal controls.
-
----
-
-### Principle 3
-
-## Trust Is an Organisational Responsibility
-
-Digital trust is not owned solely by technology teams.
-
-It spans:
-
-* technology
-* risk management
-* communications
-* procurement
-* executive leadership
-
-Failures in vendor governance, operational resilience, or identity management can all erode trust.
-
-**Implication**
-
-Trust Surface governance must operate across organisational functions.
-
----
-
-### Principle 4
-
-## Trust Must Be Continuously Maintained
-
-Digital trust is not a one-time achievement.
-
-Changes in infrastructure, vendors, domains, or services can quickly alter an organisation’s trust posture.
-
-**Implication**
-
-Trust signals must be **continuously monitored and periodically reviewed**.
-
-Trust posture should be treated as a living operational metric.
-
----
-
-### Principle 5
-
-## Trust Should Be Communicated Transparently
-
-Stakeholders increasingly expect organisations to demonstrate accountability for their digital systems.
-
-Transparency about digital trust posture strengthens credibility and resilience.
-
-Examples include:
-
-* service status reporting
-* security transparency
-* clear communication during incidents
-
-**Implication**
-
-Organisations should develop mechanisms for communicating trust posture to stakeholders.
-
----
-
-# The Five Principles in Simple Language
-
-For speaking or presenting, they should compress to something memorable.
-
-```id="3j7qz0"
-Trust must be observable.
-Trust fails at the surface.
-Trust is organisational.
-Trust must be maintained.
-Trust should be transparent.
-```
+> Trust must be observable.
+> Trust fails at the surface.
+> Trust is organisational.
+> Trust must be maintained.
+> Trust should be signalled.

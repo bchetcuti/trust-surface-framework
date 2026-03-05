@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>TrustSurface — Library and web app</title>
+  <meta name="description" content="The TrustSurface web app is an optional implementation: a searchable library of the framework documents and diagrams." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/assets/app.css" />
+  <link rel="canonical" href="https://trustsurface.org/app/" />
+</head>
+
+<body class="drawer">
+  <div class="shell">
+    <aside class="side">
+      <div class="brand">
+        <div class="mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path d="M12 3l8 4v6c0 5-3.4 9-8 8-4.6 1-8-3-8-8V7l8-4z" stroke="currentColor" stroke-width="1.8"/>
+            <path d="M7.5 10.5h9M7.5 13.5h9M9.5 16.5h5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div>
+          <div class="brandTitle">TrustSurface</div>
+          <div class="brandSub">Web app • Library</div>
+        </div>
+      </div>
+
+      <div class="sideControls">
+        <div class="sideLinks">
+          <a class="link" href="/">Home</a>
+          <a class="link" href="/framework">Framework</a>
+          <a class="link" href="/docs">Open library</a>
+        </div>
+      </div>
+
+      <nav class="nav" aria-label="App navigation">
+        <a class="navItem" href="/docs">Library (docs app)</a>
+        <a class="navItem" href="/model-diagram">Diagram</a>
+        <a class="navItem" href="/consultation">Consultation</a>
+      </nav>
+
+      <div class="sideFooter">
+        <div class="small">Core framework content: <a class="link" href="/licence">CC BY 4.0</a></div>
+        <div class="mono">© 2026 Bryan Chetcuti</div>
+      </div>
+    </aside>
+
+    <div class="navBackdrop" id="navBackdrop" aria-hidden="true"></div>
+
+    <main class="main">
+      <div class="topbar">
+        <div class="crumbs">
+          <a class="crumb" href="/">Home</a>
+          <span class="sep">/</span>
+          <span class="crumbCurrent">App</span>
+        </div>
+        <div class="actions">
+          <a class="btn" id="menuBtn" href="#">Menu</a>
+          <a class="btn" href="/docs">Open library</a>
+          <a class="btn primary" href="/framework">Framework</a>
+        </div>
+      </div>
+
+      <div class="contentGrid" style="grid-template-columns: 1fr;">
+        <article class="doc">
+          <div class="markdown">
+            <h1>The web app (optional implementation)</h1>
+
+            <p>TrustSurface is a conceptual framework first. The web app exists to make the documents easy to browse, link, and keep consistent.</p>
+
+            <h2>What the app does</h2>
+            <ul>
+              <li>Searchable, linkable library of framework documents.</li>
+              <li>Stable URLs for reference in board papers and governance artefacts.</li>
+              <li>SVG diagram asset suitable for slides and PDF export.</li>
+            </ul>
+
+            <h2>What the app does not do (yet)</h2>
+            <ul>
+              <li>No scoring automation by default.</li>
+              <li>No feature creep; the framework stabilises first.</li>
+            </ul>
+
+            <p><a class="btn primary" href="/docs">Open the library</a></p>
+
+            <hr />
+            <p class="small">If you want to contribute improvements to the framework text, raise an issue or pull request in the repository.</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="footer">
+        <div>© 2026 Bryan Chetcuti</div>
+        <div class="footerLinks"><a href="/licence">CC BY 4.0</a> <span class="sep">•</span> <a href="/citation">Citation</a></div>
+      </div>
+    </main>
+  </div>
+
+  <script src="/assets/site.js" defer></script>
+</body>
+</html>
