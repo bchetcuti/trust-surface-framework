@@ -1,0 +1,18 @@
+
+name: Governance / board usability feedback
+description: Suggestions to improve board and executive usefulness
+title: "[Governance] "
+labels: ["governance"]
+body:
+  - type: textarea
+    attributes:
+      label: What would boards/executives need to see?
+      placeholder: Reporting, metrics, questions, cadence, accountabilities.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: What is missing or misframed?
+      placeholder: Identify gaps or wording that won’t land with governance audiences.
+    validations:
+      required: false

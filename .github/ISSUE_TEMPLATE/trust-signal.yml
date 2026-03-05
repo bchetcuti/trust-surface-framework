@@ -1,0 +1,42 @@
+
+name: Trust signal suggestion
+description: Propose a new trust signal or refinement to an existing one
+title: "[Signal] "
+labels: ["signal"]
+body:
+  - type: dropdown
+    attributes:
+      label: Domain
+      options:
+        - Identity
+        - Domains & DNS
+        - Email Integrity
+        - Digital Services
+        - Infrastructure & Platforms
+        - Third-Party Ecosystem
+    validations:
+      required: true
+  - type: input
+    attributes:
+      label: Signal name
+      placeholder: e.g. DMARC enforcement
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Observation method
+      placeholder: How should this be measured or verified?
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Trust implication
+      placeholder: What does this signal indicate about trust posture?
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Notes / references
+      placeholder: Optional links or examples.
+    validations:
+      required: false

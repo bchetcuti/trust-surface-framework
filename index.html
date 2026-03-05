@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Trust Surface Framework (TSF)</title>
+  <meta name="description" content="Understanding and governing the digital signals organisations emit." />
+  <style>
+    :root { --fg:#111; --muted:#555; --bg:#fff; --line:#e6e6e6; }
+    body { margin:0; font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif; color:var(--fg); background:var(--bg); }
+    .wrap { max-width: 980px; margin: 0 auto; padding: 48px 20px; }
+    h1 { font-size: 40px; line-height: 1.1; margin: 0 0 12px; }
+    p.lead { font-size: 18px; color: var(--muted); margin: 0 0 24px; }
+    .pill { display:inline-block; border:1px solid var(--line); border-radius:999px; padding:6px 10px; margin: 0 8px 8px 0; font-size: 14px; color: var(--muted); }
+    .grid { display:grid; grid-template-columns: 1fr; gap: 16px; }
+    @media (min-width: 860px){ .grid { grid-template-columns: 1.2fr .8fr; gap: 28px; } }
+    .card { border:1px solid var(--line); border-radius:14px; padding:18px; }
+    .btns a { display:inline-block; border:1px solid var(--fg); border-radius:10px; padding:10px 12px; margin: 10px 10px 0 0; text-decoration:none; color:var(--fg); }
+    .btns a.primary { background: var(--fg); color: #fff; }
+    h2 { font-size: 22px; margin: 28px 0 12px; }
+    ul { margin: 10px 0 0 18px; }
+    hr { border:0; border-top:1px solid var(--line); margin: 32px 0; }
+    footer { color: var(--muted); font-size: 14px; }
+    .small { color: var(--muted); font-size: 14px; }
+    .quote { font-weight: 650; }
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-size: 14px; }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <div class="pill">Draft v0.1 • Consultation</div>
+
+    <h1>Trust Surface Framework (TSF)</h1>
+    <p class="lead">Understanding and governing the digital signals organisations emit.</p>
+
+    <div class="grid">
+      <section class="card">
+        <p>
+          Most organisations invest heavily in cybersecurity — yet still emit weak trust signals at the digital edge:
+          domains, email, services, platforms, and vendors. TSF is a governance model to identify those systems,
+          measure their signals, and improve trust posture over time.
+        </p>
+
+        <p class="quote">Organisations spend millions on cybersecurity but still emit weak trust signals.</p>
+
+        <div>
+          <span class="pill"><strong>Trust Surface</strong>: where trust is experienced</span>
+          <span class="pill"><strong>Trust Signals</strong>: observable indicators of trust posture</span>
+          <span class="pill"><strong>Lifecycle</strong>: Discover → Assess → Harden → Govern → Signal</span>
+        </div>
+
+        <div class="btns">
+          <a class="primary" href="https://github.com/Bchetcuti/trust-surface-framework">Read the framework (GitHub)</a>
+          <a href="https://github.com/Bchetcuti/trust-surface-framework/blob/main/FRAMEWORK-MAP.md">Framework map</a>
+          <a href="https://github.com/Bchetcuti/trust-surface-framework/blob/main/BOARD-QUESTIONS.md">Board questions</a>
+          <a href="https://github.com/Bchetcuti/trust-surface-framework/blob/main/framework/08-digital-trust-maturity-model.md">Maturity model</a>
+          <a href="https://github.com/Bchetcuti/trust-surface-framework/blob/main/CONTRIBUTING.md">Contribute feedback</a>
+        </div>
+      </section>
+
+      <aside class="card">
+        <h2>The Trust Surface</h2>
+        <ul>
+          <li>Identity</li>
+          <li>Domains &amp; DNS</li>
+          <li>Email Integrity</li>
+          <li>Digital Services</li>
+          <li>Infrastructure &amp; Platforms</li>
+          <li>Third-Party Ecosystem</li>
+        </ul>
+
+        <hr />
+
+        <p class="small"><strong>Quick cite</strong></p>
+        <p class="mono">Trust Surface Framework (TSF), Chetcuti 2026.</p>
+
+        <p class="small"><strong>Core idea</strong></p>
+        <p class="quote">Trust is not declared. It is observed.</p>
+      </aside>
+    </div>
+
+    <h2>The Trust Surface Model</h2>
+    <p class="small">Minimal diagram (SVG): <span class="mono">diagrams/trust-surface.svg</span></p>
+
+    <hr />
+
+    <h2>Consultation</h2>
+    <p>
+      TSF is published as an early draft for consultation. Feedback is welcome — especially on board usability,
+      signal quality, lifecycle practicality, and terminology. Please use GitHub Issues for structured feedback.
+    </p>
+
+    <footer>
+      © 2026 • Trust Surface Framework (TSF) • CC BY 4.0 • Maintainer: Bryan Chetcuti
+    </footer>
+  </main>
+</body>
+</html>

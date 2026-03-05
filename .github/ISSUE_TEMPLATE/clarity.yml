@@ -1,0 +1,24 @@
+
+name: Clarity feedback
+description: Suggest improvements to wording, definitions, or structure
+title: "[Clarity] "
+labels: ["clarity"]
+body:
+  - type: input
+    attributes:
+      label: Page or section
+      placeholder: e.g. framework/04-trust-surface-map.md — Domain descriptions
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: What’s unclear or not landing?
+      placeholder: Describe the confusion or ambiguity.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Suggested improvement
+      placeholder: Provide replacement text or a suggested structure.
+    validations:
+      required: false

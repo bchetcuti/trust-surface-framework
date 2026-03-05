@@ -1,0 +1,24 @@
+
+name: Lifecycle / adoption feedback
+description: Improve the TSF lifecycle steps or adoption guidance
+title: "[Lifecycle] "
+labels: ["lifecycle"]
+body:
+  - type: input
+    attributes:
+      label: Which stage?
+      placeholder: Discover / Assess / Harden / Govern / Signal
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: What would make this more practical?
+      placeholder: Suggest process changes, outputs, or cadence improvements.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Example from practice (optional)
+      placeholder: A short real-world example that supports your suggestion.
+    validations:
+      required: false
