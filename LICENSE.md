@@ -1,5 +1,9 @@
 # Licence
 
+> Status: Informative  
+> Version: v1.0  
+> Last updated: 2026-03-06
+
 ## TrustSurface Framework content
 
 **Copyright (c) 2026 Bryan Chetcuti**

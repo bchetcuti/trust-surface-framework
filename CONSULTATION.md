@@ -1,5 +1,9 @@
 # Consultation
 
+> Status: Informative  
+> Version: v1.0  
+> Last updated: 2026-03-06
+
 TrustSurface is published openly to encourage shared vocabulary and practical improvement.
 
 If you have feedback, use one of the following:

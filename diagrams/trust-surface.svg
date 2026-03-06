@@ -1,120 +1,100 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-label="TrustSurface Framework diagram">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-label="TrustSurface Framework diagram">
   <defs>
     <style>
-      .bg{fill:#ffffff;}
-      .stroke{stroke:#e2e8f0;stroke-width:2;}
-      .soft{fill:#f8fafc;}
-      .title{font:700 34px ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial; fill:#0b4f8a;}
-      .sub{font:500 14px ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial; fill:#475569;}
-      .h{font:700 16px ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial; fill:#0f172a;}
-      .t{font:500 13px ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial; fill:#334155;}
-      .mono{font:500 12px ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; fill:#64748b;}
-      .pill{fill:#ffffff; stroke:#e2e8f0; stroke-width:2;}
-      .accent{fill:#0b4f8a;}
-      
-      .arrow{stroke:#0b4f8a;stroke-width:3; fill:none; stroke-linecap:round; stroke-linejoin:round;}
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap');
+      .bg{fill:#ffffff}
+      .panel{fill:#f8fafc;stroke:#e2e8f0;stroke-width:2}
+      .card{fill:#ffffff;stroke:#e2e8f0;stroke-width:2}
+      .pill{fill:#ffffff;stroke:#d7e2ee;stroke-width:1.6}
+      .accent{fill:#0b4f8a}
+      .accent-soft{fill:rgba(11,79,138,.08)}
+      .line{stroke:#0b4f8a;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;fill:none}
+      .title,.sub,.h,.t,.mono{font-family:'Poppins',system-ui,-apple-system,'Segoe UI',Arial,sans-serif}
+      .title{font-size:34px;font-weight:700;fill:#0b4f8a}
+      .sub{font-size:15px;font-weight:500;fill:#475569}
+      .h{font-size:17px;font-weight:700;fill:#0f172a}
+      .t{font-size:13px;font-weight:500;fill:#334155}
+      .mono{font-size:12px;font-weight:500;fill:#64748b}
+      .strong{font-weight:700;fill:#0f172a}
     </style>
     <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
-      <path d="M0,0 L10,5 L0,10 Z" fill="#0b4f8a" />
+      <path d="M0 0 10 5 0 10Z" fill="#0b4f8a"/>
     </marker>
   </defs>
 
-  <rect class="bg" x="0" y="0" width="1200" height="675"/>
+  <rect class="bg" width="1200" height="720"/>
 
-  <!-- Header -->
-  <text x="60" y="78" class="title">TrustSurface Framework</text>
-  <text x="60" y="106" class="sub">Domains → Trust Signals → Operating Rhythm (evidence-led governance of the digital edge)</text>
+  <text x="64" y="78" class="title">TrustSurface Framework</text>
+  <text x="64" y="106" class="sub">Trust surface domains → trust signals → trust posture</text>
+  <text x="64" y="128" class="sub">A minimal, evidence-led model for governing the digital edge.</text>
 
-  <!-- Main container -->
-  <rect x="50" y="135" width="1100" height="410" rx="22" class="soft"/>
-  <rect x="50" y="135" width="1100" height="410" rx="22" class="stroke" fill="none"/>
+  <rect x="52" y="154" width="1096" height="420" rx="24" class="panel"/>
 
-  <!-- Left: Domains -->
-  <rect x="80" y="165" width="480" height="310" rx="18" fill="#ffffff"/>
-  <rect x="80" y="165" width="480" height="310" rx="18" class="stroke" fill="none"/>
-  <text x="110" y="205" class="h">Trust surface domains</text>
-  <text x="110" y="228" class="t">A small, stable vocabulary for governance and delivery.</text>
+  <rect x="82" y="186" width="462" height="324" rx="18" class="card"/>
+  <text x="112" y="222" class="h">Trust surface domains</text>
+  <text x="112" y="244" class="t">Stable boundary model for governance, delivery, and assurance.</text>
 
-  <!-- Domain pills -->
   <g>
-    <rect x="110" y="255" width="420" height="42" rx="21" class="pill"/>
-    <text x="132" y="282" class="t"><tspan font-weight="700" fill="#0f172a">Identity boundary</tspan><tspan> — who/what is interacting</tspan></text>
+    <rect x="112" y="268" width="402" height="36" rx="18" class="pill"/>
+    <text x="130" y="291" class="t"><tspan class="strong">Identity boundary</tspan><tspan> — who or what is interacting</tspan></text>
 
-    <rect x="110" y="305" width="420" height="42" rx="21" class="pill"/>
-    <text x="132" y="332" class="t"><tspan font-weight="700" fill="#0f172a">Domains &amp; DNS</tspan><tspan> — ownership and routing</tspan></text>
+    <rect x="112" y="314" width="402" height="36" rx="18" class="pill"/>
+    <text x="130" y="337" class="t"><tspan class="strong">Domains &amp; DNS</tspan><tspan> — ownership, routing, delegation</tspan></text>
 
-    <rect x="110" y="355" width="420" height="42" rx="21" class="pill"/>
-    <text x="132" y="382" class="t"><tspan font-weight="700" fill="#0f172a">Email integrity</tspan><tspan> — authenticity of mail</tspan></text>
+    <rect x="112" y="360" width="402" height="36" rx="18" class="pill"/>
+    <text x="130" y="383" class="t"><tspan class="strong">Email integrity</tspan><tspan> — message authenticity and alignment</tspan></text>
 
-    <rect x="110" y="405" width="420" height="42" rx="21" class="pill"/>
-    <text x="132" y="432" class="t"><tspan font-weight="700" fill="#0f172a">Digital services</tspan><tspan> — web, portals, APIs</tspan></text>
+    <rect x="112" y="406" width="402" height="36" rx="18" class="pill"/>
+    <text x="130" y="429" class="t"><tspan class="strong">Digital services</tspan><tspan> — sites, portals, APIs, status</tspan></text>
 
-    <rect x="110" y="455" width="420" height="42" rx="21" class="pill"/>
-    <text x="132" y="482" class="t"><tspan font-weight="700" fill="#0f172a">Infrastructure &amp; platforms</tspan><tspan> — the hosting edge</tspan></text>
-
-    <rect x="110" y="505" width="420" height="42" rx="21" class="pill"/>
-    <text x="132" y="532" class="t"><tspan font-weight="700" fill="#0f172a">Third‑party ecosystem</tspan><tspan> — delegated trust</tspan></text>
+    <rect x="112" y="452" width="402" height="36" rx="18" class="pill"/>
+    <text x="130" y="475" class="t"><tspan class="strong">Infrastructure &amp; platforms</tspan><tspan> — hosting edge and control plane</tspan></text>
   </g>
 
-  <!-- Right: Signals -->
-  <rect x="610" y="165" width="510" height="310" rx="18" fill="#ffffff"/>
-  <rect x="610" y="165" width="510" height="310" rx="18" class="stroke" fill="none"/>
-  <text x="640" y="205" class="h">Trust signals</text>
-  <text x="640" y="228" class="t">Observable evidence that describes posture at the surface.</text>
+  <rect x="588" y="186" width="530" height="324" rx="18" class="card"/>
+  <text x="618" y="222" class="h">Trust signals</text>
+  <text x="618" y="244" class="t">Observable evidence that describes posture at the surface.</text>
 
-  <!-- Signals bullets -->
-  <g class="t">
-    <circle cx="648" cy="262" r="4" class="accent"/>
-    <text x="664" y="267" class="t">Authentication and alignment (e.g., SPF/DKIM/DMARC)</text>
-
-    <circle cx="648" cy="292" r="4" class="accent"/>
-    <text x="664" y="297" class="t">Routing and integrity (DNS hygiene, DNSSEC, CAA)</text>
-
-    <circle cx="648" cy="322" r="4" class="accent"/>
-    <text x="664" y="327" class="t">Transport security (TLS posture, certificate automation)</text>
-
-    <circle cx="648" cy="352" r="4" class="accent"/>
-    <text x="664" y="357" class="t">Reliability and transparency (status, incident comms)</text>
-
-    <circle cx="648" cy="382" r="4" class="accent"/>
-    <text x="664" y="387" class="t">Delegated trust evidence (vendor inventory, assurance)</text>
-
-    <circle cx="648" cy="412" r="4" class="accent"/>
-    <text x="664" y="417" class="t">Governance artefacts (ownership, change control, cadence)</text>
-  </g>
-
-  <rect x="610" y="440" width="510" height="50" rx="14" fill="#0b4f8a" fill-opacity="0.08"/>
-  <text x="640" y="470" class="t"><tspan font-weight="700" fill="#0f172a">Trust signal gap:</tspan><tspan> intended posture ≠ observed evidence</tspan></text>
-
-  <!-- Bottom: operating rhythm -->
   <g>
-    <text x="60" y="585" class="h">Operating rhythm</text>
-    <text x="60" y="608" class="t">Run trust as a cycle that produces evidence, work, and governance controls.</text>
+    <circle cx="626" cy="276" r="4" class="accent"/>
+    <text x="642" y="281" class="t">Authentication and alignment (for example SPF, DKIM, DMARC)</text>
 
-    <rect x="320" y="560" width="830" height="80" rx="18" fill="#ffffff"/>
-    <rect x="320" y="560" width="830" height="80" rx="18" class="stroke" fill="none"/>
+    <circle cx="626" cy="308" r="4" class="accent"/>
+    <text x="642" y="313" class="t">Routing and integrity (DNS hygiene, DNSSEC, CAA)</text>
 
-    <!-- steps -->
-    <g>
-      <text x="350" y="605" class="t"><tspan font-weight="700" fill="#0f172a">Discover</tspan></text>
-      <path d="M430 600 L490 600" class="arrow" marker-end="url(#arrowhead)"/>
+    <circle cx="626" cy="340" r="4" class="accent"/>
+    <text x="642" y="345" class="t">Transport security (TLS posture, certificate automation)</text>
 
-      <text x="510" y="605" class="t"><tspan font-weight="700" fill="#0f172a">Assess</tspan></text>
-      <path d="575 600 L635 600" class="arrow" marker-end="url(#arrowhead)"/>
+    <circle cx="626" cy="372" r="4" class="accent"/>
+    <text x="642" y="377" class="t">Reliability and transparency (status, incident communications)</text>
 
-      <text x="655" y="605" class="t"><tspan font-weight="700" fill="#0f172a">Harden</tspan></text>
-      <path d="730 600 L790 600" class="arrow" marker-end="url(#arrowhead)"/>
+    <circle cx="626" cy="404" r="4" class="accent"/>
+    <text x="642" y="409" class="t">Delegated trust evidence (vendor inventory, assurance traceability)</text>
 
-      <text x="810" y="605" class="t"><tspan font-weight="700" fill="#0f172a">Govern</tspan></text>
-      <path d="885 600 L945 600" class="arrow" marker-end="url(#arrowhead)"/>
-
-      <text x="965" y="605" class="t"><tspan font-weight="700" fill="#0f172a">Signal</tspan></text>
-      <path d="1035 600 L1105 600" class="arrow" marker-end="url(#arrowhead)"/>
-    </g>
-
-    <text x="350" y="628" class="mono">Inventory → Scorecard → Hardening plan → Controls → Verifiable posture</text>
+    <circle cx="626" cy="436" r="4" class="accent"/>
+    <text x="642" y="441" class="t">Governance artefacts (ownership, cadence, change control)</text>
   </g>
 
-  <!-- Footer -->
-  <text x="60" y="657" class="mono">TSF diagram • CC BY 4.0 • © 2026 Bryan Chetcuti</text>
+  <rect x="618" y="458" width="470" height="34" rx="12" class="accent-soft"/>
+  <text x="634" y="480" class="t"><tspan class="strong">Trust posture:</tspan><tspan> evidence-based state implied by the quality and coverage of signals</tspan></text>
+
+  <path d="M544 350h44" class="line" marker-end="url(#arrowhead)"/>
+
+  <text x="64" y="616" class="h">Operating rhythm</text>
+  <text x="64" y="638" class="t">Run trust as a recurring cycle that produces evidence, work, and governance controls.</text>
+
+  <rect x="320" y="594" width="828" height="72" rx="18" class="card"/>
+  <text x="350" y="637" class="t"><tspan class="strong">Discover</tspan></text>
+  <path d="M424 632h54" class="line" marker-end="url(#arrowhead)"/>
+  <text x="502" y="637" class="t"><tspan class="strong">Assess</tspan></text>
+  <path d="M564 632h54" class="line" marker-end="url(#arrowhead)"/>
+  <text x="642" y="637" class="t"><tspan class="strong">Harden</tspan></text>
+  <path d="M710 632h54" class="line" marker-end="url(#arrowhead)"/>
+  <text x="790" y="637" class="t"><tspan class="strong">Govern</tspan></text>
+  <path d="M860 632h54" class="line" marker-end="url(#arrowhead)"/>
+  <text x="940" y="637" class="t"><tspan class="strong">Signal</tspan></text>
+  <path d="M997 632h94" class="line" marker-end="url(#arrowhead)"/>
+
+  <text x="350" y="656" class="mono">Inventory → scorecard → hardening plan → controls → verifiable posture</text>
+  <text x="64" y="692" class="mono">TSF diagram • CC BY 4.0 • © 2026 Bryan Chetcuti</text>
 </svg>

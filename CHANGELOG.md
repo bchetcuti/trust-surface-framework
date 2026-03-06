@@ -1,27 +1,13 @@
-# Changelog
+# Changelog (Repository)
 
-All notable changes to the Trust Surface Framework (TSF) will be documented here.
+This file tracks **project changes** (content, site structure, UX, and maintenance).
 
-This project follows semantic-ish versioning:
+For the **public, normative‑only** changelog (definitions, domains, lifecycle, framework structure), see:
 
-- v0.x: Draft / consultation
-- v1.0: First stable release
+- **trustsurface.org/changelog/**
 
-## [0.1.0] - 2026-03-05
-### Added
-- Core framework documents:
-  - Digital Trust Problem
-  - Trust Principles
-  - Trust Surface Definition
-  - Trust Surface Map (six domains)
-  - Trust Signal Catalogue (v0.1 set)
-  - Trust Surface Lifecycle
-- “Trust Signal Gap” concept
-- Digital Trust Maturity Model
-- README and Framework Map
-- Consultation and contribution guidance
-- Minimal diagrams (Mermaid + SVG)
+This repo uses semantic versioning for the framework baseline:
 
-### Notes
-- Published for consultation and feedback.
-- Focus: board-readable, measurable trust signals, practical adoption.
+- **v1.x**: stable normative baseline (tracked in the public changelog)
+- **non‑normative updates** (UX, readability, examples, guidance) may occur without changing the normative version
+

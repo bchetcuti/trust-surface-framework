@@ -1,26 +1,49 @@
-# 04 — Trust Surface Domains
+# Trust Surface Domains
 
-TrustSurface models the trust surface as a small set of domains.
-The purpose is to give boards, executives, and practitioners a shared vocabulary that supports evidence-based governance.
+> Status: Normative  
+> Version: v1.0  
+> Last updated: 2026-03-06
 
-## Domain set
-| Domain | What it covers | Typical signals |
-|---|---|---|
-| **Identity boundary** | how users, admins, and services prove who they are | MFA posture, federation integrity, session controls, admin separation |
-| **Domains & DNS** | ownership, routing, integrity, and availability of public domains | DNSSEC, CAA, authoritative NS hygiene, subdomain sprawl |
-| **Email integrity** | authenticity and integrity of email that claims your domain | SPF, DKIM, DMARC alignment and policy, reporting, MTA‑STS |
-| **Digital services** | websites, portals, APIs, and the public application edge | TLS posture, headers, availability, API exposure, change control |
-| **Infrastructure & platforms** | hosting and platforms that underpin the edge | certificate automation, logging/monitoring, resilience, platform governance |
-| **Third‑party ecosystem** | vendors and SaaS platforms where trust is delegated | vendor inventory, assurance evidence, integration boundaries, offboarding |
+The TrustSurface Framework uses a small domain model to describe the systems that shape digital trust at the surface.
 
-## How to use the domains
-1. **Inventory** what exists in each domain.
-2. **Attach evidence** (trust signals) for what is claimed.
-3. **Identify gaps** where the signal does not match the intended posture.
-4. **Prioritise** remediation based on likelihood × trust impact.
-5. **Assign ownership** and maintain through a repeatable rhythm.
+The intent is governance clarity: a stable vocabulary that delivery and leadership can share.
 
-## Notes
-- The domain set is intentionally small.
-- The domain set is not a taxonomy of all IT assets.
-- The domain set is a governance tool: it exists to make trust posture discussable, measurable, and actionable.
+(Definitions align to TrustSurface Glossary v1.0.)
+
+---
+
+## The six Trust Surface domains
+
+| Domain | Description |
+|---|---|
+| **Identity boundary** | How people and services prove who/what they are at the boundary (authentication, access, identity lifecycle). |
+| **Domains & DNS** | Domain ownership, DNS routing, integrity, and availability — the public naming and routing layer. |
+| **Email integrity** | Authenticity of organisational email communications (anti‑spoofing, alignment, transport integrity). |
+| **Digital services** | Websites, portals, APIs, and applications through which stakeholders interact with the organisation. |
+| **Infrastructure & platforms** | The hosting and platform layer underpinning the edge (cloud, hosting, configuration, resilience). |
+| **Third‑party ecosystem** | Delegated trust through vendors, SaaS platforms, and integrations that shape digital interactions. |
+
+## Why domains matter
+
+Trust posture is rarely owned by a single team.
+Domains make distributed ownership discussable.
+
+They help organisations:
+
+- inventory what exists
+- assign ownership
+- assess signals consistently
+- prioritise hardening work
+- prevent regressions through governance
+
+## Relationship to attack surface
+
+Trust Surface and Attack Surface are related but distinct:
+
+| Concept | Focus |
+|---|---|
+| **Attack surface** | Entry points through which systems can be attacked |
+| **Trust surface** | Systems and signals through which stakeholders judge trust |
+
+TrustSurface does not replace vulnerability management.
+It makes the observable trust posture of the digital edge governable.

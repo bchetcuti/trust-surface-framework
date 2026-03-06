@@ -1,65 +1,103 @@
-# 08 — Digital Trust Maturity Model
+# Digital Trust Maturity Model
 
-## Purpose
-The Digital Trust Maturity Model provides a lightweight way to express how well an organisation governs its trust surface.
+> Status: Informative  
+> Version: v1.0  
+> Last updated: 2026-03-06
 
-It is designed to complement conventional security maturity approaches by focusing on **observable trust signals** and the governance mechanisms that keep them stable.
+The Digital Trust Maturity Model provides a structured way for organisations to assess how effectively they manage the Trust Signals emitted by their Trust Surface.
 
-## Levels
-| Level | Name | What it means |
+It complements traditional cybersecurity maturity assessments by focusing on **observable trust signals rather than internal controls alone**.
+
+The model supports benchmarking, prioritisation, and executive reporting of **Trust Posture**.
+
+(Definitions align to TrustSurface Glossary v1.0.)
+
+---
+
+## Maturity levels
+
+| Level | Name | Description |
 |---:|---|---|
-| 1 | **Unmanaged** | signals are accidental; ownership unclear |
-| 2 | **Reactive** | issues fixed after incidents or pressure |
-| 3 | **Managed** | signals are maintained; owners exist |
-| 4 | **Governed** | trust posture is integrated into governance and change |
-| 5 | **Assured** | posture is continuously evidenced and, where appropriate, transparently signalled |
+| 1 | Unaware | Limited visibility of trust surface and signals |
+| 2 | Reactive | Improvements occur mainly after incidents or pressure |
+| 3 | Managed | Signals are actively measured, owned, and improved |
+| 4 | Integrated | Trust posture is integrated into governance and operations |
+| 5 | Trust leader | Trust posture is strong and transparently communicated |
 
-## Level definitions
-### Level 1 — Unmanaged
-- no reliable inventory of trust‑critical assets
-- inconsistent or missing signals (e.g., email auth, TLS hygiene)
-- trust failures surprise the organisation
+## Level 1 — Unaware
 
-### Level 2 — Reactive
-- partial controls exist, often implemented after an incident
-- evidence is hard to assemble quickly
-- changes routinely create regressions
+Typical characteristics:
 
-### Level 3 — Managed
-- core inventories exist (domains, email, key services, key vendors)
-- baseline trust signals are measured and improved
-- ownership is defined for trust‑critical systems
+- no reliable inventory of domains or digital assets
+- email authentication partially implemented or absent
+- limited visibility of third‑party SaaS dependencies
+- trust signals not considered in governance discussions
 
-### Level 4 — Governed
-- trust posture is a governance artefact (cadence, reporting, decision rights)
-- vendor onboarding includes trust surface considerations
-- change processes protect trust‑critical assets
+Trust failures occur unexpectedly because the Trust Surface is not actively governed.
 
-### Level 5 — Assured
-- trust posture is continuously evidenced
-- regressions are detected quickly and treated as operational events
-- external signalling (status/policy/assurance) is intentional and consistent
+## Level 2 — Reactive
+
+Typical characteristics:
+
+- trust issues addressed after incidents or audit findings
+- ad hoc domain and email remediation
+- limited coordination between teams managing surface systems
+
+Trust improves, but only in response to problems.
+
+## Level 3 — Managed
+
+Typical characteristics:
+
+- Trust Surface inventory maintained and owned
+- baseline trust signals assessed on a cadence
+- clear ownership for key domains (email, DNS, identity, services)
+- a hardening backlog exists and is prioritised
+
+Organisations can identify and address weak signals before incidents occur.
+
+## Level 4 — Integrated
+
+Typical characteristics:
+
+- Trust Surface reviews incorporated into risk management
+- trust posture included in executive reporting
+- vendor trust signals assessed during procurement
+- change control prevents common regressions
+
+Trust posture becomes an explicit organisational objective.
+
+## Level 5 — Trust leader
+
+Typical characteristics:
+
+- strong signals across all Trust Surface domains
+- transparent communication of trust posture (appropriate to context)
+- proactive governance of vendor ecosystems
+- trust posture treated as a strategic asset
 
 ## Domain-level maturity
-Maturity can be assessed per Trust Surface domain.
+
+Organisations may reach different maturity levels across Trust Surface domains.
 
 Example:
 
 | Domain | Maturity |
 |---|---|
-| Identity boundary | 3 |
-| Domains & DNS | 4 |
-| Email integrity | 2 |
-| Digital services | 3 |
-| Infrastructure & platforms | 3 |
-| Third‑party ecosystem | 2 |
+| Identity boundary | Level 3 |
+| Domains & DNS | Level 4 |
+| Email integrity | Level 2 |
+| Digital services | Level 3 |
+| Infrastructure & platforms | Level 2 |
+| Third‑party ecosystem | Level 1 |
 
-## Using the model with the signal catalogue
-A practical method:
+## Relationship to the TrustSurface Framework
 
-1. Score each baseline signal (present, enforced, evidenced).
-2. Aggregate by domain.
-3. Use the maturity levels to describe what the score means operationally.
-4. Track change over time as part of the TrustSurface operating rhythm.
+| Framework component | Purpose |
+|---|---|
+| Trust Surface Domains | Identifies systems influencing trust |
+| Trust Signal Catalogue | Defines measurable trust signals |
+| Trust Surface Lifecycle | Provides a governance rhythm |
+| Digital Trust Maturity Model | Enables benchmarking and improvement |
 
-The model is intentionally simple: it exists to make progress visible and governable.
+Together these allow organisations to measure, manage, and improve trust posture over time.

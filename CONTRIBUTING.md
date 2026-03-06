@@ -1,5 +1,9 @@
 # Contributing
 
+> Status: Informative  
+> Version: v1.0  
+> Last updated: 2026-03-06
+
 Thanks for taking the time to review the Trust Surface Framework (TSF).
 
 This repository is published for **consultation and improvement**.

@@ -1,144 +1,38 @@
-# The Trust Surface Diagram
+# TrustSurface diagram
 
-This should become **the defining visual of the framework**.
+The SVG diagram at `diagrams/trust-surface.svg` is the primary visual anchor for TrustSurface.
 
-Conceptually it shows:
+It is designed to be:
 
-* the **organisation at the centre**
-* the **digital systems forming the Trust Surface**
-* the **signals emitted outward to the world**
+- minimal and governance-aligned
+- legible in board packs and PDFs
+- stable (few moving parts)
+- easy to embed (SVG)
 
-Here is the first version for the repo.
+## What the diagram communicates
 
----
+At a glance, it expresses:
 
-# The Trust Surface Model
+1. **Trust Surface domains** — the systems that shape externally-facing trust.
+2. **Trust Signals** — observable indicators that describe posture.
+3. **Trust posture and signal gap** — evidence-based state and the mismatch between intent and evidence.
+4. **Operating rhythm** — Discover → Assess → Harden → Govern → Signal.
 
-```mermaid
-graph TD
+## Boardroom explanation (30 seconds)
 
-A[Organisation]
+> Organisations emit trust signals through the systems they operate.
+> Those systems form the Trust Surface.
+> Stakeholders interpret the signals to decide whether an organisation is trustworthy online.
+> TrustSurface makes those signals observable and governable.
 
-A --> B[Identity]
-A --> C[Domains & DNS]
-A --> D[Email Integrity]
-A --> E[Digital Services]
-A --> F[Infrastructure & Platforms]
-A --> G[Third-Party Ecosystem]
+## Updating the diagram
 
-B --> H[Trust Signals]
-C --> H
-D --> H
-E --> H
-F --> H
-G --> H
+Keep changes small.
+If you need a structural change, update the diagram and the spec together.
 
-H --> I[Stakeholder Trust]
-```
-```mermaid
-flowchart TB
-  O((Organisation))
+Recommended approach:
 
-  I[Identity]
-  D[Domains & DNS]
-  E[Email Integrity]
-  S[Digital Services]
-  P[Infrastructure & Platforms]
-  T[Third-Party Ecosystem]
-
-  O --- I
-  O --- D
-  O --- E
-  O --- S
-  O --- P
-  O --- T
-
-  I --> X[Trust Signals]
-  D --> X
-  E --> X
-  S --> X
-  P --> X
-  T --> X
-
-  X --> Z[Stakeholder Trust]
----
-
-# How to Explain the Diagram
-
-This is the **boardroom explanation**.
-
-> Organisations emit digital signals through the systems they operate.
->
-> These systems form the organisation’s **Trust Surface**.
->
-> Stakeholders interpret these signals — consciously or unconsciously — to decide whether the organisation can be trusted online.
-
-Those stakeholders include:
-
-* customers
-* partners
-* employees
-* regulators
-
-Weak signals can lead to:
-
-* phishing success
-* brand impersonation
-* service distrust
-* reputational damage
-
-The Trust Surface Framework helps organisations **identify, measure, and govern these signals**.
-
----
-
-# The One-Sentence Explanation
-
-When showing the diagram, you say:
-
-> **“Every organisation emits digital trust signals. The Trust Surface Framework helps you understand and govern them.”**
-
-That line is simple and powerful.
-
----
-
-# Why This Diagram Works
-
-It communicates three key ideas instantly:
-
-1. **Trust comes from signals**
-2. **Signals come from systems**
-3. **Systems must be governed**
-
-Most cybersecurity frameworks focus on **defence**.
-
-This framework focuses on **perception and trust**.
-
-That distinction is important.
-
----
-
-# The More Powerful Version (Later)
-
-Eventually the diagram evolves into something closer to this mental model:
-
-```
-              Stakeholders
-                  ▲
-                  │
-           Trust Signals
-                  ▲
-        ┌─────────────────┐
-        │  Trust Surface  │
-        │                 │
-        │ Identity        │
-        │ Domains & DNS   │
-        │ Email Integrity │
-        │ Digital Services│
-        │ Infrastructure  │
-        │ Third-Party     │
-        └─────────────────┘
-                  ▲
-             Organisation
-```
-
-This becomes the **signature graphic of the framework**.
+- edit the SVG directly (text + simple shapes)
+- keep colours neutral (one accent colour)
+- avoid decorative effects that reduce print legibility
+- include licensing and attribution in the footer line of the diagram

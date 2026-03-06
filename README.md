@@ -1,162 +1,96 @@
-# Trust Surface Framework
+# TrustSurface Framework
 
-The **Trust Surface Framework (TSF)** is a governance model for understanding, measuring, and managing digital trust.
+TrustSurface is a neutral, evidence-led framework for identifying, measuring, and governing the **observable trust signals** an organisation emits at its digital edge.
 
-Modern organisations rely on digital systems to communicate, deliver services, and interact with stakeholders. These systems emit observable signals that influence how trustworthy an organisation appears online.
+It exists because organisations can be internally well-controlled and still appear untrustworthy through weak signals: spoofable email, brittle DNS, inconsistent identity boundaries, unreliable services, and unmanaged third-party integrations.
 
-The Trust Surface Framework introduces a structured way to identify these signals and integrate them into governance and risk management practices.
+## Current release
 
-This repository contains the initial draft of the framework and is published to encourage discussion and consultation.
+- **Framework:** v1.0
+- **Glossary baseline:** v1.0
+- **Last updated:** 2026-03-06
+- **Public normative changelog:** `/changelog/`
 
----
+## Quick links
 
-# Why Digital Trust Matters
+- Website: https://trustsurface.org/
+- Framework overview: https://trustsurface.org/framework/
+- One-page specification: https://trustsurface.org/spec/
+- Print specification (A4): https://trustsurface.org/spec/print/
+- Glossary: https://trustsurface.org/framework/glossary/
+- Adoption guidance: https://trustsurface.org/adoption/
+- Comparative positioning: https://trustsurface.org/comparative/
+- Worked example: https://trustsurface.org/example/
+- Library: https://trustsurface.org/docs/
 
-Stakeholders increasingly evaluate organisations through their digital presence.
+## Normative boundary
 
-Examples include:
+TrustSurface distinguishes between **normative** and **informative** documents.
 
-* whether email communications appear authentic
-* whether websites and services behave reliably
-* whether domain names and infrastructure appear legitimate
-* whether third-party platforms are responsibly governed
+Normative documents currently define the framework’s stable boundaries:
 
-Failures in these areas can quickly erode confidence, even when internal systems remain secure.
+- `framework/03-trust-surface-definition.md`
+- `framework/04-trust-surface-map.md`
+- `framework/06-trust-surface-lifecycle.md`
 
-Many existing technology and cybersecurity frameworks focus on internal controls and compliance.
+All other documents are informative unless explicitly stated otherwise.
 
-The Trust Surface Framework focuses on **observable signals that influence trust perception**.
+## Core concepts
 
----
+Definitions are stabilised through the glossary baseline and used consistently across the site.
 
-# Core Concepts
+- **Trust Surface** — the systems and signals where trust is experienced.
+- **Trust Signal** — an observable indicator describing posture.
+- **Trust Posture** — the evidence-based state implied by signals.
+- **Trust Signal Gap** — intended posture versus observed evidence.
 
-The framework introduces three key concepts.
+## Repository structure
 
-### Trust Surface
+- `assets/` — shared CSS, JavaScript, and docs manifest
+- `data/glossary.json` — single-source glossary definitions used by tooltip highlighting
+- `framework/` — framework source documents and canonical route entrypoints
+- `spec/` — one-page specification and print-friendly specification
+- `diagrams/` — framework diagrams
+- `_redirects` and `_headers` — static host routing and security configuration
+- `scripts/validate_repo.py` — repository hygiene and route validation
 
-The collection of digital systems through which stakeholders interact with an organisation’s digital presence.
+## Deployment notes
 
-Examples include domains, email systems, digital services, infrastructure platforms, and vendor integrations.
+The site is built as a static project for Cloudflare Pages or another static host with support for `_redirects` and `_headers`.
 
----
+Recommended deployment posture:
 
-### Trust Signals
+- Publish the repository root as the site output.
+- Preserve `_redirects` and `_headers` verbatim.
+- Do not introduce rewrite-based routing for `/docs/` or `/framework/`; canonical route folders are the source of truth.
+- Keep Google Fonts allowed in CSP for Poppins rendering, especially for `/spec/print/`.
 
-Observable indicators that demonstrate the trust posture of digital systems.
+## Validation and GitHub hygiene
 
-Examples include:
+A lightweight GitHub Actions workflow runs `scripts/validate_repo.py` on push and pull request. It checks:
 
-* email authentication policies
-* DNS integrity
-* encryption configuration
-* service reliability indicators
-* vendor security attestations
+- required files are present
+- `assets/docs.json` points only to real documents
+- normative status metadata is present
+- canonical route files exist
+- `_redirects` has no conflicting entries
+- print specification loads Poppins and inlines the diagram
 
-These signals provide measurable evidence of digital trust.
+## Licence
 
----
+Framework content is licensed under **Creative Commons Attribution 4.0 (CC BY 4.0)**.
 
-### Trust Lifecycle
+Templates, assessment instruments, and implementation methods are excluded unless explicitly stated.
 
-A structured process for managing digital trust posture.
+See `LICENSE.md`.
 
-```id="2mb7p4"
-Discover → Assess → Harden → Govern → Signal
-```
+## Contributing
 
-This lifecycle enables organisations to identify trust signals, strengthen weak areas, and integrate trust considerations into governance.
+TrustSurface is published to encourage careful reuse, scrutiny, and improvement.
 
----
+Use GitHub issues for:
 
-# Trust Surface Domains
-
-The framework defines six primary domains that shape an organisation’s Trust Surface.
-
-* Identity
-* Domains & DNS
-* Email Integrity
-* Digital Services
-* Infrastructure & Platforms
-* Third-Party Ecosystem
-
-Each domain emits trust signals that influence stakeholder confidence.
-
----
-
-# Framework Structure
-
-The framework currently consists of the following documents.
-
-```
-Digital Trust Problem
-Trust Principles
-Trust Surface Definition
-Trust Surface Map
-Trust Signal Catalogue
-Trust Surface Lifecycle
-```
-
-These documents collectively describe:
-
-* why digital trust matters
-* where trust is experienced
-* how trust signals can be measured
-* how organisations can govern digital trust
-
----
-
-# Intended Audience
-
-The Trust Surface Framework is designed for:
-
-* boards and executive leadership
-* governance and risk professionals
-* technology leaders
-* cybersecurity practitioners
-* organisations seeking clearer ways to discuss digital trust
-
-It provides a shared language for discussing how digital systems influence trust.
-
----
-
-# Status
-
-This repository contains **Trust Surface Framework v0.1**, an early draft published for consultation and discussion.
-
-The framework is expected to evolve through feedback and real-world application.
-
----
-
-# Contributing and Feedback
-
-Digital trust is a complex and evolving topic.
-
-Constructive feedback from practitioners, governance leaders, and researchers is welcome.
-
-Suggestions, discussion, and critique are encouraged as the framework develops.
-
----
-
-# License
-
-This framework is published for open discussion and consultation.
-
-Licensing terms will be defined in a future version of the framework.
-
----
-
-# Next Steps for the Framework
-
-Future iterations of the framework may include:
-
-* expanded Trust Signal catalogues
-* implementation guidance for organisations
-* governance integration models
-* case studies demonstrating Trust Surface assessments
-
----
-
-# Repository Purpose
-
-This repository exists to support transparent development of the Trust Surface Framework and to provide a shared reference for discussions about digital trust governance.
+- clarity corrections
+- link or routing defects
+- glossary consistency issues
+- suggestions for worked examples or comparative references
