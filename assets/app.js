@@ -15,6 +15,9 @@
   const statusEl = $("status");
   const qEl = $("q");
   const docLabelEl = $("docLabel");
+  const docGroupEl = $("docGroup");
+  const jumpEl = $("jump");
+  const relatedEl = $("related");
   const openRawEl = $("openRaw");
   const editGitHubEl = $("editGitHub");
   const raiseIssueEl = $("raiseIssue");
@@ -30,6 +33,9 @@
     "/spec": "SPECIFICATION.md",
     "/example": "WORKED-EXAMPLE-EMAIL-TRUST.md",
     "/origin": "ORIGIN.md",
+    "/adoption": "ADOPTION-GUIDE.md",
+    "/comparative": "COMPARATIVE-POSITIONING.md",
+    "/changelog": "CHANGELOG-PUBLIC.md",
 
     "/framework-map": "FRAMEWORK-MAP.md",
     "/board-questions": "BOARD-QUESTIONS.md",
@@ -48,6 +54,8 @@
     "/framework/gap": "framework/07-trust-signal-gap.md",
     "/framework/maturity": "framework/08-digital-trust-maturity-model.md",
 
+    "/framework/glossary": "framework/09-glossary.md",
+
     // Legacy convenience aliases
     "/maturity-model": "framework/08-digital-trust-maturity-model.md",
     "/trust-signal-catalogue": "framework/05-trust-signal-catalogue.md"
@@ -57,6 +65,9 @@
     "SPECIFICATION.md": "/spec/",
     "WORKED-EXAMPLE-EMAIL-TRUST.md": "/example/",
     "ORIGIN.md": "/origin/",
+
+    "ADOPTION-GUIDE.md": "/adoption/",
+    "COMPARATIVE-POSITIONING.md": "/comparative/",
 
     "FRAMEWORK-MAP.md": "/framework-map/",
     "BOARD-QUESTIONS.md": "/board-questions/",
@@ -72,7 +83,8 @@
     "framework/05-trust-signal-catalogue.md": "/framework/signals/",
     "framework/06-trust-surface-lifecycle.md": "/framework/lifecycle/",
     "framework/07-trust-signal-gap.md": "/framework/gap/",
-    "framework/08-digital-trust-maturity-model.md": "/framework/maturity/"
+    "framework/08-digital-trust-maturity-model.md": "/framework/maturity/",
+    "framework/09-glossary.md": "/framework/glossary/"
   };
 
   const icons = {
@@ -88,6 +100,12 @@
     cycle: iconSvg("M4 12a8 8 0 0 1 14-5", "M18 12a8 8 0 0 1-14 5", true),
     gap: iconSvg("M4 8h7M13 8h7M4 16h10M16 16h4"),
     chart: iconSvg("M5 19V5M5 19h14", "M8 15v-4M12 15v-7M16 15v-2"),
+
+    quote: iconSvg("M7 7h6v6H7V7z", "M11 11h6v6h-6v-6"),
+    book: iconSvg("M6 4h10a2 2 0 0 1 2 2v14H8a2 2 0 0 0-2 2V4z", "M8 20V4"),
+    guide: iconSvg("M6 4h12v16H6V4z", "M9 8h6M9 12h6M9 16h4"),
+    compare: iconSvg("M8 5v14", "M16 19V5"),
+    history: iconSvg("M12 8v5l3 2", "M12 4a8 8 0 1 0 7.75 6", true),
     chat: iconSvg("M4 5h16v10H7l-3 3V5z"),
     plus: iconSvg("M12 5v14", "M5 12h14")
   };
@@ -202,7 +220,7 @@
       empty.className = "small";
       empty.textContent = "No headings.";
       tocNavEl.appendChild(empty);
-      return;
+      return [];
     }
 
     items.forEach((it) => {
@@ -235,6 +253,158 @@
     );
 
     headings.forEach((h) => observer.observe(h));
+
+    return items;
+  }
+
+  const GLOSSARY = {
+    "Trust Surface": "The collection of digital systems and observable signals through which stakeholders experience and judge the trustworthiness of an organisation’s digital presence.",
+    "Trust Signal": "An observable indicator (evidence) that describes the trust posture of a Trust Surface component.",
+    "Trust Signals": "Observable indicators (evidence) that describe trust posture.",
+    "Trust Posture": "The current, evidence-based state of an organisation’s Trust Surface as represented by the strength, consistency, and coverage of its Trust Signals.",
+    "Trust Signal Gap": "The difference between intended posture and the posture actually signalled by observable evidence."
+  };
+
+  function escapeRegExp(s){
+    return String(s).replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  }
+
+  function applyGlossaryTooltips(root){
+    if (!root) return;
+
+    const terms = Object.keys(GLOSSARY).sort((a,b)=>b.length-a.length);
+    const pattern = new RegExp(`\\b(${terms.map(escapeRegExp).join("|")})\\b`, "g");
+
+    const forbidden = new Set(["A","CODE","PRE","H1","H2","H3","H4","H5","H6","SVG","SCRIPT","STYLE"]);
+
+    const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
+      acceptNode: (node) => {
+        const p = node.parentElement;
+        if (!p) return NodeFilter.FILTER_REJECT;
+        if (forbidden.has(p.tagName)) return NodeFilter.FILTER_REJECT;
+        if (p.closest("a, code, pre")) return NodeFilter.FILTER_REJECT;
+        pattern.lastIndex = 0;
+        if (!pattern.test(node.nodeValue)) return NodeFilter.FILTER_REJECT;
+        return NodeFilter.FILTER_ACCEPT;
+      }
+    });
+
+    const nodes = [];
+    while (walker.nextNode()) nodes.push(walker.currentNode);
+
+    nodes.forEach((node) => {
+      const txt = node.nodeValue;
+      pattern.lastIndex = 0;
+      let last = 0;
+      const frag = document.createDocumentFragment();
+      let m;
+      while ((m = pattern.exec(txt)) !== null) {
+        const hit = m[0];
+        const before = txt.slice(last, m.index);
+        if (before) frag.appendChild(document.createTextNode(before));
+
+        const span = document.createElement("span");
+        span.className = "term";
+        span.tabIndex = 0;
+        span.setAttribute("role", "definition");
+        span.setAttribute("aria-label", `${hit}: ${GLOSSARY[hit] || GLOSSARY[hit.replace(/s$/, "")] || ""}`);
+        span.dataset.def = GLOSSARY[hit] || GLOSSARY[hit.replace(/s$/, "")] || "";
+        span.textContent = hit;
+        frag.appendChild(span);
+
+        last = m.index + hit.length;
+      }
+      const after = txt.slice(last);
+      if (after) frag.appendChild(document.createTextNode(after));
+
+      node.parentNode.replaceChild(frag, node);
+    });
+  }
+
+  function decorateCallouts(root){
+    if (!root) return;
+    root.querySelectorAll("blockquote").forEach((bq) => {
+      const t = (bq.textContent || "").trim();
+      if (!t) return;
+
+      const lower = t.toLowerCase();
+
+      // Only treat as a callout when it is explicitly labelled.
+      if (lower.startsWith("status:") || lower.includes("framework version:") || lower.includes("identifier:")) {
+        bq.classList.add("callout", "meta");
+        return;
+      }
+
+      if (lower.startsWith("normative concept")) {
+        bq.classList.add("callout", "normative");
+        return;
+      }
+
+      if (lower.startsWith("example")) {
+        bq.classList.add("callout", "example");
+        return;
+      }
+
+      if (lower.startsWith("note") || lower.startsWith("guidance")) {
+        bq.classList.add("callout", "note");
+        return;
+      }
+    });
+  }
+
+  function renderJump(tocItems){
+    if (!jumpEl) return;
+
+    const h2s = (tocItems || []).filter(i => i.level === "h2");
+    if (h2s.length < 4) { jumpEl.innerHTML = ""; return; }
+
+    const links = h2s.slice(0, 10).map(i => {
+      const safe = escapeHtml(i.text);
+      return `<a href="#${i.id}" data-id="${i.id}">${safe}</a>`;
+    }).join("");
+
+    jumpEl.innerHTML = `<div class="jumpLabel">Jump to</div><div class="jumpLinks">${links}</div>`;
+
+    jumpEl.querySelectorAll("a[data-id]").forEach((a) => {
+      a.addEventListener("click", (e) => {
+        e.preventDefault();
+        const id = a.dataset.id;
+        document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
+        history.replaceState({}, "", `#${id}`);
+        setActiveTOC(id);
+      });
+    });
+  }
+
+  function renderRelated(docPath){
+    if (!relatedEl) return;
+
+    const base = {
+      spec: { href: "/spec/", title: "One-page specification", desc: "Normative summary: definitions, domains, and operating rhythm." },
+      glossary: { href: "/framework/glossary/", title: "Glossary v1.0", desc: "Stable vocabulary for surface, signals, posture, and gaps." },
+      adoption: { href: "/adoption/", title: "Adoption guidance", desc: "Cadence, roles, evidence artefacts, and operating rhythm." },
+      compare: { href: "/comparative/", title: "Comparative positioning", desc: "How TrustSurface complements governance and assurance standards." },
+      changelog: { href: "/changelog/", title: "Changelog (Public)", desc: "Normative-only changes to definitions, domains, lifecycle, and structure." },
+      example: { href: "/example/", title: "Worked example", desc: "Email integrity example, end-to-end." },
+      print: { href: "/spec/print/", title: "Print specification", desc: "A4-friendly page for PDF export." }
+    };
+
+    const byDoc = {
+      "SPECIFICATION.md": [base.glossary, base.changelog, base.adoption, base.print],
+      "framework/09-glossary.md": [base.spec, base.changelog, base.adoption, base.compare],
+      "CHANGELOG-PUBLIC.md": [base.spec, base.glossary, base.compare],
+      "ADOPTION-GUIDE.md": [base.spec, base.glossary, base.example],
+      "COMPARATIVE-POSITIONING.md": [base.spec, base.glossary, base.adoption],
+      "WORKED-EXAMPLE-EMAIL-TRUST.md": [base.spec, base.glossary, base.adoption]
+    };
+
+    const list = byDoc[docPath] || [base.spec, base.glossary, base.adoption, base.compare, base.changelog];
+
+    const cards = list.map((c) => {
+      return `<a class="relatedCard" href="${c.href}"><div class="relatedTitle">${escapeHtml(c.title)}</div><div class="small">${escapeHtml(c.desc)}</div></a>`;
+    }).join("");
+
+    relatedEl.innerHTML = `<div class="relatedHead"><div class="relatedH">Related reading</div><a class="tocLink" href="/docs/">Library</a></div><div class="relatedGrid">${cards}</div>`;
   }
 
   function setActiveTOC(id) {
@@ -274,7 +444,7 @@
     });
 
     // Stable order (Start here, Core framework, Governance prompts, Adoption)
-    const preferred = ["Start here", "Core framework", "Governance prompts", "Adoption", "Documents"];
+    const preferred = ["Start here", "Core framework", "Guidance", "Governance prompts", "Contribute", "Documents"];
     const ordered = [];
 
     preferred.forEach((g) => {
@@ -332,6 +502,7 @@
 
     const labelHit = items.find((i) => normaliseDocPath(i.path) === docPath);
     docLabelEl.textContent = labelHit?.label || docPath;
+    if (docGroupEl) docGroupEl.textContent = labelHit?.group || "Documents";
 
     // Actions
     openRawEl.href = `/${docPath}`;
@@ -357,6 +528,8 @@
 
     const md = await res.text();
 
+    const meta = extractDocMeta(md);
+
     // Markdown -> HTML (marked) -> Sanitise (DOMPurify)
     const rawHtml = window.marked.parse(md, { mangle: false, headerIds: false });
     const cleanHtml = window.DOMPurify.sanitize(rawHtml, {
@@ -367,7 +540,11 @@
     docEl.innerHTML = cleanHtml;
 
     rewriteLinks(docPath, docEl);
-    buildTOC(docEl);
+    const tocItems = buildTOC(docEl) || [];
+    renderJump(tocItems);
+    decorateCallouts(docEl);
+    applyGlossaryTooltips(docEl);
+    renderRelated(docPath);
 
     // Scroll to hash if present
     if (location.hash) {
@@ -379,7 +556,28 @@
     // Highlight current
     renderNav(items, docPath);
 
-    statusEl.textContent = "Loaded";
+    const bits = [];
+    if (meta.frameworkVersion) bits.push(`Framework ${meta.frameworkVersion}`);
+    else if (meta.docVersion) bits.push(`v${meta.docVersion.replace(/^v/i, "")}`);
+    if (meta.lastUpdated) bits.push(`Updated ${meta.lastUpdated}`);
+    statusEl.textContent = bits.length ? `Loaded • ${bits.join(" • ")}` : "Loaded";
+  }
+
+
+  function extractDocMeta(md){
+    const out = {};
+
+    // Common patterns in repo document headers.
+    const ver = md.match(/\bFramework version:\s*(v?[0-9]+(?:\.[0-9]+)*)/i);
+    if (ver) out.frameworkVersion = ver[1];
+
+    const v2 = md.match(/\*\*Version:\*\*\s*([Vv]?[0-9]+(?:\.[0-9]+)*(?:\s*\([^\n\)]*\))?)/);
+    if (v2) out.docVersion = v2[1].trim();
+
+    const updated = md.match(/Last updated:\s*([0-9]{4}[\-\u2011][0-9]{2}[\-\u2011][0-9]{2})/i);
+    if (updated) out.lastUpdated = updated[1];
+
+    return out;
   }
 
   async function navigateToDoc(docPath, items) {

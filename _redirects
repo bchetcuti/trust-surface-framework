@@ -1,49 +1,43 @@
-/docs /docs.html 200
-/docs/ /docs.html 200
-/framework /framework.html 200
-/framework/ /framework.html 200
-/app /app.html 200
-/app/ /app.html 200
+# Canonicalise trailing slashes (avoid redirect loops)
+/docs /docs/ 301
+/framework /framework/ 301
+/app /app/ 301
+/spec /spec/ 301
+/example /example/ 301
+/origin /origin/ 301
+/adoption /adoption/ 301
+/comparative /comparative/ 301
+/changelog /changelog/ 301
+/framework-map /framework-map/ 301
+/board-questions /board-questions/ 301
+/consultation /consultation/ 301
+/citation /citation/ 301
+/licence /licence/ 301
+/contributing /contributing/ 301
 
-/spec /docs.html 200
-/spec/ /docs.html 200
-/example /docs.html 200
-/example/ /docs.html 200
-/origin /docs.html 200
-/origin/ /docs.html 200
-/framework-map /docs.html 200
-/framework-map/ /docs.html 200
-/board-questions /docs.html 200
-/board-questions/ /docs.html 200
-/consultation /docs.html 200
-/consultation/ /docs.html 200
-/citation /docs.html 200
-/citation/ /docs.html 200
-/licence /docs.html 200
-/licence/ /docs.html 200
-/contributing /docs.html 200
-/contributing/ /docs.html 200
+/framework/problem /framework/problem/ 301
+/framework/principles /framework/principles/ 301
+/framework/definition /framework/definition/ 301
+/framework/domains /framework/domains/ 301
+/framework/signals /framework/signals/ 301
+/framework/lifecycle /framework/lifecycle/ 301
+/framework/gap /framework/gap/ 301
+/framework/maturity /framework/maturity/ 301
+/framework/glossary /framework/glossary/ 301
 
-/framework/problem /docs.html 200
-/framework/problem/ /docs.html 200
-/framework/principles /docs.html 200
-/framework/principles/ /docs.html 200
-/framework/definition /docs.html 200
-/framework/definition/ /docs.html 200
-/framework/domains /docs.html 200
-/framework/domains/ /docs.html 200
-/framework/signals /docs.html 200
-/framework/signals/ /docs.html 200
-/framework/lifecycle /docs.html 200
-/framework/lifecycle/ /docs.html 200
-/framework/gap /docs.html 200
-/framework/gap/ /docs.html 200
-/framework/maturity /docs.html 200
-/framework/maturity/ /docs.html 200
+/spec/print /spec/print/ 301
 
-/maturity-model /docs.html 200
-/maturity-model/ /docs.html 200
-/trust-signal-catalogue /docs.html 200
-/trust-signal-catalogue/ /docs.html 200
-/model-diagram /diagrams/trust-surface.svg 200
-/model-diagram/ /diagrams/trust-surface.svg 200
+# Legacy HTML entrypoints
+/docs.html /docs/ 301
+/framework.html /framework/ 301
+/app.html /app/ 301
+
+# Convenience: diagram alias
+/model-diagram /diagrams/trust-surface.svg 301
+/model-diagram/ /diagrams/trust-surface.svg 301
+
+# Legacy aliases (keep old links working)
+/maturity-model /framework/maturity/ 301
+/trust-signal-catalogue /framework/signals/ 301
+/trust-surface-definition /framework/definition/ 301
+/trust-surface-domains /framework/domains/ 301

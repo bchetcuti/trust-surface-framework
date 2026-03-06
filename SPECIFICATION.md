@@ -1,30 +1,44 @@
 # TrustSurface Framework — One‑Page Specification
 
+> **Status:** Normative
+> **Framework version:** v1.0
+> **Vocabulary baseline:** Glossary v1.0 (TSF‑GLO‑1)
+> **Last updated:** 2026‑03‑06
+
+
 **Identifier:** TSF‑SPEC‑1
 
-**Version:** 0.2 (Public Draft)
+**Version:** v1.0 (Public Release)
+
+**Vocabulary baseline:** Glossary v1.0 (TSF‑GLO‑1)
 
 **Author:** Bryan Chetcuti
 
 **Year:** 2026
+
+**Changelog:** /changelog/ (normative-only)
 
 ---
 
 ## 1. Purpose
 TrustSurface defines a neutral, evidence‑led method to:
 
-- identify an organisation’s trust surface
-- measure observable trust signals
-- govern trust posture through a repeatable operating rhythm
+- identify an organisation’s Trust Surface
+- measure observable Trust Signals
+- govern Trust Posture through a repeatable operating rhythm
 
 **Purpose sentence:** TrustSurface is a practitioner-led framework for identifying, measuring, and governing the observable trust signals an organisation emits at its digital edge.
 
-## 2. Definitions
-**Trust surface:** externally-facing systems, touchpoints, and observable signals through which trustworthiness is experienced and evaluated.
+## 2. Definitions (normative)
+Definitions in this specification align to **TrustSurface Glossary v1.0**.
 
-**Trust signal:** an observable indicator (evidence) that describes the posture of a trust surface component.
+**Trust Surface:** the collection of digital systems and observable signals through which stakeholders experience and judge the trustworthiness of an organisation’s digital presence.
 
-**Trust signal gap:** the difference between intended posture and the posture signalled externally, evidenced by trust signals.
+**Trust Signal:** an observable indicator (evidence) that describes the trust posture of a Trust Surface component.
+
+**Trust Posture:** the current, evidence-based state of an organisation’s Trust Surface as represented by the strength, consistency, and coverage of its Trust Signals.
+
+**Trust Signal Gap:** the difference between intended posture and the posture actually signalled by observable evidence.
 
 ## 3. Domain model
 TrustSurface SHALL be described using the following domain set:
@@ -47,7 +61,7 @@ Minimum outputs:
 - **Assess:** Trust Signal Scorecard + evidence links
 - **Harden:** prioritised backlog + 30/60/90‑day plan
 - **Govern:** decision rights + change controls + cadence
-- **Signal:** stable trust communication (context dependent)
+- **Signal:** verifiable trust communications (context dependent)
 
 ## 5. Visual anchor
 ![TrustSurface Framework diagram](/diagrams/trust-surface.svg)
@@ -63,4 +77,4 @@ Out of scope:
 
 ## 7. Licensing
 Core framework content is licensed under **CC BY 4.0**.
-Implementation templates and assessment instruments are excluded unless explicitly stated.
+Implementation templates, assessment instruments, and delivery methods are excluded unless explicitly stated.

@@ -1,57 +1,74 @@
-# Why TrustSurface Exists
+# Origin — Why TrustSurface Exists
 
-TrustSurface emerged from a pattern seen across incident response, delivery, governance, and “simple” hygiene work.
+TrustSurface emerged from recurring patterns seen across incident response, delivery, and governance work.
 
-Organisations would invest heavily in internal security programs and still be exposed to failures that were:
+Organisations would invest heavily in cybersecurity programs and still suffer trust failures that were:
 
-- obvious to attackers,
-- visible to customers,
-- and difficult for leadership to govern.
+- obvious to attackers
+- visible to customers and partners
+- difficult for leadership to govern
 
-The failures were rarely exotic.
-They were the boring basics at the digital edge: spoofable email, brittle DNS, inconsistent identity boundaries, and unmanaged vendor integrations.
+These failures were rarely exotic.
+They were the “boring basics” at the digital edge: spoofable email, brittle DNS, inconsistent identity boundaries, and unmanaged vendor integrations.
 
 ## The recurring pattern
-Across different organisations and sectors, the same dynamics repeated:
+Across organisations and sectors, the same dynamics repeated.
 
-1. **Trust is experienced externally, but governed internally.**
+1. **Trust is experienced externally, but governed internally.**  
    Teams measure internal controls; stakeholders experience external signals.
 
-2. **Ownership is fragmented.**
-   Domains are “marketing”, email is “IT”, vendors are “procurement”, identity is “security”, and nobody owns the joined-up outcome.
+2. **Ownership is fragmented.**  
+   Domains become “marketing”, email becomes “IT”, vendors become “procurement”, identity becomes “security” — and nobody owns the joined-up trust outcome.
 
-3. **Evidence is expensive.**
-   When procurement, regulators, or a board ask for assurance, the organisation enters a scramble to assemble proof.
+3. **Evidence is expensive.**  
+   When procurement, regulators, or boards ask for assurance, organisations scramble to assemble proof across disconnected teams and systems.
 
-4. **Change causes regressions.**
-   Trust posture decays through migrations, new vendors, and configuration drift.
+4. **Change causes regressions.**  
+   Trust posture decays through migrations, new vendors, and configuration drift. The failure is not a lack of intent — it is a lack of operating rhythm.
 
-In practice, this is not just a security problem. It is a governance problem.
+In practice, this is not just a security problem.
+It is a governance and accountability problem.
 
-## The idea behind the term “trust surface”
+## Why the term “Trust Surface”
+
 The term is deliberate.
-It reframes trust as something that happens at a surface — a boundary where systems and stakeholders meet.
+
+It reframes digital trust as something that happens at a surface — a boundary where systems and stakeholders meet.
 
 It also reframes trust as something that can be:
 
-- inventoried,
-- measured,
-- governed,
-- and improved.
+- inventoried
+- measured with observable signals
+- governed through ownership and change control
+- improved through a repeatable lifecycle
 
 ## Why release it publicly
-TrustSurface is being published as a public‑good vocabulary because the problem is shared.
 
-A neutral standard helps:
+The trust signal gap is widespread, and the language to describe it is inconsistent.
 
-- boards ask better questions,
-- practitioners align work across teams,
-- procurement and assurance reduce friction,
-- and organisations reduce the likelihood of avoidable trust failures.
+TrustSurface is published as a public-good vocabulary to make trust posture:
+
+- discussable across technical and governance audiences
+- measurable through evidence, not assurance
+- operable as a cadence, not a one-off hardening project
 
 TrustSurface is intentionally **not** a product.
-The tools and templates that implement it can vary.
-The shared language is the asset.
+Tools and templates can vary.
+The shared model and vocabulary are the asset.
+
+## What is included (and what is not)
+
+Included:
+
+- the core framework documents and diagram
+- the glossary and the operating rhythm
+- guidance for adoption and comparative positioning
+
+Excluded (unless explicitly licensed):
+
+- proprietary assessment instruments
+- implementation templates and delivery methods
 
 ## Authorship
-TrustSurface is authored and maintained by **Bryan Chetcuti** and is open to improvement via consultation.
+
+TrustSurface is authored and maintained by **Bryan Chetcuti** and is open to improvement via consultation and contributions.
