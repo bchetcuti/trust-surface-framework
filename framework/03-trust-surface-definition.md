@@ -1,54 +1,77 @@
-# 03 — Trust Surface Definition
+# What is a Trust Surface?
+
+Digital systems are now the primary interface between organisations and their stakeholders.
+
+Stakeholders interact with organisations through digital channels such as:
+
+- email communications
+- websites and online services
+- domain names
+- application platforms
+- third‑party services
+
+These systems collectively shape how trustworthy an organisation appears in the digital environment.
+
+The **Trust Surface** describes the systems and observable signals through which this trust is experienced.
+
+(Definitions align to TrustSurface Glossary v1.0.)
+
+---
 
 ## Definition
-**Trust surface**
 
-> The set of externally-facing digital systems, touchpoints, and **observable signals** through which an organisation’s trustworthiness is experienced and evaluated.
+**Trust Surface**
 
-A trust surface is defined by what is *seen* and *verifiable* at the edge: protocols, configurations, behaviours, policies, and assurance evidence.
+> The collection of digital systems and observable signals through which stakeholders experience and judge the trustworthiness of an organisation’s digital presence.
 
-## Scope
-A trust surface typically includes:
+The Trust Surface includes both the systems an organisation operates and the signals those systems emit.
 
-- **Identity boundary** (authentication, session, federation, delegated access)
-- **Domains & DNS** (ownership, routing, integrity, availability)
-- **Email integrity** (authentication, alignment, reporting)
-- **Digital services** (websites, portals, APIs, integrations)
-- **Infrastructure & platforms** (hosting, certificates, edge services)
-- **Third‑party ecosystem** (SaaS, vendors, supply‑chain trust)
+Examples include:
 
-The trust surface includes both:
+- domain ownership and DNS configuration
+- email authentication policies
+- encryption and certificate posture
+- reliability of digital services
+- vendor platforms connected to organisational systems
 
-- **systems you operate**; and
-- **systems you rely on** (where trust is delegated).
+Together, these elements shape Trust Posture.
 
-## Trust surface vs attack surface
-TrustSurface is adjacent to attack surface thinking, but not interchangeable.
+## Why the Trust Surface matters
 
-| Concept | Primary question | Primary concern |
-|---|---|---|
-| Attack surface | “Where can we be attacked?” | technical entry points and vulnerabilities |
-| Trust surface | “How trustworthy do we appear, based on evidence?” | externally visible posture, governance, and assurance |
+Stakeholders rarely see internal controls or governance processes.
 
-Attack surface management is necessary.
-Trust surface governance ensures that what the organisation *signals* externally aligns with how it intends to operate.
+Instead, they experience signals such as:
 
-## Why the definition matters
-Most stakeholders never see internal controls.
-They experience only signals:
+- whether an email appears authentic
+- whether a website connection is secure
+- whether a service functions reliably
+- whether a third‑party platform behaves appropriately
 
-- Is this email authentic?
-- Is this site legitimate and secured correctly?
-- Does this service behave consistently and reliably?
-- Are third parties governed, or is risk outsourced by accident?
+Failures at the Trust Surface often lead stakeholders to question the organisation itself.
 
-When these signals drift, trust debt accumulates.
-TrustSurface exists to make the drift measurable, governable, and fixable.
+## Trust Surface vs attack surface
 
-## Key term
-**Trust signal** — an observable indicator (evidence) that describes the posture of a trust surface component.
+The Trust Surface is related to, but distinct from, the concept of an **Attack Surface**.
 
-Examples include DNS integrity signals, email authentication alignment, certificate posture, published policy, uptime, and vendor assurance artefacts.
+| Concept | Focus |
+|---|---|
+| Attack Surface | Technical entry points through which systems can be attacked |
+| Trust Surface | Signals and behaviours through which stakeholders evaluate trust |
 
-## Document status
-This definition is intended to be stable and reusable as a reference term across the framework.
+Attack surface management focuses on vulnerabilities.
+TrustSurface governance focuses on observable trust posture and the organisational discipline required to maintain it.
+
+## Why Trust Surface governance is necessary
+
+In many organisations, Trust Surface components are managed by different teams.
+
+Examples include:
+
+- technology teams managing infrastructure
+- marketing teams registering domains
+- procurement teams selecting SaaS platforms
+- communications teams operating digital channels
+
+Because responsibility is distributed, organisations may lack a unified understanding of how these systems collectively influence trust.
+
+TrustSurface provides a structured way to inventory, assess, harden, and govern this surface over time.

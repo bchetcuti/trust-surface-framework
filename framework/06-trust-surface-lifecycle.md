@@ -1,62 +1,90 @@
-# 06 — TrustSurface Operating Rhythm
+# Trust Surface Lifecycle
 
-TrustSurface is designed to be run as a repeatable operating rhythm.
-Trust posture changes with systems, vendors, and configuration drift; therefore trust must be *maintained*.
+The Trust Surface Lifecycle provides a structured operating rhythm for identifying, assessing, improving, and governing an organisation’s Trust Posture.
 
-## The cycle
+Digital trust is not static.
+Changes in infrastructure, vendors, domains, or services can alter the Trust Signals an organisation emits.
+
+The lifecycle ensures trust posture is **maintained**, not assumed.
+
+(Definitions align to TrustSurface Glossary v1.0.)
+
+---
+
+## Lifecycle overview
 
 **Discover → Assess → Harden → Govern → Signal → (repeat)**
 
-## 1) Discover
-**Objective:** establish what exists at the trust surface.
+## Stage 1 — Discover
 
-**Minimum outputs:**
-- Trust Surface Inventory (domains, identity providers, email services, public apps/APIs, key vendors)
-- Ownership map (who owns what)
+Identify the systems that make up the Trust Surface.
 
-**Success condition:** nothing trust‑critical is “unknown” or “owned by nobody”.
+Typical inclusions:
 
-## 2) Assess
-**Objective:** evaluate posture using observable trust signals.
+- registered domains and DNS infrastructure
+- email platforms and sending services
+- websites, portals, and APIs
+- identity boundaries and authentication services
+- cloud platforms and hosting
+- third‑party SaaS providers and integrations
 
-**Minimum outputs:**
-- Trust Signal Scorecard (baseline signals by domain)
-- Evidence links (what proves the score)
+**Output:** Trust Surface Inventory (with ownership)
 
-**Success condition:** posture is evidence‑backed, not opinion‑based.
+## Stage 2 — Assess
 
-## 3) Harden
-**Objective:** close the highest‑impact trust signal gaps.
+Evaluate the Trust Surface using the Trust Signal Catalogue.
 
-**Minimum outputs:**
-- Prioritised hardening backlog (likelihood × trust impact)
-- A 30/60/90‑day hardening plan
+Signals are observed or verified to determine posture and evidence coverage.
 
-**Success condition:** gaps are treated as work with owners, not “known issues”.
+**Output:** Trust Signal Scorecard (with evidence links)
 
-## 4) Govern
-**Objective:** keep trust posture stable under change.
+## Stage 3 — Harden
 
-**Minimum outputs:**
-- TrustSurface ownership + decision rights
-- Change controls for trust‑critical assets (DNS, IdP, email auth, public endpoints)
-- Reporting cadence and escalation paths
+Strengthen weak or inconsistent trust signals.
 
-This stage aligns naturally with enterprise risk governance models and the “Govern” function in contemporary cyber frameworks. citeturn27search3turn27search11
+Typical actions:
 
-**Success condition:** trust regressions are prevented by design, not detected late.
+- enforce DMARC policies and alignment
+- improve domain governance and DNS hygiene
+- strengthen authentication boundaries
+- harden public service posture (TLS, headers, availability)
+- address vendor governance gaps
 
-## 5) Signal
-**Objective:** communicate posture in a stable, verifiable way.
+**Output:** Hardening backlog + 30/60/90‑day plan
 
-**Minimum outputs (context dependent):**
-- published policy (e.g., email authentication, security contact)
+## Stage 4 — Govern
+
+Integrate trust posture into governance practices so it stays strong over time.
+
+Governance mechanisms may include:
+
+- assigning accountability for Trust Surface domains
+- incorporating trust posture into risk reporting
+- integrating signals into procurement and vendor onboarding
+- establishing regular Trust Surface reviews
+- defining exception handling with expiry
+
+**Output:** Governance controls (ownership, change control, cadence)
+
+## Stage 5 — Signal
+
+Communicate trust posture in ways stakeholders can verify.
+
+The goal is not marketing.
+It is credible, appropriate transparency.
+
+Examples include:
+
 - service status transparency
-- executive/board reporting artefacts
+- security contact and disclosure pathways
+- clear incident communications
 
-**Success condition:** stakeholders can validate trust posture without bespoke assurance work.
+**Output:** Trust signalling mechanisms (appropriate to context)
 
-## Operating guidance
-- Run the full cycle at least quarterly for high‑change environments; otherwise semi‑annually.
-- Run a lightweight check after any trust‑critical change (DNS, email sending sources, IdP changes, new vendor integrations).
-- Treat evidence as a first‑class artefact; if it isn’t evidenced, it doesn’t exist.
+---
+
+## Why the lifecycle matters
+
+Without a lifecycle, organisations often address trust issues only after incidents.
+
+The Trust Surface Lifecycle creates a repeatable rhythm that turns trust into evidence, work, and governance controls.

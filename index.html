@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>TrustSurface — Digital Trust, made governable</title>
-  <meta name="description" content="TrustSurface is a practitioner-led framework for identifying, measuring, and governing the observable trust signals organisations emit at their digital edge." />
+  <title>TrustSurface — Digital trust, made governable</title>
+  <meta name="description" content="TrustSurface is a neutral, evidence-led framework for identifying, measuring, and governing the observable trust signals organisations emit at their digital edge." />
 
   <!-- Poppins -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,7 +19,7 @@
   <link rel="canonical" href="https://trustsurface.org/" />
 </head>
 
-<body class="tsf-home">
+<body class="tsf-home drawer">
   <div class="shell">
 
     <!-- Sidebar -->
@@ -39,32 +39,34 @@
 
       <div class="sideControls">
         <div class="sideLinks">
-          <a class="link" href="/framework">Framework</a>
-          <a class="link" href="/spec">Spec</a>
-          <a class="link" href="/example">Example</a>
-          <a class="link" href="/origin">Origin</a>
-          <a class="link" href="/docs">Library</a>
+          <a class="link" href="/framework/">Framework</a>
+          <a class="link" href="/framework/glossary/">Glossary</a>
+          <a class="link" href="/adoption/">Adoption</a>
+          <a class="link" href="/comparative/">Compare</a>
+          <a class="link" href="/docs/">Library</a>
         </div>
       </div>
 
       <nav class="nav" aria-label="Primary navigation">
-        <a class="navItem" href="/framework">Framework overview</a>
-        <a class="navItem" href="/spec">One-page specification</a>
-        <a class="navItem" href="/example">Worked example</a>
-        <a class="navItem" href="/docs?doc=BOARD-QUESTIONS.md">Board questions</a>
+        <a class="navItem" href="/spec/">One-page specification</a>
+        <a class="navItem" href="/spec/print/">Print specification (A4)</a>
+        <a class="navItem" href="/example/">Worked example</a>
+        <a class="navItem" href="/board-questions/">Board questions</a>
         <a class="navItem" href="/diagrams/trust-surface.svg" target="_blank" rel="noopener noreferrer">Framework diagram (SVG)</a>
       </nav>
 
       <div class="sideFooter">
-        <div class="small">Core framework content: <a class="link" href="/licence">CC BY 4.0</a></div>
+        <div class="small">Framework content: <a class="link" href="/licence/">CC BY 4.0</a> • Templates excluded</div>
         <div class="mono">© 2026 Bryan Chetcuti</div>
         <div class="small" style="margin-top:10px;">
-          <a class="link" href="/consultation">Consultation</a>
+          <a class="link" href="/consultation/">Consultation</a>
           <span class="sep">•</span>
           <a class="link" href="https://github.com/Bchetcuti/trust-surface-framework" target="_blank" rel="noopener noreferrer">GitHub</a>
         </div>
       </div>
     </aside>
+
+    <div class="navBackdrop" id="navBackdrop" aria-hidden="true"></div>
 
     <!-- Main -->
     <main class="main">
@@ -79,12 +81,15 @@
             </svg>
             <div>
               <div class="homeDomain">trustsurface.org</div>
-              <div class="homeStatus">Public Draft v0.2 • CC BY 4.0 • Evidence-led</div>
+              <div class="homeStatus">Framework v0.3 (Public Draft) • Glossary v1.0 • CC BY 4.0</div>
             </div>
           </div>
-          <div class="homePillBadge" title="Release status">
-            <span class="homeDot" aria-hidden="true"></span>
-            Public Draft
+          <div style="display:flex; gap:10px; align-items:center;">
+            <a class="btn" id="menuBtn" href="#">Menu</a>
+            <div class="homePillBadge" title="Release status">
+              <span class="homeDot" aria-hidden="true"></span>
+              Public Draft
+            </div>
           </div>
         </div>
 
@@ -93,19 +98,21 @@
           <h1 class="homeH1">TrustSurface <span class="homeH1Muted">Framework</span></h1>
 
           <p class="homeLead">
-            A practitioner-led framework for identifying, measuring, and governing the <strong>observable trust signals</strong>
-            organisations emit at their digital edge.
+            Digital trust fails at the surface: email, domains, identity boundaries, public services, and vendor integrations.
+            TrustSurface makes that surface <strong>observable</strong>, <strong>evidence-based</strong>, and <strong>governable</strong>.
           </p>
 
           <p class="homeHint">
-            TrustSurface exists to turn digital trust into something you can <strong>inventory</strong>, <strong>evidence</strong>, <strong>govern</strong>, and <strong>improve</strong> — without relying on sales decks or internal assurances.
+            Many organisations can demonstrate strong internal controls and still emit weak trust signals.
+            The operational cost shows up as impersonation, assurance friction, and posture decay through change.
           </p>
 
           <div class="homeCtas">
-            <a class="btn primary" href="/framework">Read the framework</a>
-            <a class="btn" href="/spec">One-page spec</a>
-            <a class="btn" href="/example">Worked example</a>
-            <a class="btn" href="/docs">Library</a>
+            <a class="btn primary" href="/framework/">Read the framework</a>
+            <a class="btn" href="/framework/glossary/">Glossary v1.0</a>
+            <a class="btn" href="/adoption/">Adoption guidance</a>
+            <a class="btn" href="/spec/print/">Print spec</a>
+            <a class="btn" href="/docs/">Library</a>
           </div>
         </section>
 
@@ -116,21 +123,21 @@
           <section class="card">
             <div class="homeSectionTitle">Why trust surfaces matter</div>
             <p class="homeSmall">
-              Most organisations govern internal controls. Stakeholders experience only what is visible at the surface:
+              Most organisations govern internal controls. Stakeholders experience only what is visible at the digital edge:
               authentic email, legitimate domains, secure connections, predictable services, and governed third‑party dependencies.
             </p>
 
             <ul class="homeBullets">
-              <li><strong>Incident amplification</strong>: spoofing, brand impersonation, account takeover.</li>
+              <li><strong>Incident amplification</strong>: spoofing, brand impersonation, preventable trust failures.</li>
               <li><strong>Assurance drag</strong>: repeated “prove it” cycles for audits, procurement, and cyber insurance.</li>
               <li><strong>Trust debt</strong>: posture decays through ownership fragmentation and configuration drift.</li>
             </ul>
 
             <div class="homeSectionTitle homeSectionTitleTight">Start here</div>
             <div class="homeStartRow">
-              <a class="homeStartChip" href="/framework"><strong>Framework</strong> → overview and core definitions</a>
-              <a class="homeStartChip" href="/spec"><strong>Spec</strong> → one-page printable summary</a>
-              <a class="homeStartChip" href="/example"><strong>Example</strong> → email integrity walkthrough</a>
+              <a class="homeStartChip" href="/spec/"><strong>Spec</strong> → one-page framework definition</a>
+              <a class="homeStartChip" href="/framework/glossary/"><strong>Glossary</strong> → stabilised vocabulary</a>
+              <a class="homeStartChip" href="/example/"><strong>Example</strong> → email integrity walkthrough</a>
             </div>
 
             <div class="homeSectionTitle homeSectionTitleTight">Featured documents</div>
@@ -152,18 +159,19 @@
           <aside class="card">
             <div class="homeSectionTitle">What TrustSurface is</div>
             <ul class="homeBullets">
-              <li><strong>Trust surface</strong>: the systems where trust is experienced (not declared).</li>
-              <li><strong>Trust signals</strong>: observable indicators (evidence) describing posture.</li>
+              <li><strong>Trust Surface</strong>: the systems and signals where trust is experienced.</li>
+              <li><strong>Trust Signals</strong>: observable indicators (evidence) describing posture.</li>
+              <li><strong>Trust Posture</strong>: evidence-based state implied by signals.</li>
               <li><strong>Operating rhythm</strong>: Discover → Assess → Harden → Govern → Signal.</li>
             </ul>
 
             <div class="quote homeQuote">Trust is not declared. It is observed.</div>
 
-            <div class="homeSectionTitle homeSectionTitleTight">Trust surface domains</div>
+            <div class="homeSectionTitle homeSectionTitleTight">Trust Surface domains</div>
             <p class="homeSmall">A small domain model so governance and delivery teams can talk about the same thing — with evidence.</p>
 
             <div class="homeDomainList">
-              <a class="homeDomainItem" href="/trust-surface-definition">
+              <a class="homeDomainItem" href="/framework/domains/">
                 <span class="homeIcon" aria-hidden="true">
                   <svg viewBox="0 0 24 24" fill="none">
                     <path d="M12 12a4 4 0 1 0-4-4 4 4 0 0 0 4 4Z" stroke="currentColor" stroke-width="1.8"/>
@@ -176,7 +184,7 @@
                 </span>
               </a>
 
-              <a class="homeDomainItem" href="/trust-surface-domains">
+              <a class="homeDomainItem" href="/framework/domains/">
                 <span class="homeIcon" aria-hidden="true">
                   <svg viewBox="0 0 24 24" fill="none">
                     <path d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18Z" stroke="currentColor" stroke-width="1.8"/>
@@ -190,7 +198,7 @@
                 </span>
               </a>
 
-              <a class="homeDomainItem" href="/trust-signal-catalogue">
+              <a class="homeDomainItem" href="/framework/signals/">
                 <span class="homeIcon" aria-hidden="true">
                   <svg viewBox="0 0 24 24" fill="none">
                     <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
@@ -202,7 +210,7 @@
                 </span>
               </a>
 
-              <a class="homeDomainItem" href="/maturity-model">
+              <a class="homeDomainItem" href="/framework/maturity/">
                 <span class="homeIcon" aria-hidden="true">
                   <svg viewBox="0 0 24 24" fill="none">
                     <path d="M6 19V9M12 19V5M18 19v-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
@@ -218,9 +226,9 @@
             <div class="footer" style="margin-top:18px;">
               <div>© 2026 Bryan Chetcuti</div>
               <div class="footerLinks">
-                <a href="/licence">CC BY 4.0</a>
+                <a href="/licence/">CC BY 4.0</a>
                 <span class="sep">•</span>
-                <a href="/citation">Citation</a>
+                <a href="/citation/">Citation</a>
               </div>
             </div>
           </aside>
@@ -231,5 +239,6 @@
   </div>
 
   <script src="/assets/home.js" defer></script>
+  <script src="/assets/site.js" defer></script>
 </body>
 </html>

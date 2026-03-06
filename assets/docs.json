@@ -4,8 +4,9 @@
   "repo": "https://github.com/Bchetcuti/trust-surface-framework",
   "items": [
     { "group": "Start here", "label": "One-page specification", "path": "SPECIFICATION.md", "icon": "doc", "tags": ["Spec"] },
+    { "group": "Start here", "label": "Glossary v1.0", "path": "framework/09-glossary.md", "icon": "book", "tags": ["Vocabulary"] },
     { "group": "Start here", "label": "Framework map", "path": "FRAMEWORK-MAP.md", "icon": "map", "tags": ["Model"] },
-    { "group": "Start here", "label": "Worked example: Email trust", "path": "WORKED-EXAMPLE-EMAIL-TRUST.md", "icon": "example", "tags": ["Example"] },
+    { "group": "Start here", "label": "Worked example: Email integrity", "path": "WORKED-EXAMPLE-EMAIL-TRUST.md", "icon": "example", "tags": ["Example"] },
     { "group": "Start here", "label": "Origin", "path": "ORIGIN.md", "icon": "quote", "tags": ["Narrative"] },
 
     { "group": "Core framework", "label": "The digital trust problem", "path": "framework/01-digital-trust-problem.md", "icon": "alert" },
@@ -17,11 +18,14 @@
     { "group": "Core framework", "label": "The trust signal gap", "path": "framework/07-trust-signal-gap.md", "icon": "gap" },
     { "group": "Core framework", "label": "Digital trust maturity model", "path": "framework/08-digital-trust-maturity-model.md", "icon": "chart" },
 
+    { "group": "Guidance", "label": "Adoption guidance", "path": "ADOPTION-GUIDE.md", "icon": "guide", "tags": ["Cadence"] },
+    { "group": "Guidance", "label": "Comparative positioning", "path": "COMPARATIVE-POSITIONING.md", "icon": "compare", "tags": ["ISO/NIST/COBIT"] },
+
     { "group": "Governance prompts", "label": "Board questions", "path": "BOARD-QUESTIONS.md", "icon": "board", "tags": ["Governance"] },
 
-    { "group": "Adoption", "label": "Consultation", "path": "CONSULTATION.md", "icon": "chat" },
-    { "group": "Adoption", "label": "Contributing", "path": "CONTRIBUTING.md", "icon": "plus" },
-    { "group": "Adoption", "label": "Citation", "path": "CITATION.md", "icon": "quote" },
-    { "group": "Adoption", "label": "Licence", "path": "LICENSE.md", "icon": "doc" }
+    { "group": "Contribute", "label": "Consultation", "path": "CONSULTATION.md", "icon": "chat" },
+    { "group": "Contribute", "label": "Contributing", "path": "CONTRIBUTING.md", "icon": "plus" },
+    { "group": "Contribute", "label": "Citation", "path": "CITATION.md", "icon": "quote" },
+    { "group": "Contribute", "label": "Licence", "path": "LICENSE.md", "icon": "doc" }
   ]
 }

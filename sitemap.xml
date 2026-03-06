@@ -2,12 +2,17 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://trustsurface.org/</loc></url>
   <url><loc>https://trustsurface.org/framework/</loc></url>
-  <url><loc>https://trustsurface.org/app/</loc></url>
   <url><loc>https://trustsurface.org/docs/</loc></url>
+  <url><loc>https://trustsurface.org/app/</loc></url>
 
   <url><loc>https://trustsurface.org/spec/</loc></url>
+  <url><loc>https://trustsurface.org/spec/print/</loc></url>
   <url><loc>https://trustsurface.org/example/</loc></url>
   <url><loc>https://trustsurface.org/origin/</loc></url>
+
+  <url><loc>https://trustsurface.org/framework/glossary/</loc></url>
+  <url><loc>https://trustsurface.org/adoption/</loc></url>
+  <url><loc>https://trustsurface.org/comparative/</loc></url>
 
   <url><loc>https://trustsurface.org/framework-map/</loc></url>
   <url><loc>https://trustsurface.org/board-questions/</loc></url>

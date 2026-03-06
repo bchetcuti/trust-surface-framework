@@ -1,162 +1,55 @@
-# Trust Surface Framework
+# TrustSurface Framework
 
-The **Trust Surface Framework (TSF)** is a governance model for understanding, measuring, and managing digital trust.
+TrustSurface is a neutral, evidence-led framework for identifying, measuring, and governing the **observable trust signals** an organisation emits at its digital edge.
 
-Modern organisations rely on digital systems to communicate, deliver services, and interact with stakeholders. These systems emit observable signals that influence how trustworthy an organisation appears online.
+It exists because organisations can be internally well-controlled and still appear untrustworthy through weak signals: spoofable email, brittle DNS, inconsistent identity boundaries, unreliable services, and unmanaged third‑party integrations.
 
-The Trust Surface Framework introduces a structured way to identify these signals and integrate them into governance and risk management practices.
+## Quick links
 
-This repository contains the initial draft of the framework and is published to encourage discussion and consultation.
+- Website: https://trustsurface.org/
+- Framework overview: https://trustsurface.org/framework/
+- One-page specification: https://trustsurface.org/spec/
+- Print specification (A4): https://trustsurface.org/spec/print/
+- Glossary v1.0: https://trustsurface.org/framework/glossary/
+- Adoption guidance: https://trustsurface.org/adoption/
+- Comparative positioning: https://trustsurface.org/comparative/
+- Library: https://trustsurface.org/docs/
 
----
+## Core concepts
 
-# Why Digital Trust Matters
+Definitions are stabilised in **Glossary v1.0**.
 
-Stakeholders increasingly evaluate organisations through their digital presence.
+- **Trust Surface** — the systems and signals where trust is experienced.
+- **Trust Signals** — observable indicators (evidence) describing posture.
+- **Trust Posture** — the evidence-based state implied by signals.
+- **Trust Signal Gap** — intended posture ≠ observed evidence.
 
-Examples include:
+## Operating rhythm
 
-* whether email communications appear authentic
-* whether websites and services behave reliably
-* whether domain names and infrastructure appear legitimate
-* whether third-party platforms are responsibly governed
+TrustSurface is operated as a repeatable cycle:
 
-Failures in these areas can quickly erode confidence, even when internal systems remain secure.
+**Discover → Assess → Harden → Govern → Signal → (repeat)**
 
-Many existing technology and cybersecurity frameworks focus on internal controls and compliance.
+The intent is practical governance: evidence, ownership, work, and controls that prevent regressions.
 
-The Trust Surface Framework focuses on **observable signals that influence trust perception**.
+## Status
 
----
+- Framework: **v0.3 (Public Draft)**
+- Vocabulary baseline: **Glossary v1.0 (stable)**
 
-# Core Concepts
+## Licence
 
-The framework introduces three key concepts.
+Framework content is licensed under **Creative Commons Attribution 4.0 (CC BY 4.0)**.
 
-### Trust Surface
+Implementation templates, assessment instruments, and delivery methods are excluded unless explicitly stated.
 
-The collection of digital systems through which stakeholders interact with an organisation’s digital presence.
+See `LICENSE.md`.
 
-Examples include domains, email systems, digital services, infrastructure platforms, and vendor integrations.
+## Contributing
 
----
+TrustSurface is published to encourage adoption and improvement.
 
-### Trust Signals
+- Use GitHub issues for clarity suggestions and gaps.
+- Pull requests are welcome for wording improvements, examples, and structure.
 
-Observable indicators that demonstrate the trust posture of digital systems.
-
-Examples include:
-
-* email authentication policies
-* DNS integrity
-* encryption configuration
-* service reliability indicators
-* vendor security attestations
-
-These signals provide measurable evidence of digital trust.
-
----
-
-### Trust Lifecycle
-
-A structured process for managing digital trust posture.
-
-```id="2mb7p4"
-Discover → Assess → Harden → Govern → Signal
-```
-
-This lifecycle enables organisations to identify trust signals, strengthen weak areas, and integrate trust considerations into governance.
-
----
-
-# Trust Surface Domains
-
-The framework defines six primary domains that shape an organisation’s Trust Surface.
-
-* Identity
-* Domains & DNS
-* Email Integrity
-* Digital Services
-* Infrastructure & Platforms
-* Third-Party Ecosystem
-
-Each domain emits trust signals that influence stakeholder confidence.
-
----
-
-# Framework Structure
-
-The framework currently consists of the following documents.
-
-```
-Digital Trust Problem
-Trust Principles
-Trust Surface Definition
-Trust Surface Map
-Trust Signal Catalogue
-Trust Surface Lifecycle
-```
-
-These documents collectively describe:
-
-* why digital trust matters
-* where trust is experienced
-* how trust signals can be measured
-* how organisations can govern digital trust
-
----
-
-# Intended Audience
-
-The Trust Surface Framework is designed for:
-
-* boards and executive leadership
-* governance and risk professionals
-* technology leaders
-* cybersecurity practitioners
-* organisations seeking clearer ways to discuss digital trust
-
-It provides a shared language for discussing how digital systems influence trust.
-
----
-
-# Status
-
-This repository contains **Trust Surface Framework v0.1**, an early draft published for consultation and discussion.
-
-The framework is expected to evolve through feedback and real-world application.
-
----
-
-# Contributing and Feedback
-
-Digital trust is a complex and evolving topic.
-
-Constructive feedback from practitioners, governance leaders, and researchers is welcome.
-
-Suggestions, discussion, and critique are encouraged as the framework develops.
-
----
-
-# License
-
-This framework is published for open discussion and consultation.
-
-Licensing terms will be defined in a future version of the framework.
-
----
-
-# Next Steps for the Framework
-
-Future iterations of the framework may include:
-
-* expanded Trust Signal catalogues
-* implementation guidance for organisations
-* governance integration models
-* case studies demonstrating Trust Surface assessments
-
----
-
-# Repository Purpose
-
-This repository exists to support transparent development of the Trust Surface Framework and to provide a shared reference for discussions about digital trust governance.
+See `CONTRIBUTING.md`.

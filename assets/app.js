@@ -30,6 +30,8 @@
     "/spec": "SPECIFICATION.md",
     "/example": "WORKED-EXAMPLE-EMAIL-TRUST.md",
     "/origin": "ORIGIN.md",
+    "/adoption": "ADOPTION-GUIDE.md",
+    "/comparative": "COMPARATIVE-POSITIONING.md",
 
     "/framework-map": "FRAMEWORK-MAP.md",
     "/board-questions": "BOARD-QUESTIONS.md",
@@ -48,6 +50,8 @@
     "/framework/gap": "framework/07-trust-signal-gap.md",
     "/framework/maturity": "framework/08-digital-trust-maturity-model.md",
 
+    "/framework/glossary": "framework/09-glossary.md",
+
     // Legacy convenience aliases
     "/maturity-model": "framework/08-digital-trust-maturity-model.md",
     "/trust-signal-catalogue": "framework/05-trust-signal-catalogue.md"
@@ -57,6 +61,9 @@
     "SPECIFICATION.md": "/spec/",
     "WORKED-EXAMPLE-EMAIL-TRUST.md": "/example/",
     "ORIGIN.md": "/origin/",
+
+    "ADOPTION-GUIDE.md": "/adoption/",
+    "COMPARATIVE-POSITIONING.md": "/comparative/",
 
     "FRAMEWORK-MAP.md": "/framework-map/",
     "BOARD-QUESTIONS.md": "/board-questions/",
@@ -72,7 +79,8 @@
     "framework/05-trust-signal-catalogue.md": "/framework/signals/",
     "framework/06-trust-surface-lifecycle.md": "/framework/lifecycle/",
     "framework/07-trust-signal-gap.md": "/framework/gap/",
-    "framework/08-digital-trust-maturity-model.md": "/framework/maturity/"
+    "framework/08-digital-trust-maturity-model.md": "/framework/maturity/",
+    "framework/09-glossary.md": "/framework/glossary/"
   };
 
   const icons = {
@@ -88,6 +96,11 @@
     cycle: iconSvg("M4 12a8 8 0 0 1 14-5", "M18 12a8 8 0 0 1-14 5", true),
     gap: iconSvg("M4 8h7M13 8h7M4 16h10M16 16h4"),
     chart: iconSvg("M5 19V5M5 19h14", "M8 15v-4M12 15v-7M16 15v-2"),
+
+    quote: iconSvg("M7 7h6v6H7V7z", "M11 11h6v6h-6v-6"),
+    book: iconSvg("M6 4h10a2 2 0 0 1 2 2v14H8a2 2 0 0 0-2 2V4z", "M8 20V4"),
+    guide: iconSvg("M6 4h12v16H6V4z", "M9 8h6M9 12h6M9 16h4"),
+    compare: iconSvg("M8 5v14", "M16 19V5"),
     chat: iconSvg("M4 5h16v10H7l-3 3V5z"),
     plus: iconSvg("M12 5v14", "M5 12h14")
   };
@@ -274,7 +287,7 @@
     });
 
     // Stable order (Start here, Core framework, Governance prompts, Adoption)
-    const preferred = ["Start here", "Core framework", "Governance prompts", "Adoption", "Documents"];
+    const preferred = ["Start here", "Core framework", "Guidance", "Governance prompts", "Contribute", "Documents"];
     const ordered = [];
 
     preferred.forEach((g) => {

@@ -1,65 +1,89 @@
-# 01 — The Digital Trust Problem
+# The Digital Trust Problem
 
-## Summary
-Digital trust is created (or lost) at an organisation’s **digital edge** — the places where customers, partners, attackers, and regulators interact with its systems.
+Modern organisations depend on digital systems to communicate, deliver services, and interact with stakeholders.
+Domains, email systems, cloud services, APIs, and software platforms form the primary interface between organisations and the outside world.
 
-Most organisations govern internal security controls well enough. The consistent failure mode is different: **externally-visible trust signals drift** across domains, email, identity, cloud, and third‑party services. The result is avoidable incidents, avoidable audit pain, and avoidable reputational damage.
+When these systems behave predictably, stakeholders rarely notice.
+When they fail or are misused, the consequence is often not just technical.
+The consequence is **loss of trust**.
 
-## Why this matters
-Digital systems now function as the primary interface between organisations and the outside world:
+Examples include:
 
-- domains and DNS (ownership, routing, availability)
-- email infrastructure (authentication, integrity, deliverability)
-- public websites, portals, and APIs (security posture, reliability)
-- identity systems (how people and services prove who they are)
-- vendors and SaaS platforms (supply‑chain and delegated trust)
+- phishing emails impersonating an organisation
+- compromised domains redirecting users to malicious sites
+- outages preventing access to services
+- vendor breaches exposing customer data
 
-When these systems are well-governed, trust is invisible.
-When they are not, the *outside world* experiences failure as incompetence, negligence, or loss of control.
+---
 
-## The operational cost of unmanaged trust surfaces
-Unmanaged trust surfaces create a recurring and measurable operational burden:
+## Trust is experienced at the digital edge
 
-1. **Incident amplification**
-   - Spoofing and impersonation
-   - Account takeover via weak identity boundaries
-   - Service exposure and misconfiguration
-   - Third‑party compromise surfacing as “your” breach
+Most organisations manage digital risk internally through:
 
-2. **Governance and assurance drag**
-   - Repeated “prove it” cycles (audits, procurement due diligence, cyber insurance)
-   - Rework and conflicting interpretations of evidence
-   - Decisions delayed because ownership is unclear
+- cybersecurity controls
+- governance frameworks
+- compliance programs
+- technology operations
 
-3. **Trust debt**
-   - Controls exist internally, but **signals do not align externally**
-   - “Known issues” remain unfixed because they sit between teams
-   - Risk acceptance happens by inertia rather than explicit governance
+These practices focus primarily on internal systems and controls.
 
-The pattern is predictable: the organisation believes it is secure; the ecosystem experiences it as unreliable.
+Stakeholders experience organisations through a smaller set of externally-facing interactions:
 
-## The blind spot in conventional frameworks
-Established security and governance frameworks are essential.
-They tend to organise around internal capabilities: controls, compliance, program maturity.
+- the legitimacy of emails received
+- the integrity of domain names and websites
+- the reliability of online services
+- the behaviour of third‑party platforms connected to the organisation
 
-They do not typically answer the question boards and executives increasingly ask:
+This boundary is the **digital edge**.
+It is where trust is gained, tested, and lost.
 
-> **How trustworthy do we appear to the outside world, based on evidence?**
+## Existing frameworks do not address trust posture directly
 
-TrustSurface is designed to close that gap by modelling the trust surface explicitly and by treating trust as **observable and governable**.
+Many organisations use established frameworks to manage technology and cyber risk.
+They provide valuable guidance for controls, compliance, and governance.
 
-## Purpose sentence (the framework’s point)
-**TrustSurface is a practitioner-led framework for identifying, measuring, and governing the observable trust signals an organisation emits at its digital edge.**
+However, they rarely answer a simpler question that executives and boards increasingly ask:
 
-## What TrustSurface adds
-TrustSurface introduces three concepts that together form a practical governance model:
+> **How trustworthy do our digital systems appear to the outside world?**
 
-- **Trust surface** — the externally‑facing systems where trust is experienced (not declared).
-- **Trust signals** — observable indicators (evidence) that describe the posture of that surface.
-- **Operating rhythm** — a repeatable cycle to discover, assess, harden, govern, and signal.
+Traditional approaches optimise for internal assurance.
+They often underweight **observable trust signals** and the operational discipline required to keep them strong.
 
-The rest of the framework describes how to apply those concepts without requiring a specific tool.
+## The gap between security and trust
 
-## Document status
-This document is part of the **TrustSurface Framework** public release.
-It is written to be useful as a standalone reference and is open to improvement through consultation.
+Security practices focus on preventing attacks and protecting systems.
+
+Trust is shaped by how stakeholders perceive the reliability and integrity of digital interactions.
+
+An organisation may have strong internal controls while still emitting weak signals at the surface:
+
+- email authentication policies that allow impersonation
+- expired or misconfigured certificates
+- inconsistent domain ownership practices
+- unreliable digital services
+- poorly governed third‑party platforms
+
+These create a Trust Signal Gap: internal belief ≠ external evidence.
+
+## Introducing the Trust Surface perspective
+
+The **Trust Surface** describes the collection of digital systems and signals through which stakeholders judge an organisation’s digital presence.
+
+TrustSurface provides a model for governing this surface through:
+
+- a stable domain vocabulary
+- a catalogue of observable trust signals
+- an operating rhythm that produces evidence, work, and governance controls
+
+---
+
+## Purpose
+
+TrustSurface exists to make trust posture:
+
+- observable
+- measurable
+- governable
+- maintainable over time
+
+It is a public-good model derived from recurring real‑world patterns at the digital edge.

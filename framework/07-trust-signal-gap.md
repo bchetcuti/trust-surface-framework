@@ -1,44 +1,91 @@
-# 07 — Trust Signal Gap
+# The Trust Signal Gap
 
-## Definition
-**Trust signal gap**
+Organisations invest heavily in cybersecurity.
+They deploy security tooling, run compliance programs, and implement internal controls.
 
-> The difference between the posture an organisation intends to have and the posture it **signals externally**, as evidenced by observable trust signals.
+Despite this investment, their digital presence can still emit weak or inconsistent signals of trust.
 
-This gap explains why organisations with mature internal security programs can still be easy to impersonate, difficult to validate, or operationally brittle at the digital edge.
+This disconnect is the **Trust Signal Gap**.
 
-## Typical causes
-Trust signal gaps are rarely caused by a single “missing control”.
-They emerge from structural patterns:
+(Definitions align to TrustSurface Glossary v1.0.)
 
-- **Fragmented ownership** (domains/email/identity owned across functions)
-- **Configuration drift** (changes accumulate without a trust review)
-- **Tool overconfidence** (strong internal telemetry, weak external posture)
-- **Third‑party delegation** (trust outsourced by accident)
-- **Evidence debt** (controls exist but cannot be evidenced quickly)
+---
+
+## The core problem
+
+Cybersecurity programs typically focus on **internal protection**.
+They aim to prevent compromise, data loss, and operational disruption.
+
+These objectives are critical, but they do not automatically improve how stakeholders experience an organisation’s digital trustworthiness.
+
+Stakeholders rely on **observable signals**:
+
+- whether an email appears authentic
+- whether a website connection is secure
+- whether a service behaves reliably
+- whether a domain appears legitimate
+
+These are Trust Signals.
+
+If signals appear weak or inconsistent, trust can erode even when internal controls are strong.
 
 ## Examples
-| Intended posture | Observed signal | Gap outcome |
+
+The Trust Signal Gap appears when strong internal security coexists with weak observable signals.
+
+| Situation | Internal security | External trust signal |
 |---|---|---|
-| “No one can spoof our brand” | DMARC absent or permissive | successful impersonation attempts |
-| “We control our public domains” | registrar lock missing; stale records | domain hijack risk and confusion |
-| “Vendors are governed” | no inventory; no assurance evidence | procurement and incident response chaos |
+| Mature security tooling | Strong | Email domain can still be spoofed |
+| Modern cloud platforms | Strong | Domain governance is fragmented |
+| Policies and controls exist | Strong | Digital services emit weak security signals |
+| Vendor risk program exists | Strong | Third‑party dependencies are poorly understood |
 
-## Why the gap matters
-Trust signal gaps:
+## Why the gap exists
 
-- increase incident likelihood (because attackers exploit the edge)
-- increase the cost of assurance (because evidence is hard to assemble)
-- erode stakeholder confidence (because failures are visible)
+The gap usually emerges because trust‑critical systems are managed across multiple teams.
+
+Common fragmentation patterns:
+
+- marketing registers and manages domains
+- communications manages email platforms
+- technology operates infrastructure and services
+- procurement selects vendors and SaaS
+
+These systems collectively shape the Trust Surface, yet they are rarely governed as a unified surface.
+
+## The operational cost of weak signals
+
+Weak trust signals create operational drag and reputational risk.
+
+Typical consequences include:
+
+- higher phishing success against customers and staff
+- brand impersonation and fraud
+- repeated assurance cycles (“prove it” requests) from procurement and regulators
+- trust debt: posture decay through change and drift
 
 ## Closing the gap
-Closing a trust signal gap is operational work, not branding work.
-The TrustSurface operating rhythm does this deliberately:
 
-1. **Discover** — inventory the surface and ownership.
-2. **Assess** — score signals with evidence.
-3. **Harden** — prioritise and remediate gaps.
-4. **Govern** — prevent re‑emergence through controls and decision rights.
-5. **Signal** — make trust posture verifiable where appropriate.
+Closing the Trust Signal Gap requires focusing on **observable Trust Signals**, not only internal controls.
 
-The key move is simple: treat external trust signals as a governable surface, not a side effect.
+Practically, this means:
+
+- identifying the Trust Surface (inventory and ownership)
+- measuring signals with evidence (scorecard)
+- strengthening weak or inconsistent signals (hardening plan)
+- preventing regressions (governance, change control, cadence)
+
+---
+
+## Security posture vs trust posture
+
+Security posture answers:
+
+> *How well are we protected from attack?*
+
+Trust posture answers:
+
+> *How trustworthy do our digital systems appear to stakeholders, based on evidence?*
+
+Both perspectives are necessary.
+Organisations can be technically secure yet still appear untrustworthy through the signals they emit.

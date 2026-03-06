@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>TrustSurface Framework — Print specification</title>
+  <meta name="description" content="A4-friendly TrustSurface Framework specification sheet for printing or PDF export." />
+  <link rel="canonical" href="https://trustsurface.org/spec/print/" />
+  <style>
+    :root{
+      --fg:#0f172a;
+      --muted:#475569;
+      --line:#e2e8f0;
+      --soft:#f8fafc;
+      --accent:#0b4f8a;
+    }
+    @page{ size: A4; margin: 16mm; }
+    html,body{ margin:0; padding:0; color:var(--fg); background:#fff; }
+    body{ font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; font-size: 11.5pt; line-height: 1.45; }
+    .page{ max-width: 780px; margin: 0 auto; padding: 18px 0; }
+    .hdr{ display:flex; justify-content:space-between; align-items:flex-start; gap:18px; border-bottom:1px solid var(--line); padding-bottom: 10px; }
+    h1{ margin:0; font-size: 20pt; letter-spacing:-0.01em; }
+    .meta{ text-align:right; color:var(--muted); font-size: 10pt; }
+    .meta div{ margin-bottom: 2px; }
+    .tag{ display:inline-block; padding:2px 8px; border:1px solid var(--line); border-radius:999px; background:var(--soft); color:var(--muted); font-size:9.5pt; }
+    h2{ font-size: 12.5pt; margin: 14px 0 6px; }
+    p{ margin: 6px 0; color:var(--muted); }
+    ul{ margin: 6px 0 6px 18px; color:var(--muted); }
+    .grid{ display:grid; grid-template-columns: 1.15fr 0.85fr; gap: 14px; }
+    .card{ border:1px solid var(--line); border-radius: 10px; padding: 10px 12px; }
+    .diagram{ border:1px solid var(--line); border-radius:10px; padding:10px; }
+    .diagram img{ width:100%; height:auto; display:block; }
+    .mono{ font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-size: 9.8pt; color:var(--muted); }
+    .foot{ margin-top: 14px; border-top:1px solid var(--line); padding-top: 10px; color:var(--muted); font-size: 9.8pt; display:flex; justify-content:space-between; gap: 12px; }
+    .foot a{ color: var(--accent); text-decoration: none; }
+    .foot a:hover{ text-decoration: underline; }
+    @media print{
+      a{ color:inherit; text-decoration:none; }
+      .tag{ border-color: var(--line); }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="hdr">
+      <div>
+        <h1>TrustSurface Framework</h1>
+        <div class="mono">Digital trust, made governable through observable signals.</div>
+      </div>
+      <div class="meta">
+        <div><span class="tag">TSF‑SPEC‑1</span></div>
+        <div><strong>Version:</strong> 0.3 (Public Draft)</div>
+        <div><strong>Vocabulary:</strong> Glossary v1.0</div>
+        <div><strong>Year:</strong> 2026</div>
+      </div>
+    </div>
+
+    <div class="diagram" style="margin-top:12px;">
+      <img src="/diagrams/trust-surface.svg" alt="TrustSurface Framework diagram" />
+    </div>
+
+    <div class="grid" style="margin-top:12px;">
+      <div class="card">
+        <h2>Purpose</h2>
+        <p>TrustSurface is a neutral, evidence-led framework for identifying, measuring, and governing the observable trust signals an organisation emits at its digital edge.</p>
+
+        <h2>Definitions (normative)</h2>
+        <p><strong>Trust Surface:</strong> the collection of digital systems and observable signals through which stakeholders experience and judge trustworthiness.</p>
+        <p><strong>Trust Signal:</strong> an observable indicator (evidence) that describes the trust posture of a Trust Surface component.</p>
+        <p><strong>Trust Posture:</strong> the current, evidence-based state implied by the strength, consistency, and coverage of Trust Signals.</p>
+        <p><strong>Trust Signal Gap:</strong> intended posture ≠ observed evidence.</p>
+
+        <h2>Operating rhythm</h2>
+        <p class="mono">Discover → Assess → Harden → Govern → Signal → (repeat)</p>
+        <ul>
+          <li><strong>Discover:</strong> inventory + ownership</li>
+          <li><strong>Assess:</strong> scorecard + evidence links</li>
+          <li><strong>Harden:</strong> prioritised backlog + 30/60/90 plan</li>
+          <li><strong>Govern:</strong> decision rights + change control + cadence</li>
+          <li><strong>Signal:</strong> verifiable trust communications</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>Trust Surface domains</h2>
+        <ul>
+          <li><strong>Identity boundary</strong></li>
+          <li><strong>Domains &amp; DNS</strong></li>
+          <li><strong>Email integrity</strong></li>
+          <li><strong>Digital services</strong></li>
+          <li><strong>Infrastructure &amp; platforms</strong></li>
+          <li><strong>Third‑party ecosystem</strong></li>
+        </ul>
+
+        <h2>Positioning</h2>
+        <p>TrustSurface is a lens, not a control framework. It complements ISO 27001, NIST CSF, and COBIT by making externally observable trust posture discussable and evidence-based.</p>
+
+        <h2>Where to go next</h2>
+        <ul>
+          <li><a href="/framework/">Framework overview</a></li>
+          <li><a href="/framework/glossary/">Glossary v1.0</a></li>
+          <li><a href="/adoption/">Adoption guidance</a></li>
+          <li><a href="/docs/">Library</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="foot">
+      <div>
+        <strong>Licence:</strong> CC BY 4.0 • Framework content may be shared and adapted with attribution. Templates and assessment instruments are excluded unless explicitly stated.
+      </div>
+      <div>
+        © 2026 Bryan Chetcuti • <a href="/licence/">Licence</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
