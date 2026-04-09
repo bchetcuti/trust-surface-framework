@@ -1,7 +1,0 @@
-User-agent: *
-Allow: /
-
-# Keep assets indexable (CSS/JS/SVG are required for rendering)
-# Add Disallow rules only for genuinely private paths.
-
-Sitemap: https://trustsurface.org/sitemap.xml

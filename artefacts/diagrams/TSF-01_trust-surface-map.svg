@@ -1,0 +1,274 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">TSF-01 — Trust Surface Framework</title>
+  <desc id="desc">TrustSurface Framework master diagram showing Trust Surface domains, trust signals, digital trust posture, and the operating lifecycle.</desc>
+
+  <defs>
+    <style>
+      text { font-family: Poppins, Arial, sans-serif; fill: #0f172a; }
+
+      .bg { fill: #f8fafc; }
+      .frame { fill: #ffffff; stroke: #d9e2ec; stroke-width: 2; }
+      .rule { stroke: #d9e2ec; stroke-width: 2; }
+      .footer-rule { stroke: #d9e2ec; stroke-width: 1.5; }
+
+      .pill { fill: #ffffff; stroke: #bfd4e5; stroke-width: 1.5; }
+      .site-pill { fill: #f8fbfd; stroke: #d9e2ec; stroke-width: 1.5; }
+
+      .panel { fill: #ffffff; stroke: #d9e2ec; stroke-width: 2; }
+      .panel-soft { fill: #f8fbfd; stroke: #d9e2ec; stroke-width: 1.5; }
+      .panel-accent { fill: #eef6fb; stroke: #0b4f8a; stroke-width: 2.25; }
+      .band { fill: #ffffff; stroke: #bcd0df; stroke-width: 1.5; }
+
+      .line { stroke: #0b4f8a; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; fill: none; }
+      .line-soft { stroke: #cbd5e1; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; fill: none; }
+
+      .logo-mark { color: #0b4f8a; }
+      .bullet { fill: #0b4f8a; }
+
+      .kicker {
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        fill: #0b4f8a;
+      }
+
+      .figure-id {
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        fill: #64748b;
+      }
+
+      .title-text {
+        font-size: 56px;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+      }
+
+      .subtitle-text {
+        font-size: 24px;
+        font-weight: 500;
+        fill: #475569;
+      }
+
+      .status-text {
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        fill: #0b4f8a;
+      }
+
+      .site-link {
+        font-size: 15px;
+        font-weight: 600;
+        fill: #0b4f8a;
+      }
+
+      .section-label {
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        fill: #64748b;
+      }
+
+      .section-label-accent {
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        fill: #0b4f8a;
+      }
+
+      .panel-title {
+        font-size: 28px;
+        font-weight: 700;
+      }
+
+      .panel-copy {
+        font-size: 17px;
+        font-weight: 500;
+        fill: #475569;
+      }
+
+      .node-title {
+        font-size: 18px;
+        font-weight: 650;
+      }
+
+      .node-copy {
+        font-size: 14px;
+        font-weight: 500;
+        fill: #475569;
+      }
+
+      .core-label {
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        fill: #0b4f8a;
+      }
+
+      .core-title {
+        font-size: 30px;
+        font-weight: 700;
+      }
+
+      .core-copy {
+        font-size: 16px;
+        font-weight: 500;
+        fill: #475569;
+      }
+
+      .band-title {
+        font-size: 18px;
+        font-weight: 700;
+        fill: #0b4f8a;
+      }
+
+      .band-copy {
+        font-size: 15px;
+        font-weight: 500;
+        fill: #334155;
+      }
+
+      .footer-meta {
+        font-size: 14px;
+        font-weight: 600;
+        fill: #64748b;
+      }
+
+      .footer-statement {
+        font-size: 16px;
+        font-weight: 600;
+      }
+    </style>
+
+    <marker id="arrowhead" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#0b4f8a"/>
+    </marker>
+
+    <symbol id="ts-mark" viewBox="0 0 24 24">
+      <path d="M12 3l8 4v6c0 5-3.4 9-8 8-4.6 1-8-3-8-8V7l8-4z" stroke="currentColor" stroke-width="1.8"/>
+      <path d="M7.5 10.5h9M7.5 13.5h9M9.5 16.5h5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+    </symbol>
+  </defs>
+
+  <rect x="0" y="0" width="1600" height="900" class="bg"/>
+  <rect x="52" y="52" width="1496" height="796" rx="28" class="frame"/>
+
+  <!-- Header -->
+  <g transform="translate(110 96)">
+    <use href="#ts-mark" x="0" y="0" width="40" height="40" class="logo-mark"/>
+    <text x="58" y="17" class="kicker">TRUSTSURFACE FRAMEWORK</text>
+    <text x="0" y="74" class="figure-id">FIGURE TSF-01</text>
+    <text x="0" y="132" class="title-text">Trust Surface Framework</text>
+    <text x="0" y="172" class="subtitle-text">A governance model linking Trust Surface domains, trust signals, trust posture and operating rhythm.</text>
+  </g>
+
+  <!-- Top-right chrome -->
+  <g transform="translate(1188 94)">
+    <rect x="0" y="0" width="114" height="36" rx="18" class="pill"/>
+    <text x="57" y="23" text-anchor="middle" class="status-text">public</text>
+  </g>
+
+  <g transform="translate(1318 94)">
+    <rect x="0" y="0" width="132" height="36" rx="18" class="site-pill"/>
+    <text x="66" y="23" text-anchor="middle" class="site-link">trustsurface.org</text>
+  </g>
+
+  <line x1="110" y1="258" x2="1490" y2="258" class="rule"/>
+
+  <!-- Left column -->
+  <g transform="translate(110 300)">
+    <rect x="0" y="0" width="470" height="410" rx="24" class="panel"/>
+    <text x="32" y="42" class="section-label">Structural model</text>
+    <text x="32" y="82" class="panel-title">Trust Surface domains</text>
+    <text x="32" y="112" class="panel-copy">The primary domains through which trust is formed, observed and judged.</text>
+
+    <g transform="translate(32 146)">
+      <rect x="0" y="0" width="406" height="42" rx="14" class="panel-soft"/>
+      <circle cx="18" cy="21" r="4" class="bullet"/>
+      <text x="34" y="27" class="node-title">Identity</text>
+
+      <rect x="0" y="54" width="406" height="42" rx="14" class="panel-soft"/>
+      <circle cx="18" cy="75" r="4" class="bullet"/>
+      <text x="34" y="81" class="node-title">Domains &amp; DNS</text>
+
+      <rect x="0" y="108" width="406" height="42" rx="14" class="panel-soft"/>
+      <circle cx="18" cy="129" r="4" class="bullet"/>
+      <text x="34" y="135" class="node-title">Email Integrity</text>
+
+      <rect x="0" y="162" width="406" height="42" rx="14" class="panel-soft"/>
+      <circle cx="18" cy="183" r="4" class="bullet"/>
+      <text x="34" y="189" class="node-title">Digital Services</text>
+
+      <rect x="0" y="216" width="406" height="42" rx="14" class="panel-soft"/>
+      <circle cx="18" cy="237" r="4" class="bullet"/>
+      <text x="34" y="243" class="node-title">Infrastructure &amp; Platforms</text>
+
+      <rect x="0" y="270" width="406" height="42" rx="14" class="panel-soft"/>
+      <circle cx="18" cy="291" r="4" class="bullet"/>
+      <text x="34" y="297" class="node-title">Third-Party Ecosystem</text>
+    </g>
+  </g>
+
+  <!-- Centre / right master panel -->
+  <g transform="translate(620 300)">
+    <rect x="0" y="0" width="870" height="410" rx="24" class="panel-accent"/>
+
+    <text x="36" y="42" class="section-label-accent">Master model</text>
+    <text x="36" y="82" class="panel-title">Signals, posture and governance rhythm</text>
+    <text x="36" y="112" class="panel-copy">Domains emit trust signals. Their quality and coverage shape digital trust posture. Governance turns this into a repeatable discipline.</text>
+
+    <!-- Signals block -->
+    <g transform="translate(36 146)">
+      <rect x="0" y="0" width="360" height="180" rx="18" class="panel"/>
+      <text x="24" y="30" class="node-title">Trust signals</text>
+      <text x="24" y="52" class="node-copy">Observable evidence at the digital edge</text>
+
+      <circle cx="24" cy="84" r="4" class="bullet"/>
+      <text x="40" y="89" class="node-copy">Email authenticity and alignment</text>
+
+      <circle cx="24" cy="112" r="4" class="bullet"/>
+      <text x="40" y="117" class="node-copy">Domain integrity and routing hygiene</text>
+
+      <circle cx="24" cy="140" r="4" class="bullet"/>
+      <text x="40" y="145" class="node-copy">Service trust, reliability and resilience</text>
+
+      <circle cx="24" cy="168" r="4" class="bullet"/>
+      <text x="40" y="173" class="node-copy">Governance and third-party evidence</text>
+    </g>
+
+    <!-- Arrow -->
+    <path d="M418 236 H492" class="line" marker-end="url(#arrowhead)"/>
+
+    <!-- Posture block -->
+    <g transform="translate(512 162)">
+      <rect x="0" y="0" width="310" height="148" rx="20" class="panel"/>
+      <text x="155" y="30" text-anchor="middle" class="core-label">Core construct</text>
+      <text x="155" y="64" text-anchor="middle" class="core-title">Digital Trust</text>
+      <text x="155" y="94" text-anchor="middle" class="core-title">Posture</text>
+      <text x="155" y="122" text-anchor="middle" class="core-copy">The evidence-based state implied</text>
+      <text x="155" y="142" text-anchor="middle" class="core-copy">by the quality and coverage of signals</text>
+    </g>
+
+    <!-- Bottom band -->
+    <g transform="translate(36 344)">
+      <rect x="0" y="0" width="786" height="46" rx="16" class="band"/>
+      <text x="393" y="20" text-anchor="middle" class="band-title">Trust Surface lifecycle</text>
+      <text x="393" y="38" text-anchor="middle" class="band-copy">Discover → Assess → Harden → Govern → Signal</text>
+    </g>
+  </g>
+
+  <!-- Footer -->
+  <g transform="translate(110 778)">
+    <line x1="0" y1="0" x2="1380" y2="0" class="footer-rule"/>
+    <text x="0" y="28" class="footer-meta">Figure TSF-01 · TrustSurface Framework · v1.0</text>
+    <text x="1380" y="28" text-anchor="end" class="footer-statement">The framework links domains, signals, posture and governance into a single model for digital trust.</text>
+  </g>
+</svg>
