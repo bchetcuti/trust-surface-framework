@@ -1,0 +1,265 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">TSF-06 — Trust Signal Anatomy</title>
+  <desc id="desc">TrustSurface Framework specimen diagram showing the anatomy of a single trust signal, including signal name, domain, observation method, and trust implication.</desc>
+
+  <defs>
+    <style>
+      text { font-family: Poppins, Arial, sans-serif; fill: #0f172a; }
+
+      .bg { fill: #f8fafc; }
+      .frame { fill: #ffffff; stroke: #d9e2ec; stroke-width: 2; }
+      .rule { stroke: #d9e2ec; stroke-width: 2; }
+      .footer-rule { stroke: #d9e2ec; stroke-width: 1.5; }
+
+      .pill { fill: #ffffff; stroke: #bfd4e5; stroke-width: 1.5; }
+      .site-pill { fill: #f8fbfd; stroke: #d9e2ec; stroke-width: 1.5; }
+
+      .panel { fill: #ffffff; stroke: #d9e2ec; stroke-width: 1.5; }
+      .panel-soft { fill: #f8fbfd; stroke: #d9e2ec; stroke-width: 1.5; }
+      .panel-accent { fill: #eef6fb; stroke: #0b4f8a; stroke-width: 2.25; }
+
+      .connector { stroke: #cbd5e1; stroke-width: 1.5; fill: none; }
+      .connector-accent { stroke: #0b4f8a; stroke-width: 1.75; fill: none; opacity: 0.75; }
+
+      .logo-mark { color: #0b4f8a; }
+      .bullet { fill: #0b4f8a; }
+
+      .kicker {
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        fill: #0b4f8a;
+      }
+
+      .figure-id {
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        fill: #64748b;
+      }
+
+      .title-text {
+        font-size: 56px;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+      }
+
+      .subtitle-text {
+        font-size: 24px;
+        font-weight: 500;
+        fill: #475569;
+      }
+
+      .status-text {
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        fill: #0b4f8a;
+      }
+
+      .site-link {
+        font-size: 15px;
+        font-weight: 600;
+        fill: #0b4f8a;
+      }
+
+      .section-label {
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        fill: #64748b;
+      }
+
+      .section-label-accent {
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        fill: #0b4f8a;
+      }
+
+      .panel-title {
+        font-size: 26px;
+        font-weight: 700;
+      }
+
+      .panel-copy {
+        font-size: 17px;
+        font-weight: 500;
+        fill: #475569;
+      }
+
+      .attribute-title {
+        font-size: 18px;
+        font-weight: 700;
+      }
+
+      .attribute-copy {
+        font-size: 14px;
+        font-weight: 500;
+        fill: #475569;
+      }
+
+      .core-label {
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        fill: #0b4f8a;
+      }
+
+      .core-title {
+        font-size: 30px;
+        font-weight: 700;
+      }
+
+      .core-copy {
+        font-size: 16px;
+        font-weight: 500;
+        fill: #475569;
+      }
+
+      .value-text {
+        font-size: 16px;
+        font-weight: 600;
+        fill: #334155;
+      }
+
+      .footer-meta {
+        font-size: 14px;
+        font-weight: 600;
+        fill: #64748b;
+      }
+
+      .footer-statement {
+        font-size: 16px;
+        font-weight: 600;
+      }
+    </style>
+
+    <symbol id="ts-mark" viewBox="0 0 24 24">
+      <path d="M12 3l8 4v6c0 5-3.4 9-8 8-4.6 1-8-3-8-8V7l8-4z" stroke="currentColor" stroke-width="1.8"/>
+      <path d="M7.5 10.5h9M7.5 13.5h9M9.5 16.5h5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+    </symbol>
+  </defs>
+
+  <rect x="0" y="0" width="1600" height="900" class="bg"/>
+  <rect x="52" y="52" width="1496" height="796" rx="28" class="frame"/>
+
+  <!-- Header -->
+  <g transform="translate(110 96)">
+    <use href="#ts-mark" x="0" y="0" width="40" height="40" class="logo-mark"/>
+    <text x="58" y="17" class="kicker">TRUSTSURFACE FRAMEWORK</text>
+    <text x="0" y="74" class="figure-id">FIGURE TSF-06</text>
+    <text x="0" y="132" class="title-text">Trust Signal Anatomy</text>
+    <text x="0" y="172" class="subtitle-text">A trust signal is a structured piece of observable evidence, not a vague impression.</text>
+  </g>
+
+  <!-- Top-right chrome -->
+  <g transform="translate(1188 94)">
+    <rect x="0" y="0" width="114" height="36" rx="18" class="pill"/>
+    <text x="57" y="23" text-anchor="middle" class="status-text">Draft</text>
+  </g>
+
+  <g transform="translate(1318 94)">
+    <rect x="0" y="0" width="132" height="36" rx="18" class="site-pill"/>
+    <text x="66" y="23" text-anchor="middle" class="site-link">trustsurface.org</text>
+  </g>
+
+  <line x1="110" y1="258" x2="1490" y2="258" class="rule"/>
+
+  <!-- Left note -->
+  <g transform="translate(110 346)">
+    <rect x="0" y="0" width="250" height="294" rx="22" class="panel"/>
+    <text x="24" y="38" class="section-label">What this shows</text>
+    <text x="24" y="74" class="panel-title">A specimen signal</text>
+    <text x="24" y="108" class="panel-copy">This figure shows the minimum anatomy of a trust signal using one practical example.</text>
+
+    <rect x="24" y="156" width="202" height="108" rx="18" class="panel-accent"/>
+    <text x="125" y="188" text-anchor="middle" class="attribute-title">Purpose</text>
+    <text x="125" y="212" text-anchor="middle" class="attribute-copy">To make trust signals</text>
+    <text x="125" y="230" text-anchor="middle" class="attribute-copy">specific, observable</text>
+    <text x="125" y="248" text-anchor="middle" class="attribute-copy">and governable</text>
+  </g>
+
+  <!-- Right note -->
+  <g transform="translate(1240 346)">
+    <rect x="0" y="0" width="250" height="294" rx="22" class="panel"/>
+    <text x="24" y="38" class="section-label">How to use it</text>
+    <text x="24" y="74" class="panel-title">Catalogue pattern</text>
+    <text x="24" y="108" class="panel-copy">The same structure can be reused across the TrustSurface catalogue and in assessment work.</text>
+
+    <rect x="24" y="156" width="202" height="108" rx="18" class="panel-accent"/>
+    <text x="125" y="188" text-anchor="middle" class="attribute-title">Used in</text>
+    <text x="125" y="212" text-anchor="middle" class="attribute-copy">Book · Framework</text>
+    <text x="125" y="230" text-anchor="middle" class="attribute-copy">Signal catalogue</text>
+    <text x="125" y="248" text-anchor="middle" class="attribute-copy">Advisory work</text>
+  </g>
+
+  <!-- Central model -->
+  <g transform="translate(395 292)">
+    <rect x="0" y="0" width="810" height="450" rx="28" class="panel-accent"/>
+
+    <text x="405" y="40" text-anchor="middle" class="section-label-accent">Signal model</text>
+    <text x="405" y="80" text-anchor="middle" class="panel-title" style="font-size:30px;">Anatomy of a Trust Signal</text>
+    <text x="405" y="112" text-anchor="middle" class="panel-copy">A signal becomes useful when it is named, placed, observed and interpreted consistently.</text>
+
+    <!-- Centre specimen -->
+    <g transform="translate(255 150)">
+      <rect x="0" y="0" width="300" height="132" rx="22" class="panel"/>
+      <text x="150" y="30" text-anchor="middle" class="core-label">Specimen signal</text>
+      <text x="150" y="64" text-anchor="middle" class="core-title">DMARC Enforcement</text>
+      <text x="150" y="92" text-anchor="middle" class="core-copy">A visible email trust signal</text>
+      <text x="150" y="114" text-anchor="middle" class="core-copy">showing message authentication posture</text>
+    </g>
+
+    <!-- Top attribute -->
+    <g transform="translate(275 18)">
+      <rect x="0" y="0" width="260" height="84" rx="18" class="panel-soft"/>
+      <text x="130" y="28" text-anchor="middle" class="attribute-title">Signal name</text>
+      <text x="130" y="52" text-anchor="middle" class="value-text">DMARC Enforcement</text>
+      <text x="130" y="70" text-anchor="middle" class="attribute-copy">What the signal is called</text>
+    </g>
+    <line x1="405" y1="102" x2="405" y2="150" class="connector-accent"/>
+
+    <!-- Left attribute -->
+    <g transform="translate(28 174)">
+      <rect x="0" y="0" width="230" height="104" rx="18" class="panel-soft"/>
+      <text x="115" y="28" text-anchor="middle" class="attribute-title">Domain</text>
+      <text x="115" y="52" text-anchor="middle" class="value-text">Email Integrity</text>
+      <text x="115" y="74" text-anchor="middle" class="attribute-copy">Where the signal belongs</text>
+      <text x="115" y="92" text-anchor="middle" class="attribute-copy">within the framework</text>
+    </g>
+    <line x1="258" y1="226" x2="255" y2="226" class="connector-accent"/>
+
+    <!-- Right attribute -->
+    <g transform="translate(552 174)">
+      <rect x="0" y="0" width="230" height="104" rx="18" class="panel-soft"/>
+      <text x="115" y="28" text-anchor="middle" class="attribute-title">Observation method</text>
+      <text x="115" y="52" text-anchor="middle" class="value-text">DNS record inspection</text>
+      <text x="115" y="74" text-anchor="middle" class="attribute-copy">How the signal is</text>
+      <text x="115" y="92" text-anchor="middle" class="attribute-copy">observed or verified</text>
+    </g>
+    <line x1="552" y1="226" x2="555" y2="226" class="connector-accent"/>
+
+    <!-- Bottom attribute -->
+    <g transform="translate(225 320)">
+      <rect x="0" y="0" width="360" height="104" rx="18" class="panel-soft"/>
+      <text x="180" y="28" text-anchor="middle" class="attribute-title">Trust implication</text>
+      <text x="180" y="52" text-anchor="middle" class="value-text">Shows whether a domain is protected against unauthorised email use</text>
+      <text x="180" y="74" text-anchor="middle" class="attribute-copy">Why the signal matters for trust, credibility and assurance</text>
+    </g>
+    <line x1="405" y1="282" x2="405" y2="320" class="connector-accent"/>
+  </g>
+
+  <!-- Footer -->
+  <g transform="translate(110 778)">
+    <line x1="0" y1="0" x2="1380" y2="0" class="footer-rule"/>
+    <text x="0" y="28" class="footer-meta">Figure TSF-06 · TrustSurface Framework · v0.1</text>
+    <text x="1380" y="28" text-anchor="end" class="footer-statement">A trust signal becomes useful when it can be named, observed and interpreted consistently.</text>
+  </g>
+</svg>

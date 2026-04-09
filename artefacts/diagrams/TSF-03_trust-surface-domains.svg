@@ -1,0 +1,266 @@
+
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">TSF-03 — Trust Surface Domains</title>
+  <desc id="desc">TrustSurface Framework diagram showing the six Trust Surface domains organised around digital trust posture.</desc>
+
+  <defs>
+    <style>
+      text { font-family: Poppins, Arial, sans-serif; fill: #0f172a; }
+
+      .bg { fill: #f8fafc; }
+      .frame { fill: #ffffff; stroke: #d9e2ec; stroke-width: 2; }
+      .rule { stroke: #d9e2ec; stroke-width: 2; }
+      .footer-rule { stroke: #d9e2ec; stroke-width: 1.5; }
+
+      .pill { fill: #ffffff; stroke: #bfd4e5; stroke-width: 1.5; }
+      .site-pill { fill: #f8fbfd; stroke: #d9e2ec; stroke-width: 1.5; }
+
+      .ring-base { fill: #ffffff; stroke: #d9e2ec; stroke-width: 1.5; }
+      .ring-accent { fill: #eef6fb; stroke: #0b4f8a; stroke-width: 2; }
+      .domain-card { fill: #ffffff; stroke: #d9e2ec; stroke-width: 1.5; }
+      .domain-card-accent { fill: #f8fbfd; stroke: #bcd0df; stroke-width: 1.5; }
+
+      .connector { stroke: #cbd5e1; stroke-width: 1.5; }
+      .connector-accent { stroke: #0b4f8a; stroke-width: 1.5; opacity: 0.55; }
+
+      .logo-mark { color: #0b4f8a; }
+
+      .kicker {
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        fill: #0b4f8a;
+      }
+
+      .figure-id {
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        fill: #64748b;
+      }
+
+      .title-text {
+        font-size: 56px;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+      }
+
+      .subtitle-text {
+        font-size: 24px;
+        font-weight: 500;
+        fill: #475569;
+      }
+
+      .status-text {
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        fill: #0b4f8a;
+      }
+
+      .site-link {
+        font-size: 15px;
+        font-weight: 600;
+        fill: #0b4f8a;
+      }
+
+      .section-label {
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        fill: #64748b;
+      }
+
+      .model-title {
+        font-size: 30px;
+        font-weight: 700;
+      }
+
+      .model-copy {
+        font-size: 18px;
+        font-weight: 500;
+        fill: #334155;
+      }
+
+      .domain-title {
+        font-size: 18px;
+        font-weight: 650;
+      }
+
+      .domain-copy {
+        font-size: 14px;
+        font-weight: 500;
+        fill: #475569;
+      }
+
+      .core-label {
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        fill: #0b4f8a;
+      }
+
+      .core-title {
+        font-size: 28px;
+        font-weight: 700;
+      }
+
+      .core-copy {
+        font-size: 16px;
+        font-weight: 500;
+        fill: #475569;
+      }
+
+      .footer-meta {
+        font-size: 14px;
+        font-weight: 600;
+        fill: #64748b;
+      }
+
+      .footer-statement {
+        font-size: 16px;
+        font-weight: 600;
+      }
+    </style>
+
+    <symbol id="ts-mark" viewBox="0 0 24 24">
+      <path d="M12 3l8 4v6c0 5-3.4 9-8 8-4.6 1-8-3-8-8V7l8-4z" stroke="currentColor" stroke-width="1.8"/>
+      <path d="M7.5 10.5h9M7.5 13.5h9M9.5 16.5h5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+    </symbol>
+  </defs>
+
+  <rect x="0" y="0" width="1600" height="900" class="bg"/>
+  <rect x="52" y="52" width="1496" height="796" rx="28" class="frame"/>
+
+  <!-- Header -->
+  <g transform="translate(110 96)">
+    <use href="#ts-mark" x="0" y="0" width="40" height="40" class="logo-mark"/>
+    <text x="58" y="17" class="kicker">TRUSTSURFACE FRAMEWORK</text>
+    <text x="0" y="74" class="figure-id">FIGURE TSF-03</text>
+    <text x="0" y="132" class="title-text">Trust Surface Domains</text>
+    <text x="0" y="172" class="subtitle-text">The primary domains through which digital trust is formed, observed and judged.</text>
+  </g>
+
+  <!-- Top-right chrome -->
+  <g transform="translate(1188 94)">
+    <rect x="0" y="0" width="114" height="36" rx="18" class="pill"/>
+    <text x="57" y="23" text-anchor="middle" class="status-text">Draft</text>
+  </g>
+
+  <g transform="translate(1318 94)">
+    <rect x="0" y="0" width="132" height="36" rx="18" class="site-pill"/>
+    <text x="66" y="23" text-anchor="middle" class="site-link">trustsurface.org</text>
+  </g>
+
+  <line x1="110" y1="258" x2="1490" y2="258" class="rule"/>
+
+  <!-- Side notes -->
+  <g transform="translate(110 356)">
+    <rect x="0" y="0" width="250" height="276" rx="22" class="domain-card"/>
+    <text x="24" y="38" class="section-label">What this shows</text>
+    <text x="24" y="74" class="model-title" style="font-size:26px;">Structural view</text>
+    <text x="24" y="108" class="model-copy">The Trust Surface is organised into six primary domains. These are not products or teams. They are governance categories.</text>
+
+    <rect x="24" y="152" width="202" height="92" rx="18" class="domain-card-accent"/>
+    <text x="125" y="184" text-anchor="middle" class="domain-title" style="font-size:16px;">Classification, not mapping</text>
+    <text x="125" y="206" text-anchor="middle" class="domain-copy">Use this figure to orient the reader, not to imply exact dependencies.</text>
+  </g>
+
+  <g transform="translate(1240 356)">
+    <rect x="0" y="0" width="250" height="276" rx="22" class="domain-card"/>
+    <text x="24" y="38" class="section-label">How to read it</text>
+    <text x="24" y="74" class="model-title" style="font-size:26px;">Domains and signals</text>
+    <text x="24" y="108" class="model-copy">Each domain contains observable signals that shape trust posture. The domains together form the broader Trust Surface.</text>
+
+    <rect x="24" y="152" width="202" height="92" rx="18" class="domain-card-accent"/>
+    <text x="125" y="184" text-anchor="middle" class="domain-title" style="font-size:16px;">Used in the framework</text>
+    <text x="125" y="206" text-anchor="middle" class="domain-copy">Book · Framework · Catalogue · Advisory use</text>
+  </g>
+
+  <!-- Central model zone -->
+  <g transform="translate(405 292)">
+    <rect x="0" y="0" width="790" height="450" rx="28" class="ring-accent"/>
+
+    <text x="395" y="40" text-anchor="middle" class="section-label" style="fill:#0b4f8a;">Structural model</text>
+    <text x="395" y="80" text-anchor="middle" class="model-title">Primary Trust Surface Domains</text>
+    <text x="395" y="112" text-anchor="middle" class="model-copy">The domains through which trust signals become visible, legible and consequential.</text>
+
+    <!-- Core -->
+    <circle cx="395" cy="254" r="96" class="ring-accent"/>
+    <text x="395" y="226" text-anchor="middle" class="core-label">Core construct</text>
+    <text x="395" y="258" text-anchor="middle" class="core-title">Digital Trust</text>
+    <text x="395" y="288" text-anchor="middle" class="core-title">Posture</text>
+    <text x="395" y="320" text-anchor="middle" class="core-copy">How an organisation appears</text>
+    <text x="395" y="342" text-anchor="middle" class="core-copy">to others across its Trust Surface</text>
+
+    <!-- Connectors -->
+    <line x1="395" y1="158" x2="395" y2="116" class="connector-accent"/>
+    <line x1="487" y1="208" x2="560" y2="172" class="connector"/>
+    <line x1="487" y1="300" x2="560" y2="336" class="connector"/>
+    <line x1="395" y1="350" x2="395" y2="392" class="connector-accent"/>
+    <line x1="303" y1="300" x2="230" y2="336" class="connector"/>
+    <line x1="303" y1="208" x2="230" y2="172" class="connector"/>
+
+    <!-- Domain cards -->
+    <!-- Top -->
+    <g transform="translate(295 34)">
+      <rect x="0" y="0" width="200" height="82" rx="18" class="domain-card"/>
+      <text x="100" y="30" text-anchor="middle" class="domain-title">Identity</text>
+      <text x="100" y="52" text-anchor="middle" class="domain-copy">Accounts, authentication,</text>
+      <text x="100" y="69" text-anchor="middle" class="domain-copy">ownership and authority</text>
+    </g>
+
+    <!-- Top right -->
+    <g transform="translate(560 120)">
+      <rect x="0" y="0" width="200" height="82" rx="18" class="domain-card"/>
+      <text x="100" y="30" text-anchor="middle" class="domain-title">Domains &amp; DNS</text>
+      <text x="100" y="52" text-anchor="middle" class="domain-copy">Naming, delegation,</text>
+      <text x="100" y="69" text-anchor="middle" class="domain-copy">resolution and control</text>
+    </g>
+
+    <!-- Bottom right -->
+    <g transform="translate(560 286)">
+      <rect x="0" y="0" width="200" height="82" rx="18" class="domain-card"/>
+      <text x="100" y="30" text-anchor="middle" class="domain-title">Email Integrity</text>
+      <text x="100" y="52" text-anchor="middle" class="domain-copy">Authenticity, protection</text>
+      <text x="100" y="69" text-anchor="middle" class="domain-copy">and message trust</text>
+    </g>
+
+    <!-- Bottom -->
+    <g transform="translate(295 368)">
+      <rect x="0" y="0" width="200" height="82" rx="18" class="domain-card"/>
+      <text x="100" y="30" text-anchor="middle" class="domain-title">Digital Services</text>
+      <text x="100" y="52" text-anchor="middle" class="domain-copy">Web, apps, portals</text>
+      <text x="100" y="69" text-anchor="middle" class="domain-copy">and service experience</text>
+    </g>
+
+    <!-- Bottom left -->
+    <g transform="translate(30 286)">
+      <rect x="0" y="0" width="200" height="82" rx="18" class="domain-card"/>
+      <text x="100" y="30" text-anchor="middle" class="domain-title">Infrastructure &amp; Platforms</text>
+      <text x="100" y="52" text-anchor="middle" class="domain-copy">Hosting, resilience,</text>
+      <text x="100" y="69" text-anchor="middle" class="domain-copy">delivery and exposure</text>
+    </g>
+
+    <!-- Top left -->
+    <g transform="translate(30 120)">
+      <rect x="0" y="0" width="200" height="82" rx="18" class="domain-card"/>
+      <text x="100" y="30" text-anchor="middle" class="domain-title">Third-Party Ecosystem</text>
+      <text x="100" y="52" text-anchor="middle" class="domain-copy">Vendors, dependencies,</text>
+      <text x="100" y="69" text-anchor="middle" class="domain-copy">integrations and reliance</text>
+    </g>
+  </g>
+
+  <!-- Footer -->
+  <g transform="translate(110 778)">
+    <line x1="0" y1="0" x2="1380" y2="0" class="footer-rule"/>
+    <text x="0" y="28" class="footer-meta">Figure TSF-03 · TrustSurface Framework · v0.1</text>
+    <text x="1380" y="28" text-anchor="end" class="footer-statement">The Trust Surface is structured through the domains where trust signals are emitted, observed and judged.</text>
+  </g>
+</svg>
+
