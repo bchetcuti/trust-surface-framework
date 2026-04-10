@@ -152,3 +152,6 @@ Feedback and contributions are welcome. See [TSF-CNS-1 - Consultation & Contribu
 ## Security
 
 See [TSF-SEC-1 - Security & Vulnerability Disclosure](docs/04-publication-control/TSF-SEC-1_security-and-vulnerability-disclosure.md).
+
+
+[def]: https://doi.org/10.5281/zenodo.19499957
