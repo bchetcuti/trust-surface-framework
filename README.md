@@ -2,6 +2,8 @@
 
 A framework for making digital trust visible, assessable, and governable.
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19499957.svg)](https://doi.org/10.5281/zenodo.19499957)
+
 ---
 
 ## What TrustSurface is
