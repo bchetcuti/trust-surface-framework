@@ -1,0 +1,35 @@
+cff-version: 1.2.0
+title: "TrustSurface Framework"
+message: "If you use the TrustSurface Framework, please cite it using the metadata below."
+type: dataset
+
+authors:
+  - family-names: Chetcuti
+    given-names: Bryan
+    affiliation: "The Vigo Group"
+    country: AU
+
+identifiers:
+  - type: url
+    value: https://trustsurface.org
+
+repository-code: https://github.com/bchetcuti/trust-surface-framework
+url: https://trustsurface.org
+
+version: "1.1.0"
+date-released: "2026-04-01"
+
+keywords:
+  - digital trust
+  - governance
+  - risk
+  - observability
+  - cybersecurity
+  - trust surface
+
+license: CC-BY-4.0
+
+abstract: >
+  The TrustSurface Framework provides a structured model for observing,
+  assessing, and governing digital trust across systems, services, and
+  organisations.
