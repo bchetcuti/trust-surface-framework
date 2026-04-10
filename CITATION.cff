@@ -3,6 +3,15 @@ title: "TrustSurface Framework"
 message: "If you use the TrustSurface Framework, please cite it using the metadata below."
 type: dataset
 
+doi: "10.5281/zenodo.XXXXXXX"
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.19499957
+    description: "Archived snapshot of v1.1.0"
+  - type: url
+    value: https://trustsurface.org
+
+
 authors:
   - family-names: Chetcuti
     given-names: Bryan
