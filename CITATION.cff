@@ -3,7 +3,7 @@ title: "TrustSurface Framework"
 message: "If you use the TrustSurface Framework, please cite it using the metadata below."
 type: dataset
 
-doi: "10.5281/zenodo.XXXXXXX"
+doi: "10.5281/zenodo.19499957"
 identifiers:
   - type: doi
     value: 10.5281/zenodo.19499957
