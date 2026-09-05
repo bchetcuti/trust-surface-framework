@@ -2,7 +2,7 @@
 
 **Status:** Public draft  
 **Control:** Normative  
-**Framework version:** v1.1 public draft  
+**Framework version:** v1.2 public draft  
 **Identifier:** TSF-DEF-1  
 **Owner:** TrustSurface Framework  
 **Vocabulary baseline:** TSF-GLO-1  
@@ -64,7 +64,7 @@ The **Trust Surface** describes the systems and observable signals through which
 
 > The collection of digital systems and observable signals through which stakeholders experience and judge the trustworthiness of an organisation's digital presence.
 
-The Trust Surface includes both the systems an organisation operates and the signals those systems emit.
+The Trust Surface includes both the systems an organisation operates and the observable signals through which those systems are experienced.
 
 Examples include:
 
@@ -129,7 +129,7 @@ The Trust Surface can be described through six Trust Surface Domains:
 
 The full domain model is defined in **TSF-MOD-1** - Trust Surface Model & Domains.
 
-Each domain emits Trust Signals. Assessed signals are summarised into a Trust Signal Scorecard and together describe the organisation's Digital Trust Posture.
+Each domain has Trust Signals associated with trust-relevant properties, behaviours, or conditions of its components and relationships. Those Trust Signals are assessed using attributable evidence, summarised into a Trust Signal Scorecard, and together inform the organisation's Digital Trust Posture.
 
 ---
 
@@ -146,7 +146,7 @@ Examples include:
 
 Because responsibility is distributed, organisations may lack a unified understanding of how these systems collectively influence trust.
 
-TrustSurface provides a structured way to inventory, assess, harden, and govern this surface over time. Without deliberate governance, the Trust Surface tends toward inconsistency, unowned components, and degraded signals - not because of malice, but because no team is responsible for the whole.
+TrustSurface provides a structured way to inventory, assess, harden, and govern this surface over time. Without deliberate governance, the Trust Surface tends toward inconsistency, unowned components, and degraded trust conditions - not because of malice, but because no team is responsible for the whole.
 
 The Trust Surface Lifecycle - Discover, Assess, Harden, Govern, Signal - provides the repeatable operating rhythm that maintains posture across this distributed responsibility landscape.
 
