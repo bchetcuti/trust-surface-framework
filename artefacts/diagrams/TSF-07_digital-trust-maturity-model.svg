@@ -250,7 +250,7 @@
   <!-- Footer -->
   <g transform="translate(110 778)">
     <line x1="0" y1="0" x2="1380" y2="0" class="footer-rule"/>
-    <text x="0" y="28" class="footer-meta">Figure TSF-07 · TrustSurface Framework · v0.1</text>
+    <text x="0" y="28" class="footer-meta">Figure TSF-07 · TrustSurface Framework · v1.2 public draft</text>
     <text x="1380" y="28" text-anchor="end" class="footer-statement">Digital trust maturity reflects the strength of governance, visibility and intentional signalling across the Trust Surface.</text>
   </g>
 </svg>
