@@ -91,6 +91,12 @@ v1.2 does **not** change:
 
 Existing v1.1 Signal Assessment Records remain directly intelligible under v1.2 because they already distinguish signal identifier/name from evidence summary, source, freshness, result, confidence, and target. No record migration or identifier remapping is required solely because of the semantic separation.
 
+**Archive and post-release integrity note:**
+
+- GitHub release `v1.2.0 — Public Draft` was tagged at commit `5d79740d8b6a0608185dbe356991b9e63cd4ecd7` and archived automatically by Zenodo.
+- After that immutable archive was created, **TSF-OVR-1** received one informative publication-integrity correction: `Unknown` assessment outcomes are directed to evidence acquisition or coverage resolution rather than remediation.
+- The correction does not change the framework version, normative boundary, lifecycle, result states, assessment method, or Trust Signal / Evidence semantics. The live v1.2 public draft therefore remains v1.2 while being one non-substantive correction ahead of the archived v1.2.0 tag.
+
 ---
 
 ### v1.1 - 2026-09-06 integrity correction (public draft)
