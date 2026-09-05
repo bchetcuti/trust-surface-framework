@@ -89,11 +89,12 @@
     <text x="744" y="112" class="copy">A method-defined judgement for</text>
     <text x="744" y="134" class="copy">the Trust Signal and target.</text>
 
-    <text x="744" y="184" class="label">RESULT</text>
-    <text x="744" y="210" class="value">Strong · Partial · Weak · Unknown</text>
+    <text x="744" y="178" class="label">RESULT</text>
+    <text x="744" y="204" class="value">Strong · Partial · Weak</text>
+    <text x="744" y="226" class="value">Unknown · Not applicable</text>
 
-    <text x="744" y="256" class="label">CONFIDENCE</text>
-    <text x="744" y="282" class="value">High · Medium · Low</text>
+    <text x="744" y="264" class="label">CONFIDENCE</text>
+    <text x="744" y="290" class="value">High · Medium · Low</text>
 
     <text x="744" y="326" class="label">LIMITATIONS</text>
     <text x="744" y="352" class="value">Coverage · ambiguity · sampling</text>
