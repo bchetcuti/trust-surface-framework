@@ -36,6 +36,20 @@ The following are **non-normative** and are intentionally excluded:
 
 ---
 
+### v1.1 - 2026-09-06 integrity correction (public draft)
+**Change type:** Clarification / publication integrity alignment - no framework version change
+
+This maintenance correction aligns normative artefacts to the already-declared v1.1 public-draft authority and assessment model. It does not introduce a new framework concept, domain, lifecycle stage, conformance requirement, or assessment state.
+
+**Normative artefact corrections:**
+
+- **TSF-SPEC-1** - corrected the declared normative framework set to match TSF-REG-1, the README, artefact control headers, and the v1.1 release record. TSF-PRI-1 and TSF-SIG-1 remain active Informative artefacts rather than Normative artefacts.
+- **TSF-LIF-1** - aligned assessment-state terminology to TSF-MTH-1: `Strong / Partial / Weak / Unknown / Not applicable`, replacing stale `Present and Strong / Partial / Absent / Unknown` wording. The lifecycle structure and assessment semantics are unchanged.
+
+This entry records the normative-artefact maintenance required by TSF-VPOL-1 change control while preserving the existing v1.1 public-draft framework version.
+
+---
+
 ### v1.1 - 2026-04 (public draft)
 **Change type:** Major expansion - normative boundary extended, new artefacts, assessment model introduced
 
@@ -54,7 +68,7 @@ The following artefacts are added to the normative set in v1.1:
 - **TSF-GOV-1** - Governance Integration Model: specifies how Trust Posture connects to board reporting, risk governance, and ownership accountability.
 - **TSF-MTH-1** - Assessment Method: introduces the evidence model, Signal Assessment Record structure, Domain Judgement labels (Sustained / Mixed / Fragile / Deficient / Indeterminate), and scoring approach.
 - **TSF-ART-1** - Artefact Register and Visual Index: controlled catalogue of framework diagrams (TSF-01 through TSF-08) and artefact identifiers.
-- **TSF-VPOL-1** - Vocabulary and Naming Policy: governs term introduction, deprecation, and cross-artefact consistency.
+- **TSF-VPOL-1** - Versioning & Normative Boundary Policy: governs artefact classification, versioning, change control, supersession, and publication integrity.
 
 **Glossary expansion:**
 
@@ -100,7 +114,7 @@ The following artefacts are added to the normative set in v1.1:
 - **TSF-REG-1** - Framework Register (canonical artefact list and version status)
 - **TSF-CIT-1** - Citation Guidance
 - **TSF-LIC-1** - Licence
-- **TSF-VPOL-1** - Vocabulary and Naming Policy
+- **TSF-VPOL-1** - Versioning & Normative Boundary Policy
 - **TSF-GLO-1** - Glossary
 
 ## Summary statement

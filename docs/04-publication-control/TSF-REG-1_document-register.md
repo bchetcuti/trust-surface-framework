@@ -10,7 +10,7 @@
 
 ## 1. Purpose
 
-This register is the canonical index of all TrustSurface Framework artefacts for the v1.1 draft release.
+This register is the canonical index of all TrustSurface Framework artefacts for the v1.1 public draft.
 
 It records each artefact's identifier, title, control class, publication status, and location within the repository.
 
@@ -19,13 +19,13 @@ It records each artefact's identifier, title, control class, publication status,
 ## 2. Classification model
 
 - **Control:** Normative / Informative / Guidance / Operational
-- **Status:** Public draft / Public draft / Public release / Superseded / Retired / Archived
+- **Status:** Draft / Public draft / Public release / Superseded / Retired / Archived
 
 ---
 
 ## 3. Normative boundary
 
-The following artefacts form the normative core of the TrustSurface Framework v1.1 draft:
+The following artefacts form the normative core of the TrustSurface Framework v1.1 public draft:
 
 - **TSF-DEF-1** - Trust Surface Definition
 - **TSF-MOD-1** - Trust Surface Model & Domains
@@ -42,23 +42,23 @@ Informative, Guidance, and Operational artefacts support this set but do not ove
 
 ### 01-start-here
 
-| Identifier | Title                  | Control     | Status | File                                                      |
-| ---------- | ---------------------- | ----------- | ------ | --------------------------------------------------------- |
-| TSF-OVR-1  | Framework Overview     | Informative | Draft  | `docs/01-start-here/TSF-OVR-1_framework-overview.md`      |
-| TSF-SPEC-1 | One-page Specification | Normative   | Draft  | `docs/01-start-here/TSF-SPEC-1_one-page-specification.md` |
+| Identifier | Title                  | Control     | Status       | File                                                      |
+| ---------- | ---------------------- | ----------- | ------------ | --------------------------------------------------------- |
+| TSF-OVR-1  | Framework Overview     | Informative | Public draft | `docs/01-start-here/TSF-OVR-1_framework-overview.md`      |
+| TSF-SPEC-1 | One-page Specification | Normative   | Public draft | `docs/01-start-here/TSF-SPEC-1_one-page-specification.md` |
 
 ### 02-core-framework
 
-| Identifier | Title                         | Control     | Status | File                                                                  |
-| ---------- | ----------------------------- | ----------- | ------ | --------------------------------------------------------------------- |
-| TSF-PRI-1  | Trust Principles              | Informative | Draft  | `docs/02-core-framework/TSF-PRI-1_trust-principles.md`                |
-| TSF-DEF-1  | Trust Surface Definition      | Normative   | Draft  | `docs/02-core-framework/TSF-DEF-1_trust-surface-definition.md`        |
-| TSF-MOD-1  | Trust Surface Model & Domains | Normative   | Draft  | `docs/02-core-framework/TSF-MOD-1_trust-surface-model-and-domains.md` |
-| TSF-SIG-1  | Trust Signal Catalogue        | Informative | Draft  | `docs/02-core-framework/TSF-SIG-1_trust-signal-catalogue.md`          |
-| TSF-LIF-1  | Trust Surface Lifecycle       | Normative   | Draft  | `docs/02-core-framework/TSF-LIF-1_trust-surface-lifecycle.md`         |
-| TSF-GOV-1  | Governance Integration Model  | Normative   | Draft  | `docs/02-core-framework/TSF-GOV-1_governance-integration-model.md`    |
-| TSF-MAT-1  | Digital Trust Maturity Model  | Informative | Draft  | `docs/02-core-framework/TSF-MAT-1_digital-trust-maturity-model.md`    |
-| TSF-GLO-1  | Glossary                      | Normative   | Draft  | `docs/02-core-framework/TSF-GLO-1_glossary.md`                        |
+| Identifier | Title                         | Control     | Status       | File                                                                  |
+| ---------- | ----------------------------- | ----------- | ------------ | --------------------------------------------------------------------- |
+| TSF-PRI-1  | Trust Principles              | Informative | Public draft | `docs/02-core-framework/TSF-PRI-1_trust-principles.md`                |
+| TSF-DEF-1  | Trust Surface Definition      | Normative   | Public draft | `docs/02-core-framework/TSF-DEF-1_trust-surface-definition.md`        |
+| TSF-MOD-1  | Trust Surface Model & Domains | Normative   | Public draft | `docs/02-core-framework/TSF-MOD-1_trust-surface-model-and-domains.md` |
+| TSF-SIG-1  | Trust Signal Catalogue        | Informative | Public draft | `docs/02-core-framework/TSF-SIG-1_trust-signal-catalogue.md`          |
+| TSF-LIF-1  | Trust Surface Lifecycle       | Normative   | Public draft | `docs/02-core-framework/TSF-LIF-1_trust-surface-lifecycle.md`         |
+| TSF-GOV-1  | Governance Integration Model  | Normative   | Public draft | `docs/02-core-framework/TSF-GOV-1_governance-integration-model.md`    |
+| TSF-MAT-1  | Digital Trust Maturity Model  | Informative | Public draft | `docs/02-core-framework/TSF-MAT-1_digital-trust-maturity-model.md`    |
+| TSF-GLO-1  | Glossary                      | Normative   | Public draft | `docs/02-core-framework/TSF-GLO-1_glossary.md`                        |
 
 ### 03-application
 
@@ -85,9 +85,9 @@ Informative, Guidance, and Operational artefacts support this set but do not ove
 
 ### 05-narrative
 
-| Identifier | Title  | Control     | Status | File                                    |
-| ---------- | ------ | ----------- | ------ | --------------------------------------- |
-| TSF-NAR-3  | Origin | Informative | Draft  | `docs/05-narrative/TSF-NAR-1_origin.md` |
+| Identifier | Title  | Control     | Status       | File                                    |
+| ---------- | ------ | ----------- | ------------ | --------------------------------------- |
+| TSF-NAR-3  | Origin | Informative | Public draft | `docs/05-narrative/TSF-NAR-3_origin.md` |
 
 ### Controlled diagrams
 
@@ -135,4 +135,4 @@ The following artefacts from earlier drafts have been retired from the v1.1 fram
 
 ## 8. Summary statement
 
-This register is the single source of truth for what the TrustSurface Framework v1.1 draft contains, where each artefact lives, and what authority it carries.
+This register is the single source of truth for what the TrustSurface Framework v1.1 public draft contains, where each artefact lives, and what authority it carries.

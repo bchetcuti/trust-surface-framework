@@ -71,19 +71,20 @@ A normative artefact may:
 - change the meaning or structure of the framework
 
 Examples:
-- Trust Principles
 - Trust Surface Definition
 - Trust Surface Model & Domains
-- Trust Signal Catalogue
 - Trust Surface Lifecycle
 - Governance Integration Model
 - Glossary
+- One-page Specification
 
 ### 4.2 Informative
 Informative artefacts explain, interpret, compare, or contextualise the framework but do not change its requirements.
 
 Examples:
 - Framework Overview
+- Trust Principles
+- Trust Signal Catalogue
 - Digital Trust Maturity Model
 - Comparative Positioning
 - Origin

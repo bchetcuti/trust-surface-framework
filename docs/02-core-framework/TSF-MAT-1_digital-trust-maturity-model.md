@@ -67,7 +67,7 @@ Typical characteristics:
 
 Trust failures occur unexpectedly because the Trust Surface is not actively governed.
 
-**Typical assessment pattern:** Most signals are Absent or Unknown. Evidence Freshness is predominantly Unknown. Domain Judgements are likely Deficient or Indeterminate across multiple domains.
+**Typical assessment pattern:** Most signals are Weak or Unknown. Evidence Freshness is predominantly Unknown. Domain Judgements are likely Deficient or Indeterminate across multiple domains.
 
 ---
 
@@ -81,7 +81,7 @@ Typical characteristics:
 
 Trust improves, but only in response to problems.
 
-**Typical assessment pattern:** Some signals show improvement in domains that have been recently remediated. Others remain Absent or Partial. Evidence Freshness is often Stale for domains not recently reviewed. Domain Judgements are typically Mixed or Fragile, with some Deficient areas.
+**Typical assessment pattern:** Some signals show improvement in domains that have been recently remediated. Others remain Weak or Partial. Evidence Freshness is often Stale for domains not recently reviewed. Domain Judgements are typically Mixed or Fragile, with some Deficient areas.
 
 ---
 
@@ -155,14 +155,14 @@ This example shows an organisation that should prioritise its third-party ecosys
 
 TSF-MTH-1 - Assessment Method produces Signal Assessment Records and Domain Judgements for each Trust Surface Domain.
 
-The domain judgement labels used in TSF-MTH-1 (Variant A) map to maturity patterns as follows:
+The domain judgement labels used in TSF-MTH-1 map to maturity patterns as follows:
 
 | Domain Judgement | Maturity implication |
 |---|---|
 | **Sustained** | Signals are strong and evidence is current - consistent with Level 3–5 |
 | **Mixed** | Signals are uneven - some strong, some weak or stale - consistent with Level 2–3 transitioning |
 | **Fragile** | Signals are present but vulnerable to regression - consistent with Level 2–3, requiring active hardening |
-| **Deficient** | Key signals are absent or very weak - consistent with Level 1–2 |
+| **Deficient** | Key signals are weak or materially deficient - consistent with Level 1–2 |
 | **Indeterminate** | Evidence is insufficient to judge the domain - consistent with Level 1, or any level where assessment has not been completed |
 
 This mapping is indicative, not mechanical. A Sustained judgement in one domain does not set the organisation's overall maturity level. Maturity is assessed holistically across domains, taking into account governance capacity and the robustness of the improvement cycle.

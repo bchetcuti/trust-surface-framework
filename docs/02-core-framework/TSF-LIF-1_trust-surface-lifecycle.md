@@ -96,7 +96,7 @@ Signals are observed or verified to determine posture and evidence coverage. The
 For each assessed signal, an assessor produces a Signal Assessment Record containing:
 - the signal identifier
 - the evidence observed
-- the result state (e.g. Present and Strong, Partial, Absent, Unknown)
+- the result state (Strong, Partial, Weak, Unknown, or Not applicable)
 - a confidence level
 - an evidence freshness indicator
 
@@ -119,7 +119,7 @@ A scorecard that does not include evidence references or domain-level judgements
 
 ### Purpose
 
-Strengthen weak, partial, or absent trust signals to improve Digital Trust Posture.
+Strengthen weak or partial trust signals to improve Digital Trust Posture.
 
 ### What this stage involves
 
