@@ -1,6 +1,6 @@
 <svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
   <title id="title">TSF-01 — Trust Surface Framework</title>
-  <desc id="desc">TrustSurface Framework master diagram showing Trust Surface domains, trust signals, digital trust posture, and the operating lifecycle.</desc>
+  <desc id="desc">TrustSurface Framework master diagram showing Trust Surface domains, Trust Signals, Evidence-backed assessment, Digital Trust Posture, and the operating lifecycle.</desc>
 
   <defs>
     <style>
@@ -167,13 +167,13 @@
     <text x="58" y="17" class="kicker">TRUSTSURFACE FRAMEWORK</text>
     <text x="0" y="74" class="figure-id">FIGURE TSF-01</text>
     <text x="0" y="132" class="title-text">Trust Surface Framework</text>
-    <text x="0" y="172" class="subtitle-text">A governance model linking Trust Surface domains, trust signals, trust posture and operating rhythm.</text>
+    <text x="0" y="172" class="subtitle-text">A governance model linking Trust Surface domains, Trust Signals, Digital Trust Posture and operating rhythm.</text>
   </g>
 
   <!-- Top-right chrome -->
   <g transform="translate(1188 94)">
     <rect x="0" y="0" width="114" height="36" rx="18" class="pill"/>
-    <text x="57" y="23" text-anchor="middle" class="status-text">public</text>
+    <text x="57" y="23" text-anchor="middle" class="status-text">Draft</text>
   </g>
 
   <g transform="translate(1318 94)">
@@ -223,13 +223,13 @@
 
     <text x="36" y="42" class="section-label-accent">Master model</text>
     <text x="36" y="82" class="panel-title">Signals, posture and governance rhythm</text>
-    <text x="36" y="112" class="panel-copy">Domains emit trust signals. Their quality and coverage shape digital trust posture. Governance turns this into a repeatable discipline.</text>
+    <text x="36" y="112" class="panel-copy">Domains organise Trust Signals. Evidence supports assessment; results shape posture and governance.</text>
 
     <!-- Signals block -->
     <g transform="translate(36 146)">
       <rect x="0" y="0" width="360" height="180" rx="18" class="panel"/>
-      <text x="24" y="30" class="node-title">Trust signals</text>
-      <text x="24" y="52" class="node-copy">Observable evidence at the digital edge</text>
+      <text x="24" y="30" class="node-title">Trust Signals</text>
+      <text x="24" y="52" class="node-copy">Trust-relevant conditions assessed using Evidence</text>
 
       <circle cx="24" cy="84" r="4" class="bullet"/>
       <text x="40" y="89" class="node-copy">Email authenticity and alignment</text>
@@ -241,7 +241,7 @@
       <text x="40" y="145" class="node-copy">Service trust, reliability and resilience</text>
 
       <circle cx="24" cy="168" r="4" class="bullet"/>
-      <text x="40" y="173" class="node-copy">Governance and third-party evidence</text>
+      <text x="40" y="173" class="node-copy">Third-party governance and dependency condition</text>
     </g>
 
     <!-- Arrow -->
@@ -253,8 +253,8 @@
       <text x="155" y="30" text-anchor="middle" class="core-label">Core construct</text>
       <text x="155" y="64" text-anchor="middle" class="core-title">Digital Trust</text>
       <text x="155" y="94" text-anchor="middle" class="core-title">Posture</text>
-      <text x="155" y="122" text-anchor="middle" class="core-copy">The evidence-based state implied</text>
-      <text x="155" y="142" text-anchor="middle" class="core-copy">by the quality and coverage of signals</text>
+      <text x="155" y="122" text-anchor="middle" class="core-copy">The evidence-backed state implied</text>
+      <text x="155" y="142" text-anchor="middle" class="core-copy">by assessed Trust Signals</text>
     </g>
 
     <!-- Bottom band -->
@@ -268,7 +268,7 @@
   <!-- Footer -->
   <g transform="translate(110 778)">
     <line x1="0" y1="0" x2="1380" y2="0" class="footer-rule"/>
-    <text x="0" y="28" class="footer-meta">Figure TSF-01 · TrustSurface Framework · v1.0</text>
-    <text x="1380" y="28" text-anchor="end" class="footer-statement">The framework links domains, signals, posture and governance into a single model for digital trust.</text>
+    <text x="0" y="28" class="footer-meta">Figure TSF-01 · TrustSurface Framework · v1.2 public draft</text>
+    <text x="1380" y="28" text-anchor="end" class="footer-statement">The framework links domains, Trust Signals, posture and governance into a single model for digital trust.</text>
   </g>
 </svg>
