@@ -2,7 +2,7 @@
 
 **Status:** Public draft  
 **Control:** Operational  
-**Framework version:** v1.1 public draft  
+**Framework version:** v1.2 public draft  
 **Identifier:** TSF-VPOL-1  
 **Owner:** TrustSurface Framework  
 **Applies to:** all TrustSurface framework artefacts, releases, and publication states  
@@ -191,14 +191,14 @@ Artefacts SHOULD align to the framework release version in which they are publis
 Where needed, an artefact MAY also show a local revision marker, but the public baseline SHALL remain the framework release version.
 
 Recommended public expression:
-- `Framework version: v1.1 draft`
-- `Framework version: v1.1.0`
+- `Framework version: v1.2 public draft`
+- `Framework version: v1.2.0`
 
 ### 7.3 Draft notation
 Pre-release states MAY use clear draft notation, such as:
-- `v1.1 draft`
-- `v1.1.0-alpha`
-- `v1.1.0-beta`
+- `v1.2 public draft`
+- `v1.2.0-alpha`
+- `v1.2.0-beta`
 
 The draft notation chosen SHALL be applied consistently across the release surface.
 
@@ -459,4 +459,3 @@ The following items were resolved for the v1.1 public draft:
 ## 24. Summary statement
 
 A framework becomes durable when its authority boundary is explicit, its artefacts are classed and versioned, its releases are traceable, and its diagrams, guidance, and public surface do not outrun the current state of the model.
-
