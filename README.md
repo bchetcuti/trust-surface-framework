@@ -2,7 +2,7 @@
 
 A framework for making digital trust visible, assessable, and governable.
 
-[![Archived DOI — v1.1.0](https://zenodo.org/badge/DOI/10.5281/zenodo.19499957.svg)](https://doi.org/10.5281/zenodo.19499957)
+[![DOI](https://zenodo.org/badge/1173391560.svg)](https://zenodo.org/badge/latestdoi/1173391560)
 [![Version](https://img.shields.io/badge/version-v1.2.0-1f4b43?style=flat-square)](https://trustsurface.org/changelog/)
 [![Status](https://img.shields.io/badge/status-public%20draft-5f6b76?style=flat-square)](https://trustsurface.org/)
 [![Licence](https://img.shields.io/badge/licence-CC%20BY%204.0-4b5563?style=flat-square)](https://trustsurface.org/licence/)
