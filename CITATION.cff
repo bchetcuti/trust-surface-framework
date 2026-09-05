@@ -3,30 +3,17 @@ title: "TrustSurface Framework"
 message: "If you use the TrustSurface Framework, please cite it using the metadata below."
 type: dataset
 
-doi: "10.5281/zenodo.19499957"
-identifiers:
-  - type: doi
-    value: 10.5281/zenodo.19499957
-    description: "Archived snapshot of v1.1.0"
-  - type: url
-    value: https://trustsurface.org
-
-
 authors:
   - family-names: Chetcuti
     given-names: Bryan
     affiliation: "The Vigo Group"
     country: AU
 
-identifiers:
-  - type: url
-    value: https://trustsurface.org
-
 repository-code: https://github.com/bchetcuti/trust-surface-framework
 url: https://trustsurface.org
 
-version: "1.1.0"
-date-released: "2026-04-01"
+version: "1.2.0"
+date-released: "2026-09-06"
 
 keywords:
   - digital trust
@@ -39,6 +26,8 @@ keywords:
 license: CC-BY-4.0
 
 abstract: >
-  The TrustSurface Framework provides a structured model for observing,
+  The TrustSurface Framework provides a structured model for identifying,
   assessing, and governing digital trust across systems, services, and
-  organisations.
+  organisational dependencies. Version 1.2 separates Trust Signals from
+  Evidence as distinct concepts while preserving the framework's domains,
+  lifecycle, scorecard, and governance structure.
