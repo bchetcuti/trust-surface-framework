@@ -2,7 +2,7 @@
 
 **Status:** Public draft  
 **Control:** Informative  
-**Framework version:** v1.1 public draft  
+**Framework version:** v1.2 public draft  
 **Identifier:** TSF-SIG-1  
 **Owner:** TrustSurface Framework  
 **Vocabulary baseline:** TSF-GLO-1  
@@ -13,7 +13,7 @@
 
 ## 1. Purpose
 
-This document defines a baseline set of observable indicators - Trust Signals - used to assess Digital Trust Posture at the Trust Surface.
+This document defines a baseline set of Trust Signals used to assess Digital Trust Posture at the Trust Surface.
 
 The Trust Signal Catalogue serves three purposes:
 
@@ -42,18 +42,22 @@ The catalogue is informative. It provides the signal vocabulary that normative p
 
 ## 3. What a Trust Signal is
 
-A Trust Signal is evidence that a system is:
+A Trust Signal is the defined trust-relevant property, behaviour, or condition being assessed. It is not the Evidence used to assess it.
+
+Trust Signals may describe conditions related to whether a Trust Surface component or relationship is:
 
 - **authentic** - harder to impersonate
 - **well governed** - owned, controlled, maintained
 - **resilient** - behaves predictably under change and stress
 - **accountable** - can be explained and evidenced
 
-Signals may be publicly observable (e.g. DNS records) or internally verifiable (e.g. privileged access governance), but they should always be demonstrable.
+A Trust Signal may describe a condition that is externally observable or internally verifiable, but it must remain demonstrable and materially related to the Trust Surface.
 
-A signal is only useful if it can be evidenced, refreshed, and governed. A Trust Signal that cannot be verified or updated is not a functioning signal - it is an assumption. The distinction between a current, evidenced signal and a stale or assumed one is captured through the concept of Evidence Freshness, defined in TSF-GLO-1.
+Evidence is the attributable observation, record, configuration, artefact, test result, or verification used to assess that Trust Signal for a defined target. Evidence may be gathered externally or internally and is evaluated using the evidence model in TSF-MTH-1.
 
-The anatomy of a Trust Signal - how signals are structured, what makes them strong or weak, and how they relate to evidence and posture - is illustrated in visual artefact **TSF-06** - Trust Signal Anatomy.
+A signal is useful for posture assessment only when it can be assessed using evidence that can be traced and refreshed. Evidence Freshness applies to the evidence supporting an assessment, not to the Trust Signal definition itself.
+
+The anatomy of a Trust Signal - including the signal definition, Evidence, assessment result, and posture contribution - is illustrated in visual artefact **TSF-06** - Trust Signal Anatomy.
 
 ---
 
@@ -63,11 +67,11 @@ Each signal in the catalogue is defined using the following structure:
 
 - **ID** - stable identifier (e.g. EML-03)
 - **Domain** - Trust Surface Domain to which the signal belongs
-- **Signal** - what is being measured
-- **Evidence** - what constitutes acceptable proof
+- **Signal** - the trust-relevant property, behaviour, or condition being assessed
+- **Evidence** - attributable material that may support assessment of that signal
 - **Trust implication** - why the signal matters for trust posture
 
-When organisations produce Signal Assessment Records during assessment (per TSF-MTH-1), this catalogue provides the signal reference. Each Signal Assessment Record references a signal identifier from this catalogue (or from an organisationally-maintained extension).
+When organisations produce Signal Assessment Records during assessment (per TSF-MTH-1), this catalogue provides the signal reference. Each Signal Assessment Record references a signal identifier from this catalogue (or from an organisationally-maintained extension), records the Evidence used, and records the resulting assessment state separately.
 
 ---
 
@@ -118,7 +122,7 @@ When organisations produce Signal Assessment Records during assessment (per TSF-
 | ID | Signal | Evidence | Trust implication |
 |---|---|---|---|
 | INF-01 | Logging and monitoring coverage | logs for critical services; alerting | supports detection and assurance |
-| INF-02 | Backup and recovery evidence | backups tested; RTO/RPO defined | reduces impact of failure |
+| INF-02 | Backup and recovery capability | tested backups; restore-test results; RTO/RPO defined | reduces impact of failure |
 | INF-03 | Change control for trust-critical assets | approval + audit trail for DNS/IdP/email | prevents accidental trust regressions |
 | INF-04 | Secrets and key management | vaulting; rotation; access controls | reduces credential leakage risk |
 
@@ -127,7 +131,7 @@ When organisations produce Signal Assessment Records during assessment (per TSF-
 | ID | Signal | Evidence | Trust implication |
 |---|---|---|---|
 | TP-01 | Vendor inventory and ownership | current list; service owners | prevents unmanaged dependency risk |
-| TP-02 | Assurance evidence captured | SOC2/ISO attestations or risk review | supports procurement trust decisions |
+| TP-02 | Supplier assurance review | SOC 2/ISO attestations or risk review; review currency and owner | supports procurement trust decisions |
 | TP-03 | Integration boundary control | least privilege; scoped tokens; reviews | reduces blast radius |
 | TP-04 | Offboarding and exit controls | access revocation; data handling documented | prevents persistent third-party exposure |
 
@@ -152,11 +156,13 @@ When extending the catalogue, organisations SHOULD:
 - document the extension in their Trust Surface Inventory or assessment records
 - review extensions as part of the regular governance cadence
 
+The existence of evidence for a control does not by itself make that control a Trust Signal. Extension signals SHOULD identify the Trust Surface component or relationship whose trust-relevant condition they illuminate.
+
 ### 6.2 Retiring and superseding signals
 
 Signals may become obsolete due to changes in technology, protocol deprecation, or governance practice. Organisations SHOULD review their signal baseline periodically and retire signals that are no longer relevant.
 
-At the framework level, changes to the baseline catalogue are versioned through TSF-CHG-1 - Change Management.
+At the framework level, changes to the baseline catalogue are versioned through **TSF-CHG-1 - Public Changelog and Release Notes**.
 
 ### 6.3 Minimum coverage
 
@@ -168,34 +174,35 @@ The catalogue intentionally supports incremental adoption. The absence of covera
 
 ## 7. Relationship to TSF-MTH-1
 
-The Trust Signal Catalogue defines the signal inventory. TSF-MTH-1 - Assessment Method defines how signals are assessed.
+The Trust Signal Catalogue defines the signal inventory. TSF-MTH-1 - Assessment Method defines how signals are assessed using Evidence.
 
 When an assessor works through the lifecycle's Assess stage, they:
 
 1. Reference signals from this catalogue (and any extensions)
-2. Evaluate evidence against each signal
-3. Produce a Signal Assessment Record for each signal assessed
-4. Aggregate Signal Assessment Records into a Trust Signal Scorecard
-5. Derive a Domain Judgement for each Trust Surface Domain
+2. Define the assessment target
+3. Gather and evaluate Evidence for each selected signal
+4. Produce a Signal Assessment Record containing the evidence, result, confidence, and Evidence Freshness
+5. Aggregate Signal Assessment Records into a Trust Signal Scorecard
+6. Derive a Domain Judgement for each Trust Surface Domain
 
 The catalogue provides the "what to assess" layer. TSF-MTH-1 provides the "how to assess" layer. Neither document is complete without the other.
 
-Signal Assessment Records will use the signal identifiers defined here (e.g. EML-03, DNS-01) as their primary reference keys.
+Signal Assessment Records use the signal identifiers defined here (e.g. EML-03, DNS-01) as their primary reference keys.
 
 ---
 
 ## 8. Relationship to maturity
 
-Signals can be assessed using the Digital Trust Maturity Model (TSF-MAT-1).
+Trust Signal assessment patterns can inform the Digital Trust Maturity Model (TSF-MAT-1).
 
-An organisation's pattern of strong, mixed, partial, or absent signals across the catalogue typically reflects its maturity level:
+An organisation's pattern of Strong, Partial, Weak, Unknown, and Not applicable assessment results across the catalogue may contribute to its maturity judgement:
 
-- Level 1 organisations often cannot evidence many baseline signals
-- Level 2 organisations may have partial evidence following remediation episodes
-- Level 3 organisations have consistent evidence across most signals
-- Level 4 and 5 organisations evidence signals routinely and have governance that prevents regressions
+- Level 1 organisations often lack sufficient evidence to assess many baseline signals
+- Level 2 organisations may have Partial or Weak results following reactive remediation episodes
+- Level 3 organisations have current evidence and repeatable assessment across most signals
+- Level 4 and 5 organisations assess signals routinely and have governance that prevents regressions
 
-The catalogue does not determine maturity directly. Maturity is a governance judgement informed by patterns in assessed signals. See TSF-MAT-1 for the full model.
+The catalogue does not determine maturity directly. Maturity is a governance judgement informed by patterns in assessed signals and operating capability. See TSF-MAT-1 for the full model.
 
 ---
 
@@ -205,9 +212,10 @@ TSF-SIG-1 does not:
 
 - define assessment scoring formulas or posture thresholds (that is TSF-MTH-1's responsibility)
 - prescribe which signals are mandatory for every organisation
-- claim that the baseline catalogue covers every possible trust-relevant indicator
+- claim that the baseline catalogue covers every possible trust-relevant condition
 - determine an organisation's maturity level (that is TSF-MAT-1's responsibility)
 - replace technical configuration guidance for individual technologies
+- treat every evidenced cybersecurity control as a Trust Signal
 
 ---
 
@@ -226,6 +234,6 @@ TSF-SIG-1 does not:
 
 ## 11. Summary statement
 
-The Trust Signal Catalogue defines the observable indicators through which Digital Trust Posture is assessed.
+The Trust Signal Catalogue defines the trust-relevant properties, behaviours, and conditions through which Digital Trust Posture is assessed.
 
-It provides a domain-structured baseline of signals that organisations use to discover what to assess, produce consistent evidence, and connect signal outcomes to posture, maturity, and governance decisions. The catalogue is a starting point designed for extension - not a closed list.
+It provides a domain-structured baseline of Trust Signals that organisations use to identify what to assess, gather attributable Evidence, and connect assessment results to posture, maturity, and governance decisions. The catalogue is a starting point designed for extension - not a closed list.
