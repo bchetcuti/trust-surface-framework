@@ -36,6 +36,20 @@ The following are **non-normative** and are intentionally excluded:
 
 ---
 
+### v1.1 - 2026-09-06 integrity correction (public draft)
+**Change type:** Clarification / publication integrity alignment - no framework version change
+
+This maintenance correction aligns normative artefacts to the already-declared v1.1 public-draft authority and assessment model. It does not introduce a new framework concept, domain, lifecycle stage, conformance requirement, or assessment state.
+
+**Normative artefact corrections:**
+
+- **TSF-SPEC-1** - corrected the declared normative framework set to match TSF-REG-1, the README, artefact control headers, and the v1.1 release record. TSF-PRI-1 and TSF-SIG-1 remain active Informative artefacts rather than Normative artefacts.
+- **TSF-LIF-1** - aligned assessment-state terminology to TSF-MTH-1: `Strong / Partial / Weak / Unknown / Not applicable`, replacing stale `Present and Strong / Partial / Absent / Unknown` wording. The lifecycle structure and assessment semantics are unchanged.
+
+This entry records the normative-artefact maintenance required by TSF-VPOL-1 change control while preserving the existing v1.1 public-draft framework version.
+
+---
+
 ### v1.1 - 2026-04 (public draft)
 **Change type:** Major expansion - normative boundary extended, new artefacts, assessment model introduced
 
