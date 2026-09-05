@@ -187,7 +187,7 @@ Select Trust Signals for a defined target, gather attributable Evidence, and ass
 Summarise the evidence-backed condition of the Trust Surface in a structured way that supports governance and action.
 
 ### 9.4 Harden weak areas
-Prioritise remediation of Weak, Partial, Unknown, or poorly governed assessment outcomes.
+Prioritise remediation of Weak, Partial, or poorly governed assessment outcomes. Unknown outcomes should trigger evidence acquisition or coverage resolution rather than be treated as established failure.
 
 ### 9.5 Integrate into governance
 Ensure trust posture is reviewed through ownership, cadence, decision rights, and escalation pathways.
