@@ -2,7 +2,7 @@
 
 **Status:** Public draft  
 **Control:** Operational  
-**Framework version:** v1.1 public draft  
+**Framework version:** v1.2 public draft  
 **Identifier:** TSF-REG-1  
 **Owner:** TrustSurface Framework  
 
@@ -10,7 +10,7 @@
 
 ## 1. Purpose
 
-This register is the canonical index of all TrustSurface Framework artefacts for the v1.1 public draft.
+This register is the canonical index of all TrustSurface Framework artefacts for the v1.2 public draft.
 
 It records each artefact's identifier, title, control class, publication status, and location within the repository.
 
@@ -25,7 +25,7 @@ It records each artefact's identifier, title, control class, publication status,
 
 ## 3. Normative boundary
 
-The following artefacts form the normative core of the TrustSurface Framework v1.1 public draft:
+The following artefacts form the normative core of the TrustSurface Framework v1.2 public draft:
 
 - **TSF-DEF-1** - Trust Surface Definition
 - **TSF-MOD-1** - Trust Surface Model & Domains
@@ -98,7 +98,7 @@ Informative, Guidance, and Operational artefacts support this set but do not ove
 | TSF-03 | Trust Surface Domains | Canonical | TSF-MOD-1 | `artefacts/diagrams/TSF-03_trust-surface-domains.svg` |
 | TSF-04 | Trust Surface vs Attack Surface | Supporting | TSF-DEF-1 | `artefacts/diagrams/TSF-04_trust-surface-vs-attack-surface.svg` |
 | TSF-05 | Trust Surface Lifecycle | Canonical | TSF-LIF-1 | `artefacts/diagrams/TSF-05_trust-surface-lifecycle.svg` |
-| TSF-06 | Trust Signal Anatomy | Supporting | TSF-SIG-1 | `artefacts/diagrams/TSF-06_trust-signal-anatomy.svg` |
+| TSF-06 | Trust Signal Anatomy | Supporting | TSF-SIG-1 / TSF-MTH-1 | `artefacts/diagrams/TSF-06_trust-signal-anatomy.svg` |
 | TSF-07 | Digital Trust Maturity Model | Canonical | TSF-MAT-1 | `artefacts/diagrams/TSF-07_digital-trust-maturity-model.svg` |
 | TSF-08 | Governance Integration Model | Canonical | TSF-GOV-1 | `artefacts/diagrams/TSF-08_governance-integration-model.svg` |
 
@@ -106,7 +106,7 @@ Informative, Guidance, and Operational artefacts support this set but do not ove
 
 ## 5. Retired artefacts
 
-The following artefacts from earlier drafts have been retired from the v1.1 framework set. Their core content has been absorbed into TSF-OVR-1 (Framework Overview).
+The following artefacts from earlier drafts remain retired from the current framework set. Their core content has been absorbed into TSF-OVR-1 (Framework Overview).
 
 | Former identifier | Title | Disposition |
 |---|---|---|
@@ -135,4 +135,4 @@ The following artefacts from earlier drafts have been retired from the v1.1 fram
 
 ## 8. Summary statement
 
-This register is the single source of truth for what the TrustSurface Framework v1.1 public draft contains, where each artefact lives, and what authority it carries.
+This register is the single source of truth for what the TrustSurface Framework v1.2 public draft contains, where each artefact lives, and what authority it carries.
