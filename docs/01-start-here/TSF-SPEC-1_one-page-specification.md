@@ -113,16 +113,14 @@ Partial adoption SHOULD be described as adoption in progress, not full alignment
 
 The current normative framework set for the v1.1 draft consists of:
 
-- **TSF-PRI-1** - Trust Principles
 - **TSF-DEF-1** - Trust Surface Definition
 - **TSF-MOD-1** - Trust Surface Model & Domains
-- **TSF-SIG-1** - Trust Signal Catalogue
 - **TSF-LIF-1** - Trust Surface Lifecycle
 - **TSF-GOV-1** - Governance Integration Model
 - **TSF-GLO-1** - Glossary
 - **TSF-SPEC-1** - One-page Specification
 
-Interpretive, guidance, and operational artefacts support this set but do not override it.
+Informative, guidance, and operational artefacts support this set but do not override it.
 
 ---
 
@@ -145,6 +143,8 @@ Interpretive, guidance, and operational artefacts support this set but do not ov
 ## 10. Related artefacts
 
 - **TSF-OVR-1** - Framework Overview
+- **TSF-PRI-1** - Trust Principles
+- **TSF-SIG-1** - Trust Signal Catalogue
 - **TSF-MTH-1** - Assessment Method
 - **TSF-MAT-1** - Digital Trust Maturity Model
 - **TSF-ADP-1** - Adoption Guidance
