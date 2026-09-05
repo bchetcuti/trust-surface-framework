@@ -2,7 +2,7 @@
 
 **Status:** Public draft  
 **Control:** Informative  
-**Framework version:** v1.1 public draft  
+**Framework version:** v1.2 public draft  
 **Identifier:** TSF-CMP-1  
 **Owner:** TrustSurface Framework  
 **Vocabulary baseline:** TSF-GLO-1  
@@ -14,13 +14,13 @@
 
 This document positions the TrustSurface Framework relative to the governance and security standards most commonly encountered by adopting organisations. It is provided for orientation, not prescription. Readers using TrustSurface alongside an existing standard will find practical guidance on where the two complement each other.
 
-TrustSurface is a **lens**. It helps organisations identify, measure, and govern the **observable trust signals** emitted at the digital edge. It does not compete with control frameworks, audit standards, or maturity models. It complements them by translating internal intent into **externally meaningful evidence**.
+TrustSurface is a **lens**. It helps organisations identify and govern trust-relevant properties, behaviours, and conditions at the digital edge, then assess those Trust Signals using attributable Evidence. It does not compete with control frameworks, audit standards, or maturity models. It complements them by connecting internal controls and governance intent to evidence-backed Digital Trust Posture.
 
 ---
 
 ## 2. What TrustSurface is
 
-> A framework for making trust posture observable, discussable, and governable through signals and evidence.
+> A framework for making trust posture visible, assessable, and governable through defined Trust Signals and attributable Evidence.
 
 ---
 
@@ -37,12 +37,12 @@ TrustSurface is a **lens**. It helps organisations identify, measure, and govern
 
 | Standard / framework | Primary purpose | Primary unit of work | Typical outputs | Where TrustSurface fits |
 |---|---|---|---|---|
-| **ISO/IEC 27001** | Establish and operate an ISMS | Controls, policies, ISMS processes | SoA, policies, audits, continual improvement | Adds a trust-signal view of what stakeholders can observe (e.g. email/domain posture, service transparency) |
-| **NIST CSF** | Organise cyber risk management outcomes | Functions / categories (Identify, Protect, Detect, Respond, Recover) | Profiles, target state, outcomes mapping | Adds a "digital edge" lens that connects outcomes to observable trust signals and evidence refresh |
-| **COBIT** | Govern and manage enterprise IT | Governance and management objectives | Objectives, accountability, metrics | Adds a focused posture lens for externally-facing systems, supporting executive decision rights and reporting |
-| **ASD Essential Eight** | Reduce likelihood and impact of common cyber attacks | Eight mitigation strategies and maturity levels | Maturity assessments, remediation plans | Helps decide *where* Essential Eight maturity matters most at the edge; makes assurance visible via signals |
-| **Australian Government ISM** | Cyber security framework guidance for protecting systems and data | Controls / guidelines applied via risk management | Control profiles, implementation guidance, assurance artefacts | Provides the control depth; TrustSurface provides an externally-observable evidence lens across the trust surface |
-| **PSPF** | Protective security policy for people, information, and resources | Security domains and required outcomes | Policy compliance, maturity reporting, protective security plans | Helps turn policy intent into observable trust posture for digital-facing services and delegated trust |
+| **ISO/IEC 27001** | Establish and operate an ISMS | Controls, policies, ISMS processes | SoA, policies, audits, continual improvement | Adds a Trust Signal view of trust-relevant conditions at the digital edge and the Evidence used to assess them |
+| **NIST CSF** | Organise cyber risk management outcomes | Functions / categories (Identify, Protect, Detect, Respond, Recover) | Profiles, target state, outcomes mapping | Adds a digital-edge lens that connects outcomes to Trust Signals, evidence-backed assessment, and refresh discipline |
+| **COBIT** | Govern and manage enterprise IT | Governance and management objectives | Objectives, accountability, metrics | Adds a focused posture lens for externally experienced systems, supporting executive decision rights and reporting |
+| **ASD Essential Eight** | Reduce likelihood and impact of common cyber attacks | Eight mitigation strategies and maturity levels | Maturity assessments, remediation plans | Helps decide where Essential Eight maturity materially shapes Trust Surface condition and what Evidence supports that assessment |
+| **Australian Government ISM** | Cyber security framework guidance for protecting systems and data | Controls / guidelines applied via risk management | Control profiles, implementation guidance, assurance artefacts | Provides control depth; TrustSurface provides a surface-oriented assessment lens over trust-relevant conditions and Evidence |
+| **PSPF** | Protective security policy for people, information, and resources | Security domains and required outcomes | Policy compliance, maturity reporting, protective security plans | Helps connect policy intent to evidence-backed Digital Trust Posture for digital-facing services and delegated trust |
 
 ---
 
@@ -50,27 +50,29 @@ TrustSurface is a **lens**. It helps organisations identify, measure, and govern
 
 ### 5.1 ISO/IEC 27001
 
-Use TrustSurface to strengthen ISO 27001 where stakeholders judge you externally.
+Use TrustSurface to strengthen ISO 27001 where stakeholders experience digital trust.
 
 - treat Trust Surface domains as **ISMS-relevant groupings** at the digital edge
-- use Trust Signals to define **evidence expectations** for trust-critical controls (email, domains, public services, third-party integrations)
+- use Trust Signals to define **what trust-relevant condition is assessed** for trust-critical areas such as email, domains, public services, and third-party integrations
+- define the Evidence needed to support those assessments
 - use TrustSurface artefacts (inventory, scorecard, signal gap log) as inputs to management review
 
 ### 5.2 NIST CSF
 
-Use TrustSurface to connect CSF outcomes to externally meaningful evidence.
+Use TrustSurface to connect CSF outcomes to evidence-backed Digital Trust Posture.
 
-- map Trust Surface domains to CSF outcomes (especially Identify and Protect)
-- use signals to validate outcomes with evidence (e.g. spoof resistance, transport integrity, service reliability)
+- map Trust Surface domains to CSF outcomes where relevant
+- define Trust Signals that describe the trust-relevant condition to be assessed
+- gather Evidence that supports those assessments (e.g. spoof resistance, transport integrity, service reliability)
 - use the operating rhythm to establish a lightweight reassessment cadence
 
 ### 5.3 COBIT
 
-Use TrustSurface to operationalise governance intent into evidence.
+Use TrustSurface to operationalise governance intent into evidence-backed posture.
 
 - clarify **decision rights** and ownership for trust-critical systems
 - add trust posture measures alongside service and risk measures
-- use the Trust Signal Gap to track "assurance intent vs observable reality"
+- use the Trust Signal Gap to track assurance intent versus observable reality where that comparison can be supported
 
 ### 5.4 ASD Essential Eight
 
@@ -79,7 +81,8 @@ The Essential Eight is a set of mitigation strategies with maturity levels. Trus
 Use TrustSurface to:
 
 - identify which parts of your environment are **trust-critical at the edge** (e.g. identity boundary, email integrity, public services)
-- set **evidence expectations** for externally visible outcomes (e.g. resistance to impersonation, predictable service behaviour)
+- define Trust Signals only where a control or condition materially shapes the Trust Surface
+- gather Evidence that supports assessment of those Trust Signals
 - ensure maturity uplift is governed through ownership, cadence, and exception handling
 
 ### 5.5 Australian Government ISM
@@ -89,8 +92,9 @@ The ISM provides broad control guidance and implementation depth. TrustSurface p
 Use TrustSurface to:
 
 - make "what we must protect" explicit as a Trust Surface inventory
-- define what evidence will be used to demonstrate posture for trust-critical areas
-- avoid over-measuring: focus on high-value, high-visibility signals that affect reputation and stakeholder confidence
+- identify the trust-relevant properties, behaviours, or conditions to assess
+- define what Evidence will support posture assessment for those trust-critical areas
+- avoid over-measuring: focus on conditions that materially affect Digital Trust Posture rather than importing a broad control catalogue
 
 ### 5.6 Protective Security Policy Framework (PSPF)
 
@@ -98,8 +102,9 @@ PSPF sets policy outcomes across protective security domains. TrustSurface can h
 
 Use TrustSurface to:
 
-- translate policy-level requirements into **observable posture** for digital services and delegated trust
-- maintain a rhythm of reassessment (not a once-a-year compliance exercise)
+- translate policy-level requirements into Trust Signals where they materially shape digital-facing services and delegated trust
+- assess those Trust Signals using attributable Evidence
+- maintain a rhythm of reassessment rather than a once-a-year compliance exercise
 - surface exceptions and residual gaps as governance decisions
 
 ---
@@ -113,9 +118,10 @@ Traditional frameworks answer:
 
 TrustSurface adds:
 
-- *What signals are we emitting at the digital edge?*
-- *Would an external stakeholder (or attacker) observe weak posture?*
-- *Do we have evidence, ownership, and cadence to keep signals strong?*
+- *What trust-relevant properties, behaviours, or conditions at the digital edge are we assessing?*
+- *What attributable Evidence supports those assessments?*
+- *Would an external stakeholder experience weak posture even where internal controls appear strong?*
+- *Do we have ownership and cadence to keep the evidence and posture assessment current?*
 
 ---
 
@@ -142,4 +148,4 @@ TrustSurface adds:
 
 ## Summary statement
 
-TSF-CMP-1 positions TrustSurface as a complementary lens alongside ISO/IEC 27001, NIST CSF, COBIT, ASD Essential Eight, the Australian Government ISM, and the PSPF. In each case, the existing standard provides control depth or policy structure; TrustSurface provides the externally-observable trust signal evidence layer that connects internal assurance to stakeholder-visible posture.
+TSF-CMP-1 positions TrustSurface as a complementary lens alongside ISO/IEC 27001, NIST CSF, COBIT, ASD Essential Eight, the Australian Government ISM, and the PSPF. In each case, the existing standard provides control depth or policy structure; TrustSurface identifies trust-relevant conditions at the digital edge and uses attributable Evidence to assess and govern the Digital Trust Posture those conditions support.
