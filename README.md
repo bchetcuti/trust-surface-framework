@@ -87,6 +87,7 @@ The six-domain baseline is:
 ```
 trust-surface-framework/
 ├── README.md
+├── REPOSITORY-GOVERNANCE.md    Cross-repository authority and propagation rules
 ├── docs/
 │   ├── 01-start-here/          Framework overview, one-page specification
 │   ├── 02-core-framework/      Normative and core informative artefacts
@@ -96,6 +97,12 @@ trust-surface-framework/
 └── artefacts/
     └── diagrams/               Controlled SVG diagrams (TSF-01 through TSF-08)
 ```
+
+### Repository authority
+
+This repository is the **canonical source of truth** for framework meaning, release state and controlled diagrams. `trust-surface-web`, `trustsurface-diagrams` and `trust-surface-manuscript` are derivative or working repositories and must not redefine the framework independently.
+
+See [REPOSITORY-GOVERNANCE.md](REPOSITORY-GOVERNANCE.md) for the repository authority map, propagation order and current stop state.
 
 ---
 
