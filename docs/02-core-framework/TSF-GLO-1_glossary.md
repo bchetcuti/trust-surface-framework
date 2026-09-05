@@ -2,7 +2,7 @@
 
 **Status:** Public draft  
 **Control:** Normative  
-**Framework version:** v1.1 public draft  
+**Framework version:** v1.2 public draft  
 **Identifier:** TSF-GLO-1  
 **Owner:** TrustSurface Framework  
 **Vocabulary baseline:** TSF-GLO-1 (self-referential - this document is the baseline)
@@ -56,9 +56,9 @@ It does not define technical configuration terms (e.g. SPF, DMARC syntax), exter
 
 **Notes**
 
-- The Digital Edge is where Trust Signals become externally visible. It is where email is received, websites are loaded, APIs are called, and DNS is resolved.
+- The Digital Edge is where externally experienced conditions of the Trust Surface become visible. It is where email is received, websites are loaded, APIs are called, and DNS is resolved.
 - Trust failures are experienced at the Digital Edge before they are detected internally.
-- The Digital Edge concept explains why the Trust Surface is a governance concern, not only a technical one: the boundary is experienced by stakeholders regardless of internal controls.
+- The Digital Edge concept explains why the Trust Surface is a governance concern, not only a technical one: the boundary is experienced by stakeholders regardless of which evidence is used to assess the underlying Trust Signals.
 
 ---
 
@@ -72,13 +72,29 @@ It does not define technical configuration terms (e.g. SPF, DMARC syntax), exter
 
 - Domain Judgements are produced during the Assess stage of the Trust Surface Lifecycle, using the assessment method defined in TSF-MTH-1.
 - The five labels reflect assessable outcomes:
-  - **Sustained** - trust signals are strong and evidence is current
-  - **Mixed** - signals are uneven; some strong, some weak or stale
-  - **Fragile** - signals are present but vulnerable to regression
-  - **Deficient** - key signals are absent or materially weak
+  - **Sustained** - assessed Trust Signals are strong and supporting evidence is current
+  - **Mixed** - assessment results are uneven; some are strong, partial, or weak, or some supporting evidence is stale
+  - **Fragile** - assessed condition is vulnerable to regression and requires active hardening or governance
+  - **Deficient** - material Trust Signals are assessed as weak or materially deficient
   - **Indeterminate** - evidence is insufficient to judge the domain
 - A Domain Judgement is not a score. It is a governed assessment expression requiring interpretation in context.
 - Domain Judgements roll into the Trust Signal Scorecard and inform the overall view of Digital Trust Posture.
+
+---
+
+### Evidence
+
+**Definition**
+
+> An attributable observation, record, configuration, artefact, test result or verification used to assess a Trust Signal for a defined target.
+
+**Notes**
+
+- Evidence may be externally observed, internally observed, documented governance evidence, or sampled operational evidence as described in TSF-MTH-1.
+- Evidence should be sufficiently traceable to support the assessment claim for which it is used.
+- Evidence has properties including relevance, traceability, freshness, specificity, completeness, and provenance.
+- Evidence does not determine Digital Trust Posture merely by existing. It is interpreted through the assessment method against a defined Trust Signal and target.
+- Provenance is metadata and traceability about Evidence, not a separate evidence role.
 
 ---
 
@@ -120,12 +136,13 @@ It does not define technical configuration terms (e.g. SPF, DMARC syntax), exter
 
 **Definition**
 
-> The fundamental unit of assessment in TSF-MTH-1, containing the signal identifier, evidence observed, result state, confidence level, and evidence freshness for a single assessed Trust Signal.
+> The fundamental unit of assessment in TSF-MTH-1, recording a Trust Signal assessed for a defined target, the evidence used, the assessment result, confidence, Evidence Freshness, and relevant limitations.
 
 **Notes**
 
 - Signal Assessment Records are produced during the Assess stage of the Trust Surface Lifecycle.
 - Each record references a signal identifier from TSF-SIG-1 (or an organisational extension).
+- A Signal Assessment Record distinguishes the Trust Signal being assessed from the Evidence used to assess it.
 - A collection of Signal Assessment Records is aggregated into a Trust Signal Scorecard.
 - Signal Assessment Records provide the traceability needed to support governance decisions - they are not informal notes.
 
@@ -140,7 +157,7 @@ It does not define technical configuration terms (e.g. SPF, DMARC syntax), exter
 **Notes**
 
 - Trust Hardening is the activity that occurs in Stage 3 of the Trust Surface Lifecycle.
-- It is distinct from security hardening in that it focuses specifically on the trust-signal layer: the observable indicators through which stakeholders judge trustworthiness.
+- It is distinct from security hardening in that it focuses specifically on trust-relevant conditions of the Trust Surface that have been assessed as weak, partial, or poorly governed.
 - Trust Hardening addresses Trust Signal Gaps - closing the difference between the posture an organisation intends and the posture actually evidenced at the Trust Surface.
 - Hardening actions typically include enforcing email authentication policies, improving domain governance, strengthening identity controls, and addressing vendor ecosystem gaps.
 
@@ -171,7 +188,7 @@ It does not define technical configuration terms (e.g. SPF, DMARC syntax), exter
 **Notes**
 
 - Trust Signalling is the activity that occurs in Stage 5 of the Trust Surface Lifecycle.
-- It is distinct from the technical concept of a Trust Signal: Trust Signalling is the governed, intentional communication act, while a Trust Signal is the observable indicator assessed in the Assess stage.
+- It is distinct from a Trust Signal: Trust Signalling is the governed, intentional communication act, while a Trust Signal is a defined trust-relevant property, behaviour, or condition assessed using evidence.
 - The goal of Trust Signalling is appropriate transparency - ensuring that stakeholders can verify or assess the organisation's digital trust posture in context.
 - Trust Signalling is not a marketing activity. Claims made through Trust Signalling must be supportable by current evidence.
 
@@ -181,14 +198,16 @@ It does not define technical configuration terms (e.g. SPF, DMARC syntax), exter
 
 **Definition**
 
-> An observable indicator (evidence) that describes the trust posture of a Trust Surface component.
+> A defined trust-relevant property, behaviour or condition of a Trust Surface component or relationship that can be assessed using attributable evidence.
 
 **Notes**
 
-- Signals can be externally observable (e.g. DNS records, TLS certificates) or internally verifiable (e.g. identity governance records), but must be demonstrable.
-- A signal is only useful if it can be evidenced, refreshed, and governed.
+- A Trust Signal is the subject being assessed; it is not the Evidence used to assess it.
+- Trust Signals may describe conditions that are externally observable or internally verifiable, but they must remain demonstrable and materially related to the Trust Surface.
+- Evidence supporting assessment of a Trust Signal may come from external observation, internal systems, governance records, or sampled operational activity.
+- The existence of evidence for a cybersecurity control does not by itself make that control a Trust Signal; the signal must illuminate a trust-relevant condition of a Trust Surface component or relationship.
 - The baseline set of Trust Signals is defined in TSF-SIG-1 - Trust Signal Catalogue.
-- The anatomy of a Trust Signal - including signal structure, evidence requirements, and result states - is illustrated in visual artefact TSF-06.
+- The anatomy of a Trust Signal and its relationship to Evidence and assessment is illustrated in visual artefact TSF-06.
 
 ---
 
@@ -325,3 +344,4 @@ All framework artefacts depend on consistent use of these definitions. If vocabu
 
 - **v1.0 (2026-03-06)** - Initial stabilised glossary. Defined: Trust Surface, Trust Signal, Trust Posture, Trust Signal Gap.
 - **v1.1 (2026-04-09)** - Expanded to full v1.1 vocabulary baseline. Renamed "Trust Posture" to "Digital Trust Posture" (primary), with "Trust Posture" retained as accepted short form. Added: Trust Surface Domain, Trust Signal Scorecard, Trust Surface Inventory, Trust Hardening, Trust Hardening Plan, Trust Signalling, Trust Transparency Mechanism, Trust Surface Lifecycle, Governance Integration, Signal Assessment Record, Evidence Freshness, Domain Judgement, Digital Edge. Control updated from Informative to Normative.
+- **v1.2 (2026-09-06)** - Separated Trust Signal from Evidence as distinct canonical concepts. Trust Signal now defines the trust-relevant property, behaviour, or condition being assessed; Evidence is the attributable material used to assess it for a defined target. Clarified Signal Assessment Record and related vocabulary without changing domains, lifecycle, result states, scorecard requirements, or the canonical Trust Surface definition.
