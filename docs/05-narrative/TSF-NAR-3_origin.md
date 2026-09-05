@@ -2,7 +2,7 @@
 
 **Status:** Public draft  
 **Control:** Informative  
-**Framework version:** v1.1 public draft  
+**Framework version:** v1.2 public draft  
 **Identifier:** TSF-NAR-3  
 **Owner:** TrustSurface Framework  
 **Vocabulary baseline:** TSF-GLO-1
@@ -89,7 +89,7 @@ TrustSurface is authored and maintained by **Bryan Chetcuti** and is open to imp
 - **TSF-MOD-1** - Trust Surface Model & Domains (the domain model that addresses fragmented ownership)
 - **TSF-LIF-1** - Trust Surface Lifecycle (the operating rhythm that addresses change-driven regression)
 - **TSF-GOV-1** - Governance Integration Model (the governance layer that addresses leadership accountability)
-- **TSF-GLO-1** - Glossary (canonical definitions for Trust Surface, Trust Signal, Trust Posture, and related terms)
+- **TSF-GLO-1** - Glossary (canonical definitions for Trust Surface, Trust Signal, Evidence, Trust Posture, and related terms)
 - **TSF-CNS-1** - Consultation and Contribution Guidance
 - **TSF-LIC-1** - Licence
 
