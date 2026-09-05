@@ -2,7 +2,7 @@
 
 **Status:** Public draft  
 **Control:** Guidance  
-**Framework version:** v1.1 public draft  
+**Framework version:** v1.2 public draft  
 **Identifier:** TSF-EXM-1  
 **Owner:** TrustSurface Framework  
 **Vocabulary baseline:** TSF-GLO-1  
@@ -51,7 +51,7 @@ Minimum inventory:
 
 ## 4. Assess
 
-**Measure observable Trust Signals.**
+**Assess Trust Signals using attributable Evidence.**
 
 Baseline signals from the signal catalogue (**TSF-SIG-1**, signals EML-01 through EML-05):
 
@@ -61,9 +61,15 @@ Baseline signals from the signal catalogue (**TSF-SIG-1**, signals EML-01 throug
 - EML-04 - Transport integrity controls where applicable (e.g. MTA-STS, TLS reporting)
 - EML-05 - Sender change control
 
-Apply the domain judgement scale from **TSF-MTH-1** (Sustained / Mixed / Fragile / Deficient / Indeterminate) to characterise the current email integrity posture.
+For each selected Trust Signal, gather attributable Evidence appropriate to the target. For example:
 
-**Output:** Trust Signal Scorecard with evidence links (DNS records, provider configs, sample authentication results)
+- DNS records and authentication observations for SPF, DKIM, and DMARC
+- provider configuration for relevant sending platforms
+- approval and inventory records for Sender change control
+
+Apply the assessment method from **TSF-MTH-1** to record result state, confidence, and Evidence Freshness. Use the domain judgement scale (Sustained / Mixed / Fragile / Deficient / Indeterminate) to characterise the current email integrity posture.
+
+**Output:** Trust Signal Scorecard with attributable evidence links and assessment results
 
 ---
 
@@ -122,9 +128,9 @@ Depending on context:
 
 Before: email trust posture depended on internal belief and ad hoc fixes.
 
-After: email trust posture is evidence-based, governed, and measurably harder to impersonate.
+After: defined Trust Signals are assessed using attributable Evidence, weaknesses are governed, and organisational email is measurably harder to impersonate.
 
-That is the TrustSurface move: convert a trust failure mode into observable signals and enforceable governance.
+That is the TrustSurface move: convert a trust failure mode into defined assessment subjects, attributable Evidence, supportable assessment results, and enforceable governance.
 
 ---
 
@@ -142,4 +148,4 @@ That is the TrustSurface move: convert a trust failure mode into observable sign
 
 ## Summary statement
 
-TSF-EXM-1 traces the full TrustSurface lifecycle through an email integrity scenario, from inventory and signal assessment through hardening sequencing and governance controls. It demonstrates how the framework converts a common trust failure mode - inconsistent email authentication across multiple sending platforms - into observable signals, a prioritised hardening backlog, and repeatable governance.
+TSF-EXM-1 traces the full TrustSurface lifecycle through an email integrity scenario, from inventory and evidence-backed Trust Signal assessment through hardening sequencing and governance controls. It demonstrates how the framework converts a common trust failure mode - inconsistent email authentication across multiple sending platforms - into defined Trust Signals, attributable Evidence, a prioritised hardening backlog, and repeatable governance.
