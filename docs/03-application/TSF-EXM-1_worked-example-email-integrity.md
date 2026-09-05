@@ -59,7 +59,7 @@ Baseline signals from the signal catalogue (**TSF-SIG-1**, signals EML-01 throug
 - EML-02 - DKIM signing for major streams
 - EML-03 - DMARC alignment and policy
 - EML-04 - Transport integrity controls where applicable (e.g. MTA-STS, TLS reporting)
-- EML-05 - Abuse contact / reporting pathway published
+- EML-05 - Sender change control
 
 Apply the domain judgement scale from **TSF-MTH-1** (Sustained / Mixed / Fragile / Deficient / Indeterminate) to characterise the current email integrity posture.
 
