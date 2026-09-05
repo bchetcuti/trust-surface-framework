@@ -2,7 +2,7 @@
 
 **Status:** Public draft  
 **Control:** Informative  
-**Framework version:** v1.1 public draft  
+**Framework version:** v1.2 public draft  
 **Identifier:** TSF-MAT-1  
 **Owner:** TrustSurface Framework  
 **Vocabulary baseline:** TSF-GLO-1  
@@ -13,16 +13,16 @@
 
 ## 1. Purpose
 
-This document defines the Digital Trust Maturity Model - a structured way for organisations to understand how effectively they manage the Trust Signals emitted by their Trust Surface.
+This document defines the Digital Trust Maturity Model - a structured way for organisations to understand how effectively they assess and govern Trust Signals across their Trust Surface.
 
 The model supports:
 
 - benchmarking current Digital Trust Posture against a progressive capability scale
 - prioritising improvement investment across Trust Surface Domains
 - communicating trust posture maturity to executive and governance audiences
-- understanding the relationship between assessment results and organisational capability
+- understanding the relationship between assessment results, Evidence, and organisational capability
 
-The Digital Trust Maturity Model complements traditional cybersecurity maturity assessments by focusing on **observable trust signals rather than internal controls alone**. Where security maturity models typically address threat reduction and control coverage, this model addresses the credibility, consistency, and governance of what an organisation signals to the outside world.
+The Digital Trust Maturity Model complements traditional cybersecurity maturity assessments by focusing on **evidence-backed Trust Signal assessment and governance rather than internal controls alone**. Where security maturity models typically address threat reduction and control coverage, this model addresses the credibility, consistency, and governance of Digital Trust Posture at the Trust Surface.
 
 The maturity model is informative. It provides a useful lens for interpreting assessment results and planning improvement. It does not produce binding conformance obligations.
 
@@ -48,7 +48,7 @@ This document does not define how Trust Signals are individually assessed - that
 |---:|---|---|
 | 1 | Unaware | Limited visibility of Trust Surface and signals |
 | 2 | Reactive | Improvements occur mainly after incidents or pressure |
-| 3 | Managed | Signals are actively measured, owned, and improved |
+| 3 | Managed | Trust Signals are assessed, owned, and improved on a cadence |
 | 4 | Integrated | Trust posture is integrated into governance and operations |
 | 5 | Trust leader | Trust posture is strong and transparently communicated |
 
@@ -67,7 +67,7 @@ Typical characteristics:
 
 Trust failures occur unexpectedly because the Trust Surface is not actively governed.
 
-**Typical assessment pattern:** Most signals are Weak or Unknown. Evidence Freshness is predominantly Unknown. Domain Judgements are likely Deficient or Indeterminate across multiple domains.
+**Typical assessment pattern:** Most signal assessments are Weak or Unknown. Evidence Freshness is predominantly Unknown. Domain Judgements are likely Deficient or Indeterminate across multiple domains.
 
 ---
 
@@ -81,7 +81,7 @@ Typical characteristics:
 
 Trust improves, but only in response to problems.
 
-**Typical assessment pattern:** Some signals show improvement in domains that have been recently remediated. Others remain Weak or Partial. Evidence Freshness is often Stale for domains not recently reviewed. Domain Judgements are typically Mixed or Fragile, with some Deficient areas.
+**Typical assessment pattern:** Some Trust Signal assessments improve in domains that have been recently remediated. Others remain Weak or Partial. Evidence is often Stale for domains not recently reviewed. Domain Judgements are typically Mixed or Fragile, with some Deficient areas.
 
 ---
 
@@ -94,9 +94,9 @@ Typical characteristics:
 - clear ownership for key domains (email, DNS, identity, services)
 - a Trust Hardening backlog exists and is prioritised
 
-Organisations can identify and address weak signals before incidents occur.
+Organisations can identify and address weak assessment results before incidents occur.
 
-**Typical assessment pattern:** Most baseline signals have been assessed with current evidence. Domain Judgements are primarily Sustained or Mixed, with a managed set of known gaps in the hardening backlog. Evidence Freshness is Current or Aging for most signals.
+**Typical assessment pattern:** Most baseline Trust Signals have been assessed with current Evidence. Domain Judgements are primarily Sustained or Mixed, with a managed set of known gaps in the hardening backlog. Evidence Freshness is Current or Aging for most assessments.
 
 ---
 
@@ -106,12 +106,12 @@ Typical characteristics:
 
 - Trust Surface reviews incorporated into risk management
 - trust posture included in executive reporting
-- vendor trust signals assessed during procurement
+- vendor Trust Signals assessed during procurement
 - change control prevents common regressions
 
 Trust posture becomes an explicit organisational objective.
 
-**Typical assessment pattern:** Signal coverage is broad and evidence is current across most domains. Domain Judgements are predominantly Sustained. Governance Integration is active - scorecard refreshes, decision logs, and exception handling are functioning. The Trust Hardening Plan is tracked and progressing.
+**Typical assessment pattern:** Signal coverage is broad and Evidence is current across most domains. Domain Judgements are predominantly Sustained. Governance Integration is active - scorecard refreshes, decision logs, and exception handling are functioning. The Trust Hardening Plan is tracked and progressing.
 
 ---
 
@@ -119,7 +119,7 @@ Trust posture becomes an explicit organisational objective.
 
 Typical characteristics:
 
-- strong signals across all Trust Surface Domains
+- strong evidence-backed assessment results across all Trust Surface Domains
 - transparent communication of trust posture appropriate to context
 - proactive governance of vendor ecosystems
 - trust posture treated as a strategic asset
@@ -159,17 +159,17 @@ The domain judgement labels used in TSF-MTH-1 map to maturity patterns as follow
 
 | Domain Judgement | Maturity implication |
 |---|---|
-| **Sustained** | Signals are strong and evidence is current - consistent with Level 3–5 |
-| **Mixed** | Signals are uneven - some strong, some weak or stale - consistent with Level 2–3 transitioning |
-| **Fragile** | Signals are present but vulnerable to regression - consistent with Level 2–3, requiring active hardening |
-| **Deficient** | Key signals are weak or materially deficient - consistent with Level 1–2 |
+| **Sustained** | Assessment results are strong and Evidence is current - consistent with Level 3–5 |
+| **Mixed** | Assessment results are uneven, or some supporting Evidence is stale - consistent with Level 2–3 transitioning |
+| **Fragile** | Assessed condition is vulnerable to regression - consistent with Level 2–3, requiring active hardening |
+| **Deficient** | Key Trust Signals are assessed as Weak or materially deficient - consistent with Level 1–2 |
 | **Indeterminate** | Evidence is insufficient to judge the domain - consistent with Level 1, or any level where assessment has not been completed |
 
 This mapping is indicative, not mechanical. A Sustained judgement in one domain does not set the organisation's overall maturity level. Maturity is assessed holistically across domains, taking into account governance capacity and the robustness of the improvement cycle.
 
 **Maturity is a governance judgement, not an automatic computation from scores.**
 
-An organisation with consistent Sustained judgements but no governance cadence, no ownership model, and no hardening plan is not operating at Level 4. The level reflects both the signal evidence and the organisational capability to maintain it. Assessors and governance partners should evaluate both dimensions.
+An organisation with consistent Sustained judgements but no governance cadence, no ownership model, and no hardening plan is not operating at Level 4. The level reflects both evidence-backed Trust Signal assessment and the organisational capability to maintain posture. Assessors and governance partners should evaluate both dimensions.
 
 ---
 
@@ -262,6 +262,6 @@ TSF-MAT-1 does not:
 
 ## 11. Summary statement
 
-The Digital Trust Maturity Model provides a five-level scale - Unaware, Reactive, Managed, Integrated, Trust Leader - for understanding how effectively an organisation governs the Trust Signals emitted by its Trust Surface.
+The Digital Trust Maturity Model provides a five-level scale - Unaware, Reactive, Managed, Integrated, Trust Leader - for understanding how effectively an organisation assesses and governs Trust Signals across its Trust Surface.
 
-Maturity is a governance judgement informed by assessed signal patterns and lifecycle operating capability, not an automatic computation from scores. Organisations use the model to prioritise improvement, report posture to leadership, and understand where the lifecycle is the limiting factor.
+Maturity is a governance judgement informed by evidence-backed assessment patterns and lifecycle operating capability, not an automatic computation from scores. Organisations use the model to prioritise improvement, report posture to leadership, and understand where the lifecycle is the limiting factor.

@@ -2,7 +2,7 @@
 
 **Status:** Public draft  
 **Control:** Normative  
-**Framework version:** v1.1 public draft  
+**Framework version:** v1.2 public draft  
 **Identifier:** TSF-SPEC-1  
 **Owner:** TrustSurface Framework  
 **Vocabulary baseline:** TSF-GLO-1  
@@ -11,12 +11,12 @@
 
 ## 1. Purpose
 
-TrustSurface is a framework for identifying, assessing, and governing the observable trust signals an organisation emits through its digital systems.
+TrustSurface is a framework for identifying, assessing, and governing Trust Signals associated with an organisation's digital systems and relationships using evidence.
 
 Its purpose is to help organisations:
 
 - identify the systems through which digital trust is experienced
-- assess the Trust Signals emitted by those systems
+- assess Trust Signals associated with those systems and relationships using attributable evidence
 - understand their Digital Trust Posture through evidence rather than assurance language alone
 - govern trust posture through a repeatable lifecycle and cross-functional ownership
 
@@ -28,7 +28,7 @@ Organisations are increasingly judged through digital interactions.
 
 TrustSurface provides a structured way to make digital trust visible, assessable, and governable at the digital edge.
 
-It complements cybersecurity, risk, architecture, service, and vendor governance disciplines by focusing on the systems and signals through which stakeholders actually experience trust.
+It complements cybersecurity, risk, architecture, service, and vendor governance disciplines by focusing on the systems, relationships, and trust-relevant conditions through which stakeholders actually experience trust.
 
 ---
 
@@ -55,10 +55,10 @@ Definitions in this specification align to **TSF-GLO-1**.
 The collection of digital systems and observable signals through which stakeholders assess the trustworthiness of an organisation’s digital presence.
 
 **Trust Signal**  
-An observable indicator that suggests whether a digital system is authentic, controlled, reliable, or responsibly governed.
+A defined trust-relevant property, behaviour or condition of a Trust Surface component or relationship that can be assessed using attributable evidence.
 
 **Digital Trust Posture**  
-The evidence-backed condition implied by the Trust Signals emitted across the Trust Surface.
+The evidence-backed condition implied by assessed Trust Signals across the Trust Surface.
 
 **Trust Signal Scorecard**  
 A structured summary of assessed Trust Signals, evidence, and posture gaps.
@@ -99,7 +99,7 @@ Minimum lifecycle outputs are:
 An organisation claiming alignment with TrustSurface SHALL be able to show:
 
 1. a defined Trust Surface using the domain baseline or a justified extension
-2. observable Trust Signals linked to relevant domains
+2. defined Trust Signals linked to relevant domains and supported by attributable evidence
 3. an evidence-based Trust Signal Scorecard
 4. a repeatable lifecycle for review and improvement
 5. ownership and governance integration for trust-critical domains and decisions
@@ -111,7 +111,7 @@ Partial adoption SHOULD be described as adoption in progress, not full alignment
 
 ## 8. Normative framework set
 
-The current normative framework set for the v1.1 draft consists of:
+The current normative framework set for the v1.2 public draft consists of:
 
 - **TSF-DEF-1** - Trust Surface Definition
 - **TSF-MOD-1** - Trust Surface Model & Domains
@@ -158,4 +158,4 @@ Informative, guidance, and operational artefacts support this set but do not ove
 
 TrustSurface is a framework for making digital trust visible, assessable, and governable.
 
-It defines a domain model, a signal model, a lifecycle, and a governance model so that organisations can move from fragmented digital signals to an evidence-based understanding of trust posture over time.
+It defines a domain model, a signal model, a lifecycle, and a governance model so that organisations can move from fragmented observations and controls to an evidence-backed understanding of trust posture over time.

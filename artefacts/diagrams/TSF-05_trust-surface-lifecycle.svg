@@ -239,13 +239,13 @@
     <g transform="translate(540 220)">
       <rect x="0" y="0" width="180" height="72" rx="18" class="loop-node-soft"/>
       <text x="90" y="30" text-anchor="middle" class="node-title">Assess</text>
-      <text x="90" y="50" text-anchor="middle" class="node-copy">Evaluate trust signals</text>
+      <text x="90" y="50" text-anchor="middle" class="node-copy">Assess using Evidence</text>
     </g>
 
     <g transform="translate(450 360)">
       <rect x="0" y="0" width="180" height="72" rx="18" class="loop-node-soft"/>
       <text x="90" y="30" text-anchor="middle" class="node-title">Harden</text>
-      <text x="90" y="50" text-anchor="middle" class="node-copy">Strengthen weak signals</text>
+      <text x="90" y="50" text-anchor="middle" class="node-copy">Act on Weak / Partial</text>
     </g>
 
     <g transform="translate(180 360)">
@@ -257,7 +257,7 @@
     <g transform="translate(90 220)">
       <rect x="0" y="0" width="180" height="72" rx="18" class="loop-node-soft"/>
       <text x="90" y="30" text-anchor="middle" class="node-title">Signal</text>
-      <text x="90" y="50" text-anchor="middle" class="node-copy">Make trust observable</text>
+      <text x="90" y="50" text-anchor="middle" class="node-copy">Communicate trust posture</text>
     </g>
 
     <!-- Outputs -->
@@ -292,7 +292,7 @@
     <g transform="translate(22 220)">
       <rect x="0" y="0" width="132" height="56" rx="16" class="panel"/>
       <text x="66" y="24" text-anchor="middle" class="output-title">Transparency</text>
-      <text x="66" y="42" text-anchor="middle" class="output-copy">Visible signals</text>
+      <text x="66" y="42" text-anchor="middle" class="output-copy">Governed communication</text>
     </g>
     <line x1="154" y1="248" x2="180" y2="248" class="loop-line-soft"/>
   </g>
@@ -300,7 +300,7 @@
   <!-- Footer -->
   <g transform="translate(110 778)">
     <line x1="0" y1="0" x2="1380" y2="0" class="footer-rule"/>
-    <text x="0" y="28" class="footer-meta">Figure TSF-05 · TrustSurface Framework · v0.1</text>
+    <text x="0" y="28" class="footer-meta">Figure TSF-05 · TrustSurface Framework · v1.2 public draft</text>
     <text x="1380" y="28" text-anchor="end" class="footer-statement">The Trust Surface Lifecycle turns digital trust from a passive condition into a governed, repeatable discipline.</text>
   </g>
 </svg>

@@ -2,8 +2,8 @@
 
 A framework for making digital trust visible, assessable, and governable.
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19499957.svg)](https://doi.org/10.5281/zenodo.19499957)
-[![Version](https://img.shields.io/badge/version-v1.1.0-1f4b43?style=flat-square)](https://trustsurface.org/changelog/)
+[![Archived DOI — v1.1.0](https://zenodo.org/badge/DOI/10.5281/zenodo.19499957.svg)](https://doi.org/10.5281/zenodo.19499957)
+[![Version](https://img.shields.io/badge/version-v1.2.0-1f4b43?style=flat-square)](https://trustsurface.org/changelog/)
 [![Status](https://img.shields.io/badge/status-public%20draft-5f6b76?style=flat-square)](https://trustsurface.org/)
 [![Licence](https://img.shields.io/badge/licence-CC%20BY%204.0-4b5563?style=flat-square)](https://trustsurface.org/licence/)
 [![Website](https://img.shields.io/badge/site-trustsurface.org-0f766e?style=flat-square)](https://trustsurface.org/)
@@ -18,11 +18,13 @@ TrustSurface is a framework for understanding how digital systems shape stakehol
 It helps organisations:
 
 - identify the systems through which digital trust is experienced
-- assess the observable trust signals those systems emit
-- understand digital trust posture through evidence rather than assurance language alone
+- define and assess Trust Signals associated with those systems and relationships
+- use attributable Evidence to support Digital Trust Posture rather than assurance language alone
 - govern trust posture through ownership, lifecycle, and transparency
 
-TrustSurface focuses on the digital edge: the domains, services, dependencies, and signals through which trust is actually experienced.
+A **Trust Signal** is a defined trust-relevant property, behaviour, or condition of a Trust Surface component or relationship. **Evidence** is the attributable material used to assess that Trust Signal for a defined target. Canonical definitions are maintained in [TSF-GLO-1 — Glossary](docs/02-core-framework/TSF-GLO-1_glossary.md).
+
+TrustSurface focuses on the digital edge: the domains, services, dependencies, relationships, and trust-relevant conditions through which trust is actually experienced.
 
 It complements cybersecurity, risk, architecture, service, and vendor governance disciplines. It does not replace them.
 
@@ -30,9 +32,11 @@ It complements cybersecurity, risk, architecture, service, and vendor governance
 
 ## Current release
 
-**Framework version:** v1.1 public draft  
+**Framework version:** v1.2 public draft  
 **Publication status:** Public draft  
 **Primary entry point:** [TSF-OVR-1 - Framework Overview](docs/01-start-here/TSF-OVR-1_framework-overview.md)
+
+> **Archive note:** DOI `10.5281/zenodo.19499957` identifies the archived **v1.1.0** snapshot. It must not be represented as a v1.2 archive. This repository is the canonical source for the v1.2 public draft until a v1.2 archival snapshot is published.
 
 ---
 
@@ -56,6 +60,12 @@ Informative, Guidance, and Operational artefacts support this set but do not ove
 TrustSurface models digital trust through a connected chain:
 
 **Trust Surface domains → Trust Signals → Trust Signal Scorecard → Digital Trust Posture → Trust Surface Lifecycle → Governance Integration → Trust signalling and continuous improvement**
+
+Within the assessment step, the relationship is:
+
+**Target + Trust Signal → Evidence → Assessment Result + Confidence + Evidence Freshness → Trust Signal Scorecard → Digital Trust Posture**
+
+Evidence is an assessment mechanic inside the Trust Signal-to-scorecard transition. It is not an additional high-level framework stage.
 
 The six-domain baseline is:
 
@@ -128,6 +138,7 @@ TrustSurface is not:
 - a full attack surface management model
 - a purely brand or communications-based trust method
 - a product-specific implementation standard
+- a generic cybersecurity control catalogue
 - a claim that digital trust can be reduced to one single number without interpretation
 
 It is a framework for making digital trust visible, assessable, and governable over time.
@@ -142,9 +153,9 @@ TrustSurface Framework content is licensed under [Creative Commons Attribution 4
 
 ## Citation
 
-Chetcuti, Bryan. (2026). *TrustSurface Framework* (v1.1 public draft). trustsurface.org.
+Chetcuti, Bryan. (2026). *TrustSurface Framework* (v1.2 public draft). trustsurface.org.
 
-See [TSF-CIT-1](docs/04-publication-control/TSF-CIT-1_citation-guidance.md) for full citation and attribution guidance.
+See [TSF-CIT-1](docs/04-publication-control/TSF-CIT-1_citation-guidance.md) for full citation and attribution guidance, including the distinction between the current public draft and the archived v1.1.0 DOI snapshot.
 
 ---
 

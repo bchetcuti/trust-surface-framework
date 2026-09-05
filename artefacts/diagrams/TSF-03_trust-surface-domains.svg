@@ -1,7 +1,7 @@
 
 <svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
   <title id="title">TSF-03 — Trust Surface Domains</title>
-  <desc id="desc">TrustSurface Framework diagram showing the six Trust Surface domains organised around digital trust posture.</desc>
+  <desc id="desc">TrustSurface Framework diagram showing the six Trust Surface domains organised around Digital Trust Posture.</desc>
 
   <defs>
     <style>
@@ -175,11 +175,15 @@
     <rect x="0" y="0" width="250" height="276" rx="22" class="domain-card"/>
     <text x="24" y="38" class="section-label">How to read it</text>
     <text x="24" y="74" class="model-title" style="font-size:26px;">Domains and signals</text>
-    <text x="24" y="108" class="model-copy">Each domain contains observable signals that shape trust posture. The domains together form the broader Trust Surface.</text>
+    <text x="24" y="108" class="model-copy">
+      <tspan x="24" dy="0">Each domain has Trust Signals</tspan>
+      <tspan x="24" dy="24">that define what is assessed.</tspan>
+      <tspan x="24" dy="24">Evidence supports the result.</tspan>
+    </text>
 
-    <rect x="24" y="152" width="202" height="92" rx="18" class="domain-card-accent"/>
-    <text x="125" y="184" text-anchor="middle" class="domain-title" style="font-size:16px;">Used in the framework</text>
-    <text x="125" y="206" text-anchor="middle" class="domain-copy">Book · Framework · Catalogue · Advisory use</text>
+    <rect x="24" y="184" width="202" height="60" rx="18" class="domain-card-accent"/>
+    <text x="125" y="208" text-anchor="middle" class="domain-title" style="font-size:16px;">Used in the framework</text>
+    <text x="125" y="228" text-anchor="middle" class="domain-copy">Framework · Catalogue · Advisory</text>
   </g>
 
   <!-- Central model zone -->
@@ -188,15 +192,15 @@
 
     <text x="395" y="40" text-anchor="middle" class="section-label" style="fill:#0b4f8a;">Structural model</text>
     <text x="395" y="80" text-anchor="middle" class="model-title">Primary Trust Surface Domains</text>
-    <text x="395" y="112" text-anchor="middle" class="model-copy">The domains through which trust signals become visible, legible and consequential.</text>
+    <text x="395" y="112" text-anchor="middle" class="model-copy">Domains organise where trust-relevant conditions are assessed and governed.</text>
 
     <!-- Core -->
     <circle cx="395" cy="254" r="96" class="ring-accent"/>
     <text x="395" y="226" text-anchor="middle" class="core-label">Core construct</text>
     <text x="395" y="258" text-anchor="middle" class="core-title">Digital Trust</text>
     <text x="395" y="288" text-anchor="middle" class="core-title">Posture</text>
-    <text x="395" y="320" text-anchor="middle" class="core-copy">How an organisation appears</text>
-    <text x="395" y="342" text-anchor="middle" class="core-copy">to others across its Trust Surface</text>
+    <text x="395" y="320" text-anchor="middle" class="core-copy">The evidence-backed condition</text>
+    <text x="395" y="342" text-anchor="middle" class="core-copy">derived from assessed Trust Signals</text>
 
     <!-- Connectors -->
     <line x1="395" y1="158" x2="395" y2="116" class="connector-accent"/>
@@ -259,8 +263,8 @@
   <!-- Footer -->
   <g transform="translate(110 778)">
     <line x1="0" y1="0" x2="1380" y2="0" class="footer-rule"/>
-    <text x="0" y="28" class="footer-meta">Figure TSF-03 · TrustSurface Framework · v0.1</text>
-    <text x="1380" y="28" text-anchor="end" class="footer-statement">The Trust Surface is structured through the domains where trust signals are emitted, observed and judged.</text>
+    <text x="0" y="28" class="footer-meta">Figure TSF-03 · TrustSurface Framework · v1.2 public draft</text>
+    <text x="1380" y="28" text-anchor="end" class="footer-statement">The Trust Surface is structured through domains where Trust Signals are assessed using Evidence.</text>
   </g>
 </svg>
 

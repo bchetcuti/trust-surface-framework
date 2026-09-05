@@ -2,7 +2,7 @@
 
 **Status:** Public draft  
 **Control:** Operational  
-**Framework version:** v1.1 public draft  
+**Framework version:** v1.2 public draft  
 **Identifier:** TSF-CNS-1  
 **Owner:** TrustSurface Framework  
 **Vocabulary baseline:** TSF-GLO-1  
@@ -62,8 +62,9 @@ Please focus on practical, adoption-oriented critique:
    - Would a board understand the reporting outputs?
 
 2. **Signal quality**
-   - Are signals measurable and observable?
-   - Are they too technical or too vague?
+   - Are Trust Signals defined clearly enough to assess?
+   - Is the supporting Evidence attributable and practical to refresh?
+   - Are signals too technical or too vague?
 
 3. **Lifecycle practicality**
    - Can organisations realistically implement this without a major program?
@@ -95,17 +96,18 @@ If you want to propose text changes directly:
 ### 3.3 Contribution principles
 
 - Prefer **clarity over completeness**
-- Prefer **observable/measurable** over theoretical
+- Prefer **demonstrable and evidence-backed** over theoretical
 - Prefer **small additions** over long lists
-- Avoid turning the framework into a compliance checklist
+- Avoid turning the framework into a compliance checklist or generic control catalogue
 
 ### 3.4 Scope boundaries
 
-To keep v1.1 coherent, the following are out of scope unless explicitly planned:
+To keep the active v1.2 public draft coherent, the following are out of scope unless explicitly planned:
 
 - formal certification programs
 - scoring that implies a definitive "safe/unsafe" label
 - vulnerability scanning guidance (this is not a pentest framework)
+- importing broad cybersecurity control catalogues as Trust Signals without a Trust Surface rationale
 
 ### 3.5 Code of Conduct
 
@@ -123,4 +125,4 @@ Be constructive and respectful. Assume good intent. Focus critique on the framew
 
 ## Summary statement
 
-TSF-CNS-1 describes how to engage with the TrustSurface Framework through feedback, issue submission, or direct contribution. It establishes guardrails to keep the framework neutral, evidence-based, and board-usable across v1.1 development.
+TSF-CNS-1 describes how to engage with the TrustSurface Framework through feedback, issue submission, or direct contribution. It establishes guardrails to keep the framework neutral, evidence-based, and board-usable across v1.2 public-draft development.

@@ -2,7 +2,7 @@
 
 **Status:** Public draft  
 **Control:** Operational  
-**Framework version:** v1.1 public draft  
+**Framework version:** v1.2 public draft  
 **Identifier:** TSF-ART-1  
 **Owner:** TrustSurface Framework  
 **Applies to:** controlled diagrams, visual models, downloadable artefacts, and related publication metadata  
@@ -162,6 +162,7 @@ Examples:
 - **TSF-01 Trust Surface Map** → TSF-MOD-1
 - **TSF-03 Trust Surface Domains** → TSF-MOD-1
 - **TSF-05 Trust Surface Lifecycle** → TSF-LIF-1
+- **TSF-06 Trust Signal Anatomy** → TSF-SIG-1 / TSF-MTH-1
 - **TSF-07 Digital Trust Maturity Model** → TSF-MAT-1
 - **TSF-08 Governance Integration Model** → TSF-GOV-1
 
@@ -212,8 +213,8 @@ Status SHALL be visible through the artefact library or otherwise discoverable t
 Each controlled artefact SHALL show its framework version alignment.
 
 Examples:
-- `Framework version: v1.1 draft`
-- `Framework version: v1.1.0`
+- `Framework version: v1.2 public draft`
+- `Framework version: v1.2.0`
 
 Where a diagram is revised without changing framework meaning, the framework version MAY remain unchanged if the change is editorial.
 
@@ -322,9 +323,9 @@ This responsibility MAY sit with the framework owner or a delegated publication 
 
 ---
 
-## 17. Current controlled artefact set for v1.1 draft
+## 17. Current controlled artefact set for v1.2 public draft
 
-The following artefacts are currently recognised as the controlled diagram baseline for the v1.1 draft.
+The following artefacts are currently recognised as the controlled diagram baseline for the v1.2 public draft.
 
 | Identifier | Title | Artefact class | Related framework artefact | Current status | Notes |
 |---|---|---|---|---|---|
@@ -333,11 +334,11 @@ The following artefacts are currently recognised as the controlled diagram basel
 | TSF-03 | Trust Surface Domains | Canonical diagram | TSF-MOD-1 | Draft | Domain-level concept support |
 | TSF-04 | Trust Surface vs Attack Surface | Supporting diagram | TSF-DEF-1 / comparison support | Draft | Clarifying comparison |
 | TSF-05 | Trust Surface Lifecycle | Canonical diagram | TSF-LIF-1 | Draft | Lifecycle visual anchor |
-| TSF-06 | Trust Signal Anatomy | Supporting diagram | TSF-SIG-1 / TSF-MTH-1 | Draft | Signal structure support |
+| TSF-06 | Trust Signal Anatomy | Supporting diagram | TSF-SIG-1 / TSF-MTH-1 | Draft | v1.2 Signal → Evidence → Assessment → posture relationship |
 | TSF-07 | Digital Trust Maturity Model | Canonical diagram | TSF-MAT-1 | Draft | Maturity illustration |
 | TSF-08 | Governance Integration Model | Canonical diagram | TSF-GOV-1 | Draft | Governance model visual anchor |
 
-This table is the initial register baseline and SHOULD be expanded into a fuller artefact library entry set as release preparation continues.
+The controlled artefact set retains the same identifiers and classes as v1.1. TSF-06 is conceptually revised in v1.2 to align with the new canonical Signal / Evidence distinction.
 
 ---
 

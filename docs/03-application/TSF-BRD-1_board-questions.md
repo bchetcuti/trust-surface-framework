@@ -2,7 +2,7 @@
 
 **Status:** Public draft  
 **Control:** Guidance  
-**Framework version:** v1.1 public draft  
+**Framework version:** v1.2 public draft  
 **Identifier:** TSF-BRD-1  
 **Owner:** TrustSurface Framework  
 **Vocabulary baseline:** TSF-GLO-1  
@@ -28,7 +28,7 @@ The questions align to the five lifecycle phases of the TrustSurface Framework (
 ### 2.2 What do we signal to the outside world?
 
 - If an external party tries to validate us (email, website, portals), what evidence do they see?
-- Where are Trust Signals weak, inconsistent, or out of date?
+- Where do assessed Trust Signals show weak or inconsistent condition, and where is supporting evidence stale or incomplete?
 
 ### 2.3 Where is the Trust Signal Gap highest?
 
@@ -42,7 +42,7 @@ The questions align to the five lifecycle phases of the TrustSurface Framework (
 
 ### 2.5 How do we evidence and report trust posture?
 
-- Can we produce a Trust Signal Scorecard with evidence links within 48 hours?
+- Can we produce a Trust Signal Scorecard with attributable evidence links within 48 hours?
 - Is trust posture reviewed on a cadence alongside cyber risk and operational resilience?
 
 ---
@@ -88,6 +88,7 @@ Ask for a **one-page Trust Signal Scorecard** summarising:
 
 - maturity by domain
 - top 5 trust signal gaps (with owners and due dates)
+- evidence gaps or stale evidence requiring refresh
 - the next review date
 
 The scorecard provides the evidence base for the discussion; these questions provide the governance frame.

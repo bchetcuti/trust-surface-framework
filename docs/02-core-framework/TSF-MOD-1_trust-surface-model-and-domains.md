@@ -2,7 +2,7 @@
 
 **Status:** Public draft  
 **Control:** Normative  
-**Framework version:** v1.1 public draft  
+**Framework version:** v1.2 public draft  
 **Identifier:** TSF-MOD-1  
 **Owner:** TrustSurface Framework  
 **Vocabulary baseline:** TSF-GLO-1  
@@ -35,7 +35,7 @@ It governs:
 - the framework model structure
 - the domain baseline used across the framework
 - the relationship between domains and Trust Signals
-- the model used to move from observable signals to digital trust posture and governance action
+- the model used to move from assessed Trust Signals and attributable evidence to digital trust posture and governance action
 
 It does not define every Trust Signal in detail, prescribe the assessment method, or replace the lifecycle, governance, or maturity artefacts.
 
@@ -68,7 +68,7 @@ The TrustSurface Framework connects four primary elements.
 The digital systems and boundaries through which stakeholders experience an organisation’s digital presence.
 
 ### 4.2 Trust Signals
-Observable indicators emitted by those systems that suggest how well they are controlled, maintained, and governed.
+Defined trust-relevant properties, behaviours, or conditions of Trust Surface components or relationships that can be assessed using attributable evidence.
 
 ### 4.3 Trust Surface Lifecycle
 The repeatable operating rhythm used to discover, assess, harden, govern, and signal digital trust posture.
@@ -87,14 +87,14 @@ The TrustSurface model SHALL be understood in the following order.
 ### 5.1 Domains define where trust is experienced
 Domains provide a stable structure for describing the systems and boundaries that shape digital trust.
 
-### 5.2 Signals define what is observable
-Each domain emits observable indicators that can be assessed as evidence of trust posture.
+### 5.2 Signals define what is assessed
+Each domain has Trust Signals associated with trust-relevant properties, behaviours, or conditions of its components and relationships. Attributable evidence is gathered to assess those signals for a defined target.
 
-### 5.3 Scorecards summarise observed condition
-Assessed signals are summarised into a Trust Signal Scorecard that records strengths, weaknesses, unknowns, and priority gaps.
+### 5.3 Scorecards summarise assessed condition
+Evidence-backed signal assessments are summarised into a Trust Signal Scorecard that records strengths, weaknesses, unknowns, evidence coverage, and priority gaps.
 
 ### 5.4 Posture expresses the evidence-backed condition
-Digital Trust Posture is the condition implied by the observed and assessed signals across the Trust Surface.
+Digital Trust Posture is the condition implied by the evidence-backed assessment of Trust Signals across the Trust Surface.
 
 ### 5.5 Lifecycle governs improvement
 The lifecycle provides the repeatable mechanism for moving from discovery to assessment, hardening, governance, and signalling.
@@ -196,9 +196,9 @@ It reflects the real interdependence of digital systems at the trust surface.
 
 ## 10. Trust Signals within the model
 
-Each domain emits observable Trust Signals.
+Each domain has Trust Signals associated with trust-relevant properties, behaviours, or conditions of its components and relationships.
 
-Signals may be:
+Trust Signals may describe conditions that are:
 - externally observable
 - internally verifiable
 - structurally persistent
@@ -206,7 +206,7 @@ Signals may be:
 
 The Trust Signal Catalogue defines the signal layer in detail.
 
-TSF-MOD-1 establishes that Trust Signals are not separate from the domain model; they are the evidence layer through which each domain becomes assessable.
+TSF-MOD-1 establishes that Trust Signals are not the evidence used to assess them. Trust Signals form the assessment layer through which trust-relevant conditions of each domain become assessable; Evidence provides the attributable basis for assessing those signals for a defined target.
 
 ---
 
@@ -215,13 +215,13 @@ TSF-MOD-1 establishes that Trust Signals are not separate from the domain model;
 The model assumes that assessed signals can be summarised into a Trust Signal Scorecard.
 
 The purpose of the scorecard is to provide a structured view of:
-- current signal condition
+- current assessed signal condition
 - evidence coverage
 - material weaknesses
 - priority hardening needs
 - cross-domain posture patterns
 
-Digital Trust Posture is the condition implied by that assessed signal set.
+Digital Trust Posture is the condition implied by that evidence-backed assessed signal set.
 
 It is not a claim made by branding, intent, or assurance language alone.
 It is an evidence-backed condition derived from the Trust Surface.
@@ -233,7 +233,7 @@ It is an evidence-backed condition derived from the Trust Surface.
 The model defined in TSF-MOD-1 is operationalised through the Trust Surface Lifecycle.
 
 The domains provide the structure for the **Discover** stage.
-The signals provide the basis for the **Assess** stage.
+The signals provide the basis for the **Assess** stage and are assessed using attributable evidence.
 The posture gaps shape the **Harden** stage.
 The ownership and decision implications feed the **Govern** stage.
 The externally experienced condition informs the **Signal** stage.
@@ -252,6 +252,7 @@ With the model in place, organisations can ask:
 - which domains are in scope?
 - who owns each domain?
 - which signals matter most?
+- what evidence supports their assessment?
 - where are the material gaps?
 - what governance pathway should control change?
 
@@ -286,8 +287,9 @@ An organisation claiming alignment with TSF-MOD-1 SHOULD be able to do all of th
 1. identify the Trust Surface using the six-domain baseline or a justified extension of it
 2. explain which systems, services, and dependencies fall into each domain
 3. relate relevant Trust Signals to those domains
-4. show how assessed signals roll into a scorecard and posture view
-5. connect the model to lifecycle and governance activity
+4. show what attributable evidence supports the assessment of those Trust Signals
+5. show how assessed signals roll into a scorecard and posture view
+6. connect the model to lifecycle and governance activity
 
 If these conditions cannot be met, the organisation may still be exploring digital trust, but it is not yet using the TrustSurface model in a controlled way.
 
@@ -345,7 +347,6 @@ The framework uses the term **domains** throughout the normative artefacts. Publ
 
 ## 20. Summary statement
 
-The TrustSurface model provides a stable way to describe where digital trust is experienced, how it becomes observable, how it is assessed into posture, and how that posture is governed over time.
+The TrustSurface model provides a stable way to describe where digital trust is experienced, which trust-relevant properties, behaviours, and conditions are assessed, what evidence supports those assessments, and how the resulting posture is governed over time.
 
-Its six-domain structure gives organisations a common language for moving digital trust from scattered signals to a governable model.
-
+Its six-domain structure gives organisations a common language for moving digital trust from scattered observations and controls to a governable, evidence-backed model.

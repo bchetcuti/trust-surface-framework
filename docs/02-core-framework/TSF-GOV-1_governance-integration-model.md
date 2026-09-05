@@ -2,7 +2,7 @@
 
 **Status:** Public draft  
 **Control:** Normative  
-**Framework version:** v1.1 public draft  
+**Framework version:** v1.2 public draft  
 **Identifier:** TSF-GOV-1  
 **Owner:** TrustSurface Framework  
 **Vocabulary baseline:** TSF-GLO-1  
@@ -47,7 +47,7 @@ Digital trust is organisational.
 
 Trust posture is shaped by decisions made across leadership, technology, risk, communications, procurement, service operations, legal, and identity governance functions.
 
-A TrustSurface governance model exists to coordinate those decisions so that trust signals remain observable, credible, current, and owned.
+A TrustSurface governance model exists to coordinate those decisions so that Trust Signals remain assessable, Evidence remains current and attributable, and ownership and decisions remain clear.
 
 ---
 
@@ -97,7 +97,7 @@ Provides executive backing, direction, and acceptance of residual trust risk.
 Assigns accountable owners for each Trust Surface domain and major trust-critical service.
 
 ### 6.3 Evidence and assessment
-Maintains Trust Signal evidence, scorecards, and posture assessments.
+Maintains Trust Signal assessments, supporting evidence, scorecards, and posture assessments.
 
 ### 6.4 Decision and control
 Applies change control, exception handling, prioritisation, and escalation.
@@ -169,7 +169,7 @@ Who sponsors the model and accepts residual trust risk.
 Who owns the trust posture of a specific domain.
 
 ### 8.3 Operational accountability
-Who maintains evidence, reviews signals, and executes hardening actions.
+Who maintains evidence, reviews Trust Signal assessments, and executes hardening actions.
 
 ### 8.4 Decision accountability
 Who approves changes, accepts exceptions, and determines escalation pathways.
@@ -205,7 +205,7 @@ Examples:
 
 ### 9.3 Exceptions
 Examples:
-- temporary weak signal accepted due to dependency constraints
+- temporary Weak assessment result for a Trust Signal accepted due to dependency constraints
 - delayed remediation due to delivery sequencing
 - vendor limitation requiring a time-bound workaround
 
@@ -262,13 +262,13 @@ The governance model SHALL maintain the following artefacts.
 A current inventory of trust-critical systems, services, domains, dependencies, and owners.
 
 ### 11.2 Trust Signal Scorecard
-A current assessment of signal strength, coverage, and notable gaps.
+A current assessment of Trust Signal condition, coverage, and notable gaps, supported by evidence.
 
 ### 11.3 Evidence register
-Linked evidence showing how posture claims were assessed.
+Linked evidence showing how Trust Signals and posture claims were assessed.
 
 ### 11.4 Trust Hardening Plan
-A prioritised set of actions to strengthen weak or inconsistent trust signals.
+A prioritised set of actions to address Trust Signals assessed as weak, partial, or inconsistent.
 
 ### 11.5 Decision and exception log
 A record of governance decisions, accepted exceptions, expiry dates, and accountable owners.
@@ -295,7 +295,7 @@ Trust posture regressions SHALL be treated as operationally meaningful events wh
 Third-party dependencies with trust impact SHALL be reviewed during onboarding, renewal, and incident response.
 
 ### 12.5 Security governance
-TrustSurface SHALL complement security governance by translating external-facing signals into a posture that leadership and non-technical stakeholders can understand.
+TrustSurface SHALL complement security governance by translating evidence-backed assessment of trust-relevant conditions at the digital edge into a posture that leadership and non-technical stakeholders can understand.
 
 ### 12.6 Executive and board reporting
 Material trust posture issues, trends, and accepted exceptions SHALL be capable of inclusion in leadership and board reporting.
@@ -355,7 +355,7 @@ Escalation criteria SHOULD consider:
 
 TrustSurface governance includes not only internal oversight but also governed communication.
 
-An organisation using TSF-GOV-1 SHALL determine which trust posture signals are communicated publicly, internally, or only on request.
+An organisation using TSF-GOV-1 SHALL determine which trust posture information is communicated publicly, internally, or only on request.
 
 Typical signalling mechanisms may include:
 - service status communication
@@ -487,5 +487,4 @@ The following items were resolved for the v1.1 public draft:
 
 Digital trust is not governed by one team acting alone.
 
-It is governed when an organisation can show who owns the Trust Surface, what signals are being emitted, what evidence supports current posture, how change is controlled, how weaknesses are escalated, and how trust is communicated truthfully.
-
+It is governed when an organisation can show who owns the Trust Surface, which Trust Signals are in scope, what their assessed condition is, what evidence supports those assessments, how change is controlled, how weaknesses are escalated, and how trust is communicated truthfully.

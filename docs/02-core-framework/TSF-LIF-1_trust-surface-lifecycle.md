@@ -2,7 +2,7 @@
 
 **Status:** Public draft  
 **Control:** Normative  
-**Framework version:** v1.1 public draft  
+**Framework version:** v1.2 public draft  
 **Identifier:** TSF-LIF-1  
 **Owner:** TrustSurface Framework  
 **Vocabulary baseline:** TSF-GLO-1  
@@ -15,7 +15,7 @@
 
 This document defines the Trust Surface Lifecycle - the repeatable operating rhythm through which organisations identify, assess, strengthen, govern, and communicate their digital trust posture.
 
-Digital trust is not static. Changes in infrastructure, vendors, domains, or services can alter the Trust Signals an organisation emits. Without a governing cycle, trust posture tends to degrade silently - not through deliberate decision, but through accumulated drift.
+Digital trust is not static. Changes in infrastructure, vendors, domains, or services can alter trust-relevant conditions across the Trust Surface and the evidence available to assess them. Without a governing cycle, trust posture tends to degrade silently - not through deliberate decision, but through accumulated drift.
 
 The lifecycle ensures Digital Trust Posture is **maintained**, not assumed.
 
@@ -87,28 +87,29 @@ A Trust Surface Inventory that cannot be mapped to owners or domain coverage is 
 
 ### Purpose
 
-Evaluate the Trust Surface by assessing the Trust Signals emitted by each Trust Surface Domain.
+Evaluate the Trust Surface by assessing Trust Signals associated with each Trust Surface Domain using attributable evidence.
 
 ### What this stage involves
 
-Signals are observed or verified to determine posture and evidence coverage. The assessment method used to evaluate signals is defined in **TSF-MTH-1** - Assessment Method.
+Trust Signals are selected for a defined target, and evidence is gathered and evaluated to support an assessment result. The assessment method used to evaluate signals and evidence is defined in **TSF-MTH-1** - Assessment Method.
 
 For each assessed signal, an assessor produces a Signal Assessment Record containing:
 - the signal identifier
-- the evidence observed
+- the assessment target
+- the evidence used
 - the result state (Strong, Partial, Weak, Unknown, or Not applicable)
 - a confidence level
-- an evidence freshness indicator
+- an Evidence Freshness indicator
 
 ### Minimum output expectations
 
 An organisation completing the Assess stage SHALL produce a **Trust Signal Scorecard** that:
 
 - references assessed signals by identifier (using TSF-SIG-1 or an extension)
-- records the evidence observed for each signal
+- records the evidence used for each signal assessment
 - captures the result state and any notable weaknesses or gaps
 - includes a Domain Judgement for each Trust Surface Domain assessed
-- identifies Trust Signal Gaps - differences between intended posture and assessed evidence
+- identifies Trust Signal Gaps - differences between intended posture and the evidence-backed assessed condition
 - is dated and attributable
 
 A scorecard that does not include evidence references or domain-level judgements does not meet the minimum expectation. Assessments based on recalled impressions rather than verified evidence are not assessments - they are assumptions.
@@ -119,7 +120,7 @@ A scorecard that does not include evidence references or domain-level judgements
 
 ### Purpose
 
-Strengthen weak or partial trust signals to improve Digital Trust Posture.
+Address Trust Signals assessed as Weak or Partial to improve Digital Trust Posture.
 
 ### What this stage involves
 
@@ -162,7 +163,7 @@ Governance mechanisms SHALL include:
 
 - assigning accountability for each Trust Surface Domain
 - incorporating trust posture into risk reporting
-- integrating signal state into procurement and vendor onboarding decisions
+- integrating assessed signal condition into procurement and vendor onboarding decisions
 - establishing regular Trust Surface reviews on a defined cadence
 - defining exception handling with expiry dates and accountable owners
 - applying change control to trust-critical assets and configurations
@@ -251,7 +252,7 @@ It specifies:
 - how Signal Assessment Records are produced
 - how evidence is evaluated
 - how Evidence Freshness is assessed
-- how Domain Judgements are derived from signal outcomes
+- how Domain Judgements are derived from signal assessment outcomes
 - how posture is summarised into a Trust Signal Scorecard
 
 TSF-LIF-1 defines the stage structure and output expectations. TSF-MTH-1 defines the method that produces those outputs. Together they define the full operating model for the Assess stage.

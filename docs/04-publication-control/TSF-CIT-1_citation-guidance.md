@@ -2,7 +2,7 @@
 
 **Status:** Public draft  
 **Control:** Operational  
-**Framework version:** v1.1 public draft  
+**Framework version:** v1.2 public draft  
 **Identifier:** TSF-CIT-1  
 **Owner:** TrustSurface Framework  
 **Vocabulary baseline:** TSF-GLO-1  
@@ -16,11 +16,19 @@ This document provides the recommended citation format for the TrustSurface Fram
 
 ## 2. Recommended citation
 
-Chetcuti, Bryan. (2026). *TrustSurface Framework* (Version v1.1 public draft). trustsurface.org.
+Chetcuti, Bryan. (2026). *TrustSurface Framework* (Version v1.2 public draft). trustsurface.org.
 
 Changelog (normative-only): trustsurface.org/changelog/
 
 Repository: https://github.com/Bchetcuti/trustsurface-framework
+
+### 2.1 Archive / DOI status
+
+DOI `10.5281/zenodo.19499957` identifies the archived **v1.1.0** snapshot.
+
+It SHOULD be cited when specifically referencing that archived v1.1.0 snapshot. It MUST NOT be described as the DOI for the v1.2 public draft.
+
+Until a v1.2 archival snapshot is published, the repository and trustsurface.org are the canonical references for the active v1.2 public draft.
 
 ## 3. Attribution guidance (CC BY 4.0)
 
@@ -38,9 +46,10 @@ Where a specific artefact is cited rather than the framework as a whole, include
 
 The version to cite depends on what you are referencing:
 
-- For the framework as a whole, cite the framework version (e.g., v1.0, v1.1 public draft).
-- For individual artefacts, the artefact identifier and its version status are sufficient.
-- The **TSF-CHG-1** changelog records normative changes only. Non-normative edits (readability, layout, examples) do not increment the version.
+- For the framework as a whole, cite the framework version (e.g., v1.1 public draft, v1.2 public draft).
+- For individual artefacts, the artefact identifier and current framework version status are sufficient.
+- For an archived snapshot, cite the version represented by that archive rather than assuming the latest framework version.
+- The **TSF-CHG-1** changelog records normative changes. Non-normative edits that do not alter framework meaning are recorded only where publication integrity requires it.
 
 ---
 
@@ -53,4 +62,4 @@ The version to cite depends on what you are referencing:
 
 ## Summary statement
 
-TSF-CIT-1 provides the canonical citation format for the TrustSurface Framework and explains how attribution requirements under CC BY 4.0 should be met when referencing or adapting framework content.
+TSF-CIT-1 provides the canonical citation format for the TrustSurface Framework and explains how attribution requirements under CC BY 4.0 should be met when referencing or adapting framework content. It also distinguishes the active v1.2 public draft from the archived v1.1.0 DOI snapshot.

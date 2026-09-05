@@ -2,7 +2,7 @@
 
 **Status:** Public draft  
 **Control:** Operational  
-**Framework version:** v1.1 public draft  
+**Framework version:** v1.2 public draft  
 **Identifier:** TSF-LIC-1  
 **Owner:** TrustSurface Framework  
 **Vocabulary baseline:** TSF-GLO-1  

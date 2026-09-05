@@ -1,6 +1,6 @@
 <svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
   <title id="title">TSF-02 — Trust Signal Gap</title>
-  <desc id="desc">TrustSurface Framework diagram showing the gap between internal assurance and external trust signals.</desc>
+  <desc id="desc">TrustSurface Framework diagram showing the gap between internal assurance and externally observable trust evidence.</desc>
 
   <defs>
     <style>
@@ -156,7 +156,7 @@
     <text x="58" y="17" class="kicker">TRUSTSURFACE FRAMEWORK</text>
     <text x="0" y="74" class="figure-id">FIGURE TSF-02</text>
     <text x="0" y="132" class="title">Trust Signal Gap</text>
-    <text x="0" y="172" class="subtitle">When internal assurance is stronger than the trust signals others can observe.</text>
+    <text x="0" y="172" class="subtitle">When internal assurance is stronger than externally observable trust evidence.</text>
   </g>
 
   <g transform="translate(1188 94)">
@@ -209,7 +209,7 @@
       <tspan x="200" dy="0">A gap emerges when internal</tspan>
       <tspan x="200" dy="28">assurance is not matched by</tspan>
       <tspan x="200" dy="28">clear, consistent external</tspan>
-      <tspan x="200" dy="28">trust signals.</tspan>
+      <tspan x="200" dy="28">trust evidence.</tspan>
     </text>
 
     <rect x="76" y="246" width="248" height="42" rx="12" class="emphasis-box"/>
@@ -227,7 +227,7 @@
   <g transform="translate(1060 310)">
     <rect x="0" y="0" width="430" height="420" rx="24" class="panel"/>
     <text x="32" y="42" class="section-label">Outside the organisation</text>
-    <text x="32" y="78" class="panel-title">External trust signals</text>
+    <text x="32" y="78" class="panel-title">Externally observable evidence</text>
     <text x="32" y="106" class="panel-copy">Evidence that customers, partners, regulators and the public can actually observe.</text>
 
     <g transform="translate(32 136)">
@@ -255,7 +255,7 @@
 
   <g transform="translate(110 778)">
     <line x1="0" y1="0" x2="1380" y2="0" class="footer-rule"/>
-    <text x="0" y="28" class="footer-meta">Figure TSF-02 · TrustSurface Framework · v0.2</text>
+    <text x="0" y="28" class="footer-meta">Figure TSF-02 · TrustSurface Framework · v1.2 public draft</text>
     <text x="1380" y="28" text-anchor="end" class="footer-copy">The Trust Surface is where internal assurance becomes visible, legible and credible to others.</text>
   </g>
 </svg>

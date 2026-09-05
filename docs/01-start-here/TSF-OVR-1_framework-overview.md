@@ -2,7 +2,7 @@
 
 **Status:** Public draft  
 **Control:** Informative  
-**Framework version:** v1.1 public draft  
+**Framework version:** v1.2 public draft  
 **Identifier:** TSF-OVR-1  
 **Owner:** TrustSurface Framework  
 **Supports:** the full TrustSurface framework set  
@@ -41,7 +41,7 @@ However, those disciplines do not always answer a simpler and increasingly impor
 
 TrustSurface exists to address that gap.
 
-It provides a structured model for understanding, assessing, and governing the digital systems and observable signals through which trust is experienced.
+It provides a structured model for understanding, assessing, and governing the digital systems and observable signals through which trust is experienced, using evidence to support posture judgements.
 
 ---
 
@@ -75,7 +75,7 @@ TrustSurface is a framework for understanding how digital systems shape stakehol
 It does this through four connected elements:
 
 1. **Trust Surface** - the digital systems through which trust is experienced
-2. **Trust Signals** - the observable indicators those systems emit
+2. **Trust Signals** - defined trust-relevant properties, behaviours, or conditions of Trust Surface components or relationships that can be assessed using attributable evidence
 3. **Trust Lifecycle** - the repeatable process for discovering, assessing, hardening, governing, and signalling trust posture
 4. **Governance Integration** - the organisational mechanisms that keep trust posture owned, reviewed, and controlled
 
@@ -95,7 +95,7 @@ TrustSurface is not:
 
 It is a governance-grade framework for making digital trust visible, assessable, and governable.
 
-It complements existing disciplines by focusing on **observable trust signals and externally experienced digital systems**.
+It complements existing disciplines by focusing on **trust-relevant conditions at the digital edge and the evidence used to assess them**, rather than internal controls alone.
 
 ---
 
@@ -119,10 +119,10 @@ This is concerned with externally experienced legitimacy, integrity, clarity, re
 
 The two postures are related, but they are not identical.
 
-A technically secure organisation may still emit weak trust signals.
+A technically secure organisation may still present weak trust conditions at the digital edge.
 A digitally polished organisation may still lack real control underneath.
 
-TrustSurface is concerned with the interaction between these realities, especially where outward-facing signals influence confidence, legitimacy, and governance judgement.
+TrustSurface is concerned with the interaction between these realities, especially where outward-facing conditions influence confidence, legitimacy, and governance judgement.
 
 ---
 
@@ -132,18 +132,21 @@ TrustSurface is concerned with the interaction between these realities, especial
 The collection of digital systems and observable signals through which stakeholders assess the trustworthiness of an organisation’s digital presence.
 
 ### 7.2 Trust Signals
-Observable indicators that suggest whether a digital system is authentic, controlled, reliable, and responsibly governed.
+Defined trust-relevant properties, behaviours, or conditions of Trust Surface components or relationships that can be assessed using attributable evidence.
 
-### 7.3 Digital trust posture
-The overall condition suggested by the signals emitted across the Trust Surface.
+### 7.3 Evidence
+Attributable observations, records, configurations, artefacts, test results, or verifications used to assess Trust Signals for defined targets.
 
-### 7.4 Trust Signal Scorecard
+### 7.4 Digital trust posture
+The evidence-backed condition implied by assessed Trust Signals across the Trust Surface.
+
+### 7.5 Trust Signal Scorecard
 A structured summary of assessed Trust Signals, evidence, and posture gaps.
 
-### 7.5 Trust hardening
-The work required to strengthen weak, partial, or poorly governed trust signals.
+### 7.6 Trust hardening
+The work required to address Trust Signals assessed as weak, partial, or poorly governed.
 
-### 7.6 Trust signalling
+### 7.7 Trust signalling
 The deliberate communication of trust-relevant information to stakeholders, such as status, verification, transparency, or incident communication.
 
 These concepts are defined more fully in the normative artefacts and glossary.
@@ -178,13 +181,13 @@ The framework is intended to be read as a connected system.
 Identify the digital systems, dependencies, and boundaries through which trust is experienced.
 
 ### 9.2 Assess signals
-Evaluate Trust Signals using explicit scope, evidence, freshness, confidence, and result states.
+Select Trust Signals for a defined target, gather attributable Evidence, and assign result, confidence, and Evidence Freshness using the assessment method.
 
 ### 9.3 Build a scorecard
-Summarise the condition of the Trust Surface in a structured way that supports governance and action.
+Summarise the evidence-backed condition of the Trust Surface in a structured way that supports governance and action.
 
 ### 9.4 Harden weak areas
-Prioritise remediation of weak, partial, unknown, or poorly governed signals.
+Prioritise remediation of Weak, Partial, Unknown, or poorly governed assessment outcomes.
 
 ### 9.5 Integrate into governance
 Ensure trust posture is reviewed through ownership, cadence, decision rights, and escalation pathways.
@@ -264,7 +267,7 @@ TrustSurface complements, rather than replaces, existing disciplines such as:
 - procurement and vendor assurance
 - privacy and policy governance
 
-Its distinctive contribution is that it treats **observable trust signals** as a legitimate governance subject.
+Its distinctive contribution is that it treats **defined Trust Signals and the evidence used to assess them** as a legitimate governance subject.
 
 That means it pays attention not only to internal control, but to the digital edge where confidence is actually formed.
 
@@ -283,6 +286,7 @@ TrustSurface makes those decisions visible.
 It establishes a way to connect trust posture to:
 - ownership
 - assessment
+- evidence
 - hardening
 - risk and assurance
 - change control
@@ -311,31 +315,33 @@ This order moves from conceptual framing into structure, method, governance, and
 
 ## 16. Current release posture
 
-The TrustSurface Framework is currently being assembled as a controlled **v1.1 draft**.
+The TrustSurface Framework is published as a controlled **v1.2 public draft**.
 
-The aim of this release is to:
+The purpose of v1.2 is to:
 
-- establish a clear normative boundary
-- stabilise the core document set
-- align diagrams and publication artefacts
-- reduce duplication between framing materials and core framework papers
-- prepare the framework for a cleaner public publication surface
-
-This means some earlier explanatory documents may remain useful as narrative or book-development material while no longer acting as framework authorities.
+- separate Trust Signal from Evidence as distinct canonical concepts
+- make the existing evidence-led assessment mechanics explicit
+- preserve the six-domain model, lifecycle, scorecard, result states, and governance structure
+- align supporting artefacts and TSF-06 to the clarified vocabulary
+- retain the digital-edge boundary without expanding TrustSurface into a generic control catalogue
 
 ---
 
-## 17. Non-goals for v1.1 draft
+## 17. Non-goals for v1.2 public draft
 
-The v1.1 draft does not aim to:
+The v1.2 public draft does not aim to:
 
-- solve every trust measurement problem
-- define every possible Trust Signal in full maturity
+- reclassify or remove Identity or Infrastructure Trust Signals
+- introduce evidence-role semantics
+- change the six-domain baseline
+- change the Trust Surface Lifecycle
+- remove or restructure the Trust Signal Scorecard
+- redesign the Digital Trust Maturity Model
+- alter the Trust Signal Gap definition
 - prescribe a universal scoring formula across all organisations
-- force a new committee or governance forum where existing structures can be used
 - turn the framework into a commercial methodology document
 
-The goal is clarity, coherence, and governable structure.
+The goal is semantic precision without structural expansion.
 
 ---
 
@@ -359,6 +365,8 @@ The goal is clarity, coherence, and governable structure.
 The following items are deferred to a future release:
 
 1. Whether a dedicated security-posture versus trust-posture comparison diagram should be added to the core reading path.
+2. Evidence-role semantics such as assessment-driving versus supporting/contextual Evidence.
+3. Field validation of the Identity and Infrastructure & Platforms signal boundary.
 
 ---
 
@@ -366,7 +374,6 @@ The following items are deferred to a future release:
 
 TrustSurface is a framework for making digital trust visible, assessable, and governable.
 
-It exists because organisations are increasingly judged through digital signals, not only through internal controls.
+It exists because organisations are increasingly judged through digital interactions, not only through internal controls.
 
-Its purpose is to help organisations understand the systems through which trust is experienced, assess the signals those systems emit, strengthen weak trust posture, and govern digital trust as an ongoing responsibility rather than an assumption.
-
+Its purpose is to help organisations understand the systems through which trust is experienced, assess defined Trust Signals using attributable Evidence, strengthen weak trust posture, and govern digital trust as an ongoing responsibility rather than an assumption.
