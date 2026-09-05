@@ -54,7 +54,7 @@ The following artefacts are added to the normative set in v1.1:
 - **TSF-GOV-1** - Governance Integration Model: specifies how Trust Posture connects to board reporting, risk governance, and ownership accountability.
 - **TSF-MTH-1** - Assessment Method: introduces the evidence model, Signal Assessment Record structure, Domain Judgement labels (Sustained / Mixed / Fragile / Deficient / Indeterminate), and scoring approach.
 - **TSF-ART-1** - Artefact Register and Visual Index: controlled catalogue of framework diagrams (TSF-01 through TSF-08) and artefact identifiers.
-- **TSF-VPOL-1** - Vocabulary and Naming Policy: governs term introduction, deprecation, and cross-artefact consistency.
+- **TSF-VPOL-1** - Versioning & Normative Boundary Policy: governs artefact classification, versioning, change control, supersession, and publication integrity.
 
 **Glossary expansion:**
 
@@ -100,7 +100,7 @@ The following artefacts are added to the normative set in v1.1:
 - **TSF-REG-1** - Framework Register (canonical artefact list and version status)
 - **TSF-CIT-1** - Citation Guidance
 - **TSF-LIC-1** - Licence
-- **TSF-VPOL-1** - Vocabulary and Naming Policy
+- **TSF-VPOL-1** - Versioning & Normative Boundary Policy
 - **TSF-GLO-1** - Glossary
 
 ## Summary statement
