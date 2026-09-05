@@ -2,7 +2,7 @@
 
 **Status:** Public draft  
 **Control:** Informative  
-**Framework version:** v1.1 public draft  
+**Framework version:** v1.2 public draft  
 **Identifier:** TSF-PRI-1  
 **Owner:** TrustSurface Framework  
 **Vocabulary baseline:** TSF-GLO-1  
@@ -35,20 +35,20 @@ This document does not define controls, prescribe methods, or establish scoring 
 ### 3.1 Principle 1 - Trust must be observable
 
 Digital trust cannot rely on assurances alone.
-It must be supported by **observable signals**.
+It must be supported by **demonstrable evidence about trust-relevant conditions at the Trust Surface**.
 
 Examples include:
 
 - email authentication records
-- domain integrity controls
+- domain integrity controls and observations
 - encryption posture
 - service availability indicators
 
-If trust cannot be observed, it cannot be verified.
+If trust cannot be demonstrated, it cannot be verified.
 
 **Implication**
 
-Organisations should ensure the signals they emit accurately reflect their operational and security posture. Assessment, evidence, and governance must be grounded in what can be demonstrated, not only what is claimed.
+Organisations should define Trust Signals and assess them using attributable evidence. Evidence may be externally observed or internally verified where it materially supports assessment of a Trust Surface condition. Assessment, evidence, and governance must be grounded in what can be demonstrated, not only what is claimed.
 
 ---
 
@@ -97,7 +97,7 @@ Changes in infrastructure, vendors, domains, or services can quickly alter Digit
 
 **Implication**
 
-Trust Signals must be continuously monitored and periodically reviewed. Digital Trust Posture should be treated as a living operational metric, not a certification endpoint. The Trust Surface Lifecycle exists to operationalise this principle.
+Trust Signal assessments and their supporting evidence must be refreshed on a cadence proportionate to change and exposure. Not every Trust Signal requires continuous real-time monitoring. Digital Trust Posture should be treated as a living operational condition, not a certification endpoint. The Trust Surface Lifecycle exists to operationalise this principle.
 
 ---
 
