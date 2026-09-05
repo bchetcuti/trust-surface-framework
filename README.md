@@ -2,7 +2,7 @@
 
 A framework for making digital trust visible, assessable, and governable.
 
-[![Archived DOI — v1.1.0](https://zenodo.org/badge/DOI/10.5281/zenodo.19499957.svg)](https://doi.org/10.5281/zenodo.19499957)
+[![DOI](https://zenodo.org/badge/1173391560.svg)](https://zenodo.org/badge/latestdoi/1173391560)
 [![Version](https://img.shields.io/badge/version-v1.2.0-1f4b43?style=flat-square)](https://trustsurface.org/changelog/)
 [![Status](https://img.shields.io/badge/status-public%20draft-5f6b76?style=flat-square)](https://trustsurface.org/)
 [![Licence](https://img.shields.io/badge/licence-CC%20BY%204.0-4b5563?style=flat-square)](https://trustsurface.org/licence/)
@@ -34,9 +34,13 @@ It complements cybersecurity, risk, architecture, service, and vendor governance
 
 **Framework version:** v1.2 public draft  
 **Publication status:** Public draft  
+**GitHub release:** [v1.2.0 — Public Draft](https://github.com/bchetcuti/trust-surface-framework/releases/tag/v1.2.0)  
+**Zenodo archive:** [latest archived TrustSurface release](https://zenodo.org/badge/latestdoi/1173391560)  
 **Primary entry point:** [TSF-OVR-1 - Framework Overview](docs/01-start-here/TSF-OVR-1_framework-overview.md)
 
-> **Archive note:** DOI `10.5281/zenodo.19499957` identifies the archived **v1.1.0** snapshot. It must not be represented as a v1.2 archive. This repository is the canonical source for the v1.2 public draft until a v1.2 archival snapshot is published.
+> **Archive note:** the Zenodo-backed `v1.2.0` archive is the immutable GitHub tag at commit `5d79740d8b6a0608185dbe356991b9e63cd4ecd7`. The live v1.2 public draft on `main` also includes a later one-line informative publication-integrity correction that keeps `Unknown` assessment outcomes outside remediation. The correction does not change the framework version, normative boundary, result states, lifecycle, or assessment semantics.
+>
+> DOI `10.5281/zenodo.19499957` remains the archived **v1.1.0** version DOI and must not be used for v1.2.
 
 ---
 
@@ -153,9 +157,13 @@ TrustSurface Framework content is licensed under [Creative Commons Attribution 4
 
 ## Citation
 
+For the live framework:
+
 Chetcuti, Bryan. (2026). *TrustSurface Framework* (v1.2 public draft). trustsurface.org.
 
-See [TSF-CIT-1](docs/04-publication-control/TSF-CIT-1_citation-guidance.md) for full citation and attribution guidance, including the distinction between the current public draft and the archived v1.1.0 DOI snapshot.
+For an immutable archived release, cite the version-specific DOI shown by its Zenodo record. The repository DOI badge resolves to the latest archived TrustSurface release.
+
+See [TSF-CIT-1](docs/04-publication-control/TSF-CIT-1_citation-guidance.md) for full citation and attribution guidance.
 
 ---
 
@@ -168,6 +176,3 @@ Feedback and contributions are welcome. See [TSF-CNS-1 - Consultation & Contribu
 ## Security
 
 See [TSF-SEC-1 - Security & Vulnerability Disclosure](docs/04-publication-control/TSF-SEC-1_security-and-vulnerability-disclosure.md).
-
-
-[def]: https://doi.org/10.5281/zenodo.19499957
