@@ -2,7 +2,7 @@
 
 **Status:** Public draft  
 **Control:** Operational  
-**Framework version:** v1.1 public draft  
+**Framework version:** v1.2 public draft  
 **Identifier:** TSF-CHG-1  
 **Owner:** TrustSurface Framework  
 **Vocabulary baseline:** TSF-GLO-1  
@@ -25,7 +25,7 @@ Normative changes are changes that alter the meaning, scope, or required structu
 - **Lifecycle / operating rhythm** (the required loop and its outputs)
 - **Framework structure** (the set of normative artefacts and how they relate)
 
-The following are **non-normative** and are intentionally excluded:
+The following are **non-normative** and are intentionally excluded unless needed to explain alignment to a normative change:
 
 - wording and readability edits that do not change meaning
 - layout, typography, navigation, and visual polish
@@ -33,6 +33,63 @@ The following are **non-normative** and are intentionally excluded:
 - implementation templates, assessments, and delivery methods
 
 ## 3. Release entries
+
+---
+
+### v1.2 - 2026-09-06 (public draft)
+**Change type:** Substantive compatible / MINOR - Trust Signal and Evidence semantic separation
+
+v1.2 resolves a semantic inconsistency in v1.1 by separating **Trust Signal** from **Evidence** as distinct framework concepts while preserving the existing domain model, lifecycle, assessment mechanics, scorecard, and governance structure.
+
+**Canonical vocabulary changes:**
+
+- **Trust Signal** is now defined as: *A defined trust-relevant property, behaviour or condition of a Trust Surface component or relationship that can be assessed using attributable evidence.*
+- **Evidence** is added as a canonical glossary term: *An attributable observation, record, configuration, artefact, test result or verification used to assess a Trust Signal for a defined target.*
+- **Signal Assessment Record** is clarified as the governed assessment record that distinguishes the Trust Signal being assessed, the Evidence used, the assessment result, confidence, Evidence Freshness, target, and limitations.
+
+**Normative alignment:**
+
+- **TSF-GLO-1** establishes the Signal / Evidence distinction.
+- **TSF-MOD-1** now treats Trust Signals as the assessment layer and Evidence as the attributable basis for assessment; the high-level framework chain is unchanged.
+- **TSF-SPEC-1** carries the same distinction and clarifies the existing evidence-backed conformance requirement.
+- **TSF-DEF-1** retains the canonical Trust Surface definition unchanged while removing universal wording that implied every Trust Signal is literally emitted.
+- **TSF-LIF-1** retains Discover → Assess → Harden → Govern → Signal and its existing outputs while making the Assess-stage Signal / Evidence relationship explicit.
+- **TSF-GOV-1** retains roles, cadence, decision rights, controls, and conformance while distinguishing Trust Signal assessment from Evidence governance.
+
+**Supporting alignment:**
+
+- **TSF-SIG-1** preserves all 28 signal identifiers and the `Signal | Evidence` catalogue structure while clarifying their distinct jobs. Two labels are normalised without changing identifiers or intended coverage: `INF-02` becomes **Backup and recovery capability** and `TP-02` becomes **Supplier assurance review**.
+- **TSF-MTH-1** makes its existing assessment sequence explicit: define scope and target → select Trust Signals → gather and evaluate Evidence → assess → summarise → scorecard → action. Result states, confidence, Evidence Freshness, and numeric summary mapping remain unchanged.
+- **TSF-OVR-1**, **TSF-PRI-1**, **TSF-MAT-1**, **TSF-ADP-1**, **TSF-BRD-1**, **TSF-CMP-1**, and **TSF-EXM-1** are aligned so Signal condition is not conflated with Evidence or Evidence Freshness.
+- **TSF-06 Trust Signal Anatomy** is redesigned to show `Trust Signal → Evidence → Assessment → Scorecard / posture` and remains a Supporting diagram.
+
+**Explicit structural non-changes:**
+
+v1.2 does **not** change:
+
+- the canonical Trust Surface definition;
+- the six Trust Surface Domains;
+- the Trust Surface Lifecycle stages or order;
+- the Trust Signal Scorecard requirement;
+- assessment result states (`Strong / Partial / Weak / Unknown / Not applicable`);
+- the confidence model;
+- the Evidence Freshness model;
+- Governance Integration structure, roles, cadence, or controls;
+- the Trust Signal Gap definition;
+- the Digital Trust Maturity Model structure;
+- any of the 28 Trust Signal identifiers.
+
+**Deferred by design:**
+
+- evidence-role semantics such as assessment-driving versus supporting/contextual Evidence;
+- Identity and Infrastructure & Platforms signal reclassification or narrowing, including any future treatment of INF-01 or INF-04;
+- longitudinal observation-horizon semantics;
+- maturity-model redesign;
+- broader relationship or domain restructuring.
+
+**Backward compatibility:**
+
+Existing v1.1 Signal Assessment Records remain directly intelligible under v1.2 because they already distinguish signal identifier/name from evidence summary, source, freshness, result, confidence, and target. No record migration or identifier remapping is required solely because of the semantic separation.
 
 ---
 
