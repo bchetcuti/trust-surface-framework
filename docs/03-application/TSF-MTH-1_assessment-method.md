@@ -2,7 +2,7 @@
 
 **Status:** Public draft  
 **Control:** Guidance  
-**Framework version:** v1.1 public draft  
+**Framework version:** v1.2 public draft  
 **Identifier:** TSF-MTH-1  
 **Owner:** TrustSurface Framework  
 **Supports:** TSF-SIG-1, TSF-LIF-1, TSF-GOV-1, TSF-MAT-1  
@@ -39,7 +39,7 @@ This method applies to assessment of Trust Signals across all Trust Surface doma
 
 It covers:
 
-- signal observation
+- signal selection and assessment
 - evidence collection and validation
 - signal scoring
 - handling of unknown, stale, or partial evidence
@@ -61,6 +61,8 @@ It links:
 - **TSF-GOV-1** by producing evidence suitable for governance review and decision-making
 - **TSF-MAT-1** by providing a basis for domain-level maturity judgement
 
+Under TSF-GLO-1, a Trust Signal is the defined trust-relevant property, behaviour, or condition being assessed. Evidence is the attributable material used to assess that Trust Signal for a defined target. TSF-MTH-1 governs how those two concepts are connected in practice.
+
 Without a defined assessment method, scorecards become inconsistent and posture claims become difficult to govern.
 
 ---
@@ -72,7 +74,7 @@ An assessment performed using TSF-MTH-1 SHOULD enable an organisation to answer 
 1. What Trust Signals were assessed?
 2. What evidence supports each assessment?
 3. How current is that evidence?
-4. Which signals are strong, weak, unknown, or not applicable?
+4. Which signal assessments are Strong, Partial, Weak, Unknown, or Not applicable?
 5. Where are the most material trust posture gaps?
 6. Which findings require hardening, governance attention, or exception handling?
 
@@ -99,6 +101,8 @@ Each signal assessment record SHALL contain, at minimum:
 
 A Trust Signal Scorecard is the aggregation of multiple signal assessment records.
 
+The record structure intentionally distinguishes the Trust Signal being assessed from the Evidence used to assess it and from the resulting assessment state.
+
 ---
 
 ## 6. Assessment targets
@@ -122,12 +126,16 @@ A score without a clearly defined target is not valid for comparison.
 
 ## 7. Evidence model
 
+Evidence is defined in TSF-GLO-1 as an attributable observation, record, configuration, artefact, test result, or verification used to assess a Trust Signal for a defined target.
+
+Evidence is not the Trust Signal itself. It is the attributable basis used to support an assessment result.
+
 ### 7.1 Evidence types
 
 Evidence used in TSF-MTH-1 may be one or more of the following:
 
 1. **Observed external evidence**  
-   Publicly observable indicators such as DNS records, TLS posture, public service behaviour, status signalling, and certificate data.
+   Publicly observable material such as DNS records, TLS posture, public service behaviour, status signalling, and certificate data.
 
 2. **Observed internal evidence**  
    System configuration data, platform settings, audit logs, identity policy configuration, or operational dashboards.
@@ -153,12 +161,12 @@ Unverifiable assurance language SHOULD NOT be treated as strong evidence.
 
 ## 8. Evidence sufficiency
 
-A signal SHOULD only be assessed as strong when the evidence is both relevant and sufficiently current.
+A signal SHOULD only be assessed as Strong when the Evidence is both relevant and sufficiently current.
 
 Evidence sufficiency is determined by five tests.
 
 ### 8.1 Relevance
-Does the evidence directly support the signal being assessed?
+Does the evidence directly support the Trust Signal being assessed?
 
 ### 8.2 Traceability
 Can the evidence source be identified and linked?
@@ -172,7 +180,7 @@ Does the evidence apply to the target being assessed, rather than a generic orga
 ### 8.5 Completeness
 Is there enough evidence to support the result without major ambiguity?
 
-If two or more of these tests fail, the signal SHOULD be scored as unknown, weak, or partial rather than strong.
+If two or more of these tests fail, the signal SHOULD be assessed as Unknown, Weak, or Partial rather than Strong.
 
 ---
 
@@ -185,15 +193,15 @@ Evidence freshness SHALL be recorded using one of the following states:
 - **Stale** - evidence is outdated and no longer sufficient for a strong claim
 - **Unknown** - freshness cannot be determined
 
-Default review windows SHOULD be set by the organisation according to signal volatility.
+Default review windows SHOULD be set by the organisation according to signal and evidence volatility.
 
 Recommended baseline:
 
-| Signal type | Suggested review window |
+| Signal / evidence type | Suggested review window |
 |---|---|
-| High-change signals | 30 days |
-| Medium-change signals | 90 days |
-| Low-change structural signals | 180 days |
+| High-change conditions | 30 days |
+| Medium-change conditions | 90 days |
+| Low-change structural conditions | 180 days |
 | Vendor documentation / attestation | aligned to renewal or annual cycle |
 
 These are defaults, not absolutes.
@@ -207,19 +215,19 @@ High-exposure environments MAY require shorter windows.
 Each signal assessment SHALL use one of the following result states.
 
 ### 10.1 Strong
-Evidence indicates the signal is implemented, current, and supportable.
+Evidence supports that the assessed trust-relevant condition is implemented, current, and supportable.
 
 ### 10.2 Partial
-Evidence indicates the signal is present but incomplete, inconsistent, weakly governed, or not uniformly applied.
+Evidence supports that the assessed condition is present but incomplete, inconsistent, weakly governed, or not uniformly applied.
 
 ### 10.3 Weak
-Evidence indicates the signal is absent, materially deficient, or unreliable.
+Evidence supports that the assessed condition is absent, materially deficient, or unreliable.
 
 ### 10.4 Unknown
-Available evidence is insufficient to make a supportable judgement.
+Available evidence is insufficient to make a supportable judgement about the Trust Signal for the defined target.
 
 ### 10.5 Not applicable
-The signal does not apply to the target or assessed context.
+The Trust Signal does not apply to the target or assessed context.
 
 These states are preferred for executive and governance readability.
 
@@ -256,7 +264,7 @@ Evidence is adequate but limited by sampling, partial visibility, tool constrain
 ### 12.3 Low confidence
 Evidence is sparse, indirect, stale, or materially constrained.
 
-A strong result SHOULD NOT be reported with low confidence without an explicit note.
+A Strong result SHOULD NOT be reported with Low confidence without an explicit note.
 
 ---
 
@@ -264,21 +272,21 @@ A strong result SHOULD NOT be reported with low confidence without an explicit n
 
 Unknown is a valid assessment outcome.
 
-It SHALL NOT be treated as equivalent to strong or partial.
+It SHALL NOT be treated as equivalent to Strong or Partial.
 
 Unknown exists to prevent unsupported certainty.
 
-A signal SHOULD be recorded as unknown when:
+A signal SHOULD be recorded as Unknown when:
 
 - evidence cannot be obtained
 - ownership is unclear
-- data is stale or contradictory
+- evidence is stale or contradictory
 - the target boundary is not sufficiently defined
 - only generic assurance language is available
 
-Partial exists to represent signals that are present but not reliable enough to count as strong.
+Partial exists to represent assessed conditions that are present but not reliable enough to count as Strong.
 
-A signal SHOULD be recorded as partial when:
+A signal SHOULD be recorded as Partial when:
 
 - implementation exists in some but not all relevant areas
 - evidence is current for only part of the target
@@ -300,7 +308,7 @@ Where sampling is used, the assessment record SHOULD state:
 - selection basis
 - limitations of inference
 
-Signals based on sampled evidence SHOULD NOT be reported as high-confidence strong unless sampling coverage is clearly sufficient.
+Signals based on sampled evidence SHOULD NOT be reported as High-confidence Strong unless sampling coverage is clearly sufficient.
 
 ---
 
@@ -311,7 +319,7 @@ Where evidence conflicts, the assessor SHALL:
 1. record the conflict
 2. prefer direct and current evidence over general or historical claims
 3. lower confidence where ambiguity remains
-4. avoid assigning a strong result unless the conflict is resolved
+4. avoid assigning a Strong result unless the conflict is resolved
 
 Contradictory evidence is itself a governance-relevant finding.
 
@@ -324,7 +332,7 @@ Signal assessments MAY be summarised at domain level.
 A domain summary SHOULD include:
 
 - number of signals assessed
-- number strong / partial / weak / unknown / not applicable
+- number Strong / Partial / Weak / Unknown / Not applicable
 - notable coverage gaps
 - key risks or posture gaps
 - overall domain judgement
@@ -344,13 +352,13 @@ They describe the current assessed condition of a domain, not the organisation's
 
 This judgement should be based on:
 
-- signal distribution
+- signal assessment distribution
 - evidence confidence
-- criticality of weak signals
-- existence of material unknowns
-- whether key control signals are absent
+- criticality of Weak results
+- existence of material Unknown results
+- whether key trust-relevant conditions are materially deficient
 
-A domain with one severe weak signal MAY justify a lower domain judgement even if other signals are strong.
+A domain with one severe Weak result MAY justify a lower domain judgement even if other signals are Strong.
 
 ---
 
@@ -360,7 +368,7 @@ TSF-MTH-1 supports TSF-MAT-1 but does not automatically compute maturity.
 
 Maturity is a governance judgement informed by:
 
-- signal strength
+- signal assessment strength
 - signal coverage
 - review cadence
 - ownership clarity
@@ -386,7 +394,7 @@ This table is indicative, not deterministic.
 
 Not all signals carry equal weight.
 
-An organisation using TSF-MTH-1 SHOULD identify critical signals whose weakness materially affects trust posture.
+An organisation using TSF-MTH-1 SHOULD identify critical signals whose Weak assessment materially affects trust posture.
 
 Examples may include:
 
@@ -396,7 +404,7 @@ Examples may include:
 - public service legitimacy and reliability signalling
 - major supplier trust dependencies
 
-A critical weak signal SHOULD be escalated even if the overall score distribution appears acceptable.
+A critical Weak signal assessment SHOULD be escalated even if the overall score distribution appears acceptable.
 
 ---
 
@@ -422,21 +430,27 @@ A Trust Signal Scorecard produced under TSF-MTH-1 SHOULD include, at minimum:
 The minimum assessment workflow is:
 
 ### 20.1 Define scope
-Identify target, domains, and signal set.
+Identify the target and domains in scope.
 
-### 20.2 Gather evidence
-Collect direct, attributable evidence and record source types.
+### 20.2 Select Trust Signals
+Identify the Trust Signals to be assessed for the defined target.
 
-### 20.3 Assess each signal
-Assign result state, confidence, freshness, and notes.
+### 20.3 Gather evidence
+Collect attributable Evidence for each selected Trust Signal and record source types.
 
-### 20.4 Summarise by domain
-Identify critical weak or unknown signals.
+### 20.4 Evaluate evidence
+Evaluate relevance, traceability, freshness, specificity, completeness, and any contradictions.
 
-### 20.5 Produce scorecard
+### 20.5 Assess each signal
+Assign result state, confidence, Evidence Freshness, and notes based on the evaluated Evidence.
+
+### 20.6 Summarise by domain
+Identify critical Weak or Unknown signal assessments and coverage gaps.
+
+### 20.7 Produce scorecard
 Create a governance-ready summary with evidence linkage.
 
-### 20.6 Trigger action
+### 20.8 Trigger action
 Raise hardening items, governance exceptions, or escalation items where required.
 
 ---
@@ -465,7 +479,7 @@ An organisation claiming that a scorecard was produced using TSF-MTH-1 SHALL be 
 3. assessment records for assessed signals
 4. evidence linkage or evidence register
 5. result state and confidence for each assessed signal
-6. treatment of unknown and not applicable signals
+6. treatment of Unknown and Not applicable signals
 7. date of assessment and review date
 
 Where these are absent, the output SHOULD be described as a heuristic review, not a TSF-MTH-1 scorecard.
@@ -481,6 +495,7 @@ TSF-MTH-1 does not:
 - guarantee comparability across organisations without consistent scope
 - treat every signal as equally material
 - require exhaustive assessment of every possible signal at all times
+- define assessment-driving versus supporting/contextual evidence roles
 
 The purpose of the method is disciplined judgement, not false precision.
 
@@ -524,5 +539,4 @@ A standard **signal assessment template** will be published as a companion artef
 
 Trust posture should not be declared by impression.
 
-It should be assessed through explicit scope, observable signals, current evidence, honest handling of unknowns, and scorecards that can support governance decisions over time.
-
+It should be assessed through explicit scope, defined Trust Signals, attributable and current Evidence, honest handling of unknowns, and scorecards that can support governance decisions over time.
