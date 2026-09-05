@@ -16,19 +16,33 @@ This document provides the recommended citation format for the TrustSurface Fram
 
 ## 2. Recommended citation
 
+### 2.1 Live v1.2 public draft
+
+When referring to the current web/repository framework rather than an immutable archive:
+
 Chetcuti, Bryan. (2026). *TrustSurface Framework* (Version v1.2 public draft). trustsurface.org.
 
-Changelog (normative-only): trustsurface.org/changelog/
+Changelog: https://trustsurface.org/changelog/
 
-Repository: https://github.com/Bchetcuti/trustsurface-framework
+Repository: https://github.com/bchetcuti/trust-surface-framework
 
-### 2.1 Archive / DOI status
+### 2.2 Archived v1.2.0 release
 
-DOI `10.5281/zenodo.19499957` identifies the archived **v1.1.0** snapshot.
+GitHub release `v1.2.0 — Public Draft` is archived by Zenodo and represents the immutable tag at commit `5d79740d8b6a0608185dbe356991b9e63cd4ecd7`.
 
-It SHOULD be cited when specifically referencing that archived v1.1.0 snapshot. It MUST NOT be described as the DOI for the v1.2 public draft.
+Release: https://github.com/bchetcuti/trust-surface-framework/releases/tag/v1.2.0
 
-Until a v1.2 archival snapshot is published, the repository and trustsurface.org are the canonical references for the active v1.2 public draft.
+Zenodo latest-archive resolver for this repository: https://zenodo.org/badge/latestdoi/1173391560
+
+When citing the archived release, use the **version-specific DOI displayed by the Zenodo record**, not the DOI of an earlier version and not a later latest-version DOI.
+
+The live v1.2 public draft on `main` includes a later one-line informative publication-integrity correction that keeps `Unknown` assessment outcomes outside remediation. That correction does not alter the framework version, normative boundary, lifecycle, result states, or assessment semantics, but it means the current repository head is not byte-identical to the immutable v1.2.0 archive.
+
+### 2.3 Earlier archive
+
+DOI `10.5281/zenodo.19499957` identifies the archived **v1.1.0** snapshot only.
+
+It SHOULD be cited when specifically referencing that archived v1.1.0 snapshot. It MUST NOT be described as the DOI for v1.2 or for the current public draft.
 
 ## 3. Attribution guidance (CC BY 4.0)
 
@@ -37,7 +51,7 @@ Attribution should include:
 - author name (Bryan Chetcuti)
 - title (TrustSurface Framework)
 - version (framework and/or glossary)
-- link to trustsurface.org or the repository
+- link to trustsurface.org, the repository, or the version-specific archive
 - indication of changes (if you modified the material)
 
 Where a specific artefact is cited rather than the framework as a whole, include the artefact identifier (e.g., TSF-GLO-1, TSF-MOD-1) alongside the version.
@@ -46,10 +60,12 @@ Where a specific artefact is cited rather than the framework as a whole, include
 
 The version to cite depends on what you are referencing:
 
-- For the framework as a whole, cite the framework version (e.g., v1.1 public draft, v1.2 public draft).
-- For individual artefacts, the artefact identifier and current framework version status are sufficient.
-- For an archived snapshot, cite the version represented by that archive rather than assuming the latest framework version.
-- The **TSF-CHG-1** changelog records normative changes. Non-normative edits that do not alter framework meaning are recorded only where publication integrity requires it.
+- For the live framework as a whole, cite the active framework version and canonical web/repository path.
+- For an immutable archived release, cite the version-specific DOI displayed by that Zenodo record.
+- For individual artefacts, include the artefact identifier and current framework version status.
+- Do not reuse a prior version DOI for a newer framework release.
+- A repository-level latest-DOI resolver is convenient for discovery but is not a substitute for a version-specific DOI when reproducibility depends on the exact archived release.
+- The **TSF-CHG-1** changelog records normative changes. Non-normative edits that do not alter framework meaning are recorded where publication integrity requires traceability.
 
 ---
 
@@ -62,4 +78,4 @@ The version to cite depends on what you are referencing:
 
 ## Summary statement
 
-TSF-CIT-1 provides the canonical citation format for the TrustSurface Framework and explains how attribution requirements under CC BY 4.0 should be met when referencing or adapting framework content. It also distinguishes the active v1.2 public draft from the archived v1.1.0 DOI snapshot.
+TSF-CIT-1 provides the canonical citation format for the TrustSurface Framework and explains how attribution requirements under CC BY 4.0 should be met when referencing or adapting framework content. It distinguishes the live v1.2 public draft, the immutable v1.2.0 Zenodo-backed release archive, and earlier archived versions.
