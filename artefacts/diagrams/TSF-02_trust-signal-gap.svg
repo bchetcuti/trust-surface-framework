@@ -1,6 +1,6 @@
 <svg width="1200" height="700" viewBox="0 0 1200 700" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
   <title id="title">TSF-02 — Trust Signal Gap</title>
-  <desc id="desc">TrustSurface Framework diagram showing a mismatch between intended or internally assured posture and the posture supported by observable evidence, with a governance response that separates Trust Signals from Evidence and Assessment.</desc>
+  <desc id="desc">TrustSurface Framework diagram showing the difference between intended or internally assured trust posture and the posture actually signalled by observable evidence, with a governance response that separates Trust Signals from Evidence and Assessment.</desc>
 
   <defs>
     <style>
@@ -78,14 +78,14 @@
     <text x="177" y="36" text-anchor="middle" class="gap-kicker">CORE CONCEPT</text>
     <text x="177" y="76" text-anchor="middle" class="gap-title">Trust Signal Gap</text>
 
-    <text x="177" y="128" text-anchor="middle" class="gap-copy">
-      <tspan x="177">A meaningful mismatch between the</tspan>
-      <tspan x="177" dy="25">posture an organisation intends or</tspan>
-      <tspan x="177" dy="25">believes it has and the posture</tspan>
-      <tspan x="177" dy="25">supported by observable evidence.</tspan>
+    <text x="177" y="126" text-anchor="middle" class="gap-copy">
+      <tspan x="177">The difference between the trust posture</tspan>
+      <tspan x="177" dy="25">an organisation intends (or believes it</tspan>
+      <tspan x="177" dy="25">has) and the posture actually signalled</tspan>
+      <tspan x="177" dy="25">by observable evidence.</tspan>
     </text>
 
-    <text x="177" y="252" text-anchor="middle" class="gap-note">
+    <text x="177" y="250" text-anchor="middle" class="gap-note">
       <tspan x="177">Evidence does not prove posture by itself.</tspan>
       <tspan x="177" dy="24">It supports assessment of defined Trust Signals.</tspan>
     </text>
