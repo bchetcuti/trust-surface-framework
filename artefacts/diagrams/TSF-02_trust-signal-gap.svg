@@ -13,14 +13,16 @@
       .arrow { fill: #0b4f8a; opacity: .72; }
       .response { fill: #ffffff; stroke: #d9e2ec; stroke-width: 1.8; }
       .pill { fill: #f8fbfd; stroke: #bfd4e5; stroke-width: 1.2; }
+      .status-pill { fill: #ffffff; stroke: #bfd4e5; stroke-width: 1.2; }
       .kicker { font-size: 14px; font-weight: 700; letter-spacing: .16em; fill: #0b4f8a; }
-      .figure-id { font-size: 13px; font-weight: 700; letter-spacing: .12em; fill: #64748b; }
+      .figure-id { font-size: 12px; font-weight: 700; letter-spacing: .1em; fill: #64748b; }
+      .status-text { font-size: 12px; font-weight: 700; letter-spacing: .08em; fill: #0b4f8a; }
       .title { font-size: 42px; font-weight: 700; letter-spacing: -.03em; }
       .subtitle { font-size: 19px; font-weight: 500; fill: #475569; }
       .panel-label { font-size: 13px; font-weight: 700; letter-spacing: .12em; fill: #64748b; }
       .panel-title { font-size: 26px; font-weight: 700; letter-spacing: -.02em; }
       .panel-copy { font-size: 16px; font-weight: 500; fill: #475569; }
-      .row-text { font-size: 18px; font-weight: 600; fill: #243447; }
+      .row-text { font-size: 17px; font-weight: 600; fill: #243447; }
       .dot { fill: #0b4f8a; }
       .gap-kicker { font-size: 13px; font-weight: 700; letter-spacing: .12em; fill: #0b4f8a; }
       .gap-title { font-size: 28px; font-weight: 700; letter-spacing: -.02em; }
@@ -41,7 +43,11 @@
 
   <g transform="translate(42 38)">
     <text class="kicker">TRUSTSURFACE FRAMEWORK</text>
-    <text x="1116" class="figure-id" text-anchor="end">FIGURE TSF-02 · v1.2 PUBLIC DRAFT</text>
+    <text x="1028" class="figure-id" text-anchor="end">FIGURE TSF-02 · FRAMEWORK v1.2 PUBLIC DRAFT</text>
+    <g transform="translate(1044 -19)">
+      <rect width="72" height="28" rx="14" class="status-pill"/>
+      <text x="36" y="19" text-anchor="middle" class="status-text">DRAFT</text>
+    </g>
     <text y="52" class="title">Trust Signal Gap</text>
     <text y="84" class="subtitle">Intended or internally assured posture can diverge from the posture supported by observable evidence.</text>
   </g>
@@ -58,7 +64,7 @@
     <g transform="translate(24 142)">
       <rect width="272" height="54" rx="13" class="row"/>
       <circle cx="20" cy="27" r="4" class="dot"/>
-      <text x="38" y="33" class="row-text">Security &amp; resilience controls</text>
+      <text x="38" y="33" class="row-text">Security &amp; resilience</text>
 
       <rect y="72" width="272" height="54" rx="13" class="row"/>
       <circle cx="20" cy="99" r="4" class="dot"/>
@@ -66,7 +72,7 @@
 
       <rect y="144" width="272" height="54" rx="13" class="row"/>
       <circle cx="20" cy="171" r="4" class="dot"/>
-      <text x="38" y="177" class="row-text">Supplier &amp; operating controls</text>
+      <text x="38" y="177" class="row-text">Supplier &amp; operating control</text>
     </g>
   </g>
 
@@ -108,11 +114,11 @@
     <g transform="translate(24 142)">
       <rect width="273" height="54" rx="13" class="row"/>
       <circle cx="20" cy="27" r="4" class="dot"/>
-      <text x="38" y="33" class="row-text">Domain &amp; email observations</text>
+      <text x="38" y="33" class="row-text">Domain &amp; email records</text>
 
       <rect y="72" width="273" height="54" rx="13" class="row"/>
       <circle cx="20" cy="99" r="4" class="dot"/>
-      <text x="38" y="105" class="row-text">Identity &amp; service observations</text>
+      <text x="38" y="105" class="row-text">Identity &amp; service records</text>
 
       <rect y="144" width="273" height="54" rx="13" class="row"/>
       <circle cx="20" cy="171" r="4" class="dot"/>
@@ -123,13 +129,14 @@
     </g>
   </g>
 
-  <g transform="translate(42 535)">
-    <rect width="1116" height="112" rx="18" class="response"/>
+  <g transform="translate(42 526)">
+    <rect width="1116" height="130" rx="18" class="response"/>
     <text x="24" y="29" class="response-label">GOVERNANCE RESPONSE</text>
     <text x="24" y="58" class="response-title">Assess the gap without overstating what the evidence proves.</text>
-    <text x="24" y="83" class="response-copy">
-      <tspan x="24">Define the target and Trust Signal, gather attributable Evidence, and record the assessment result with confidence and freshness.</tspan>
-      <tspan x="24" dy="19">Then harden and govern material gaps.</tspan>
+    <text x="24" y="82" class="response-copy">
+      <tspan x="24">Define the target and Trust Signal, then gather attributable Evidence.</tspan>
+      <tspan x="24" dy="19">Record the assessment result with confidence and Evidence Freshness.</tspan>
+      <tspan x="24" dy="19">Harden and govern material gaps.</tspan>
     </text>
 
     <g transform="translate(735 20)">
@@ -144,6 +151,6 @@
     </g>
   </g>
 
-  <text x="42" y="676" class="footer">TrustSurface Framework · Figure TSF-02 · Supporting diagram</text>
-  <text x="1158" y="676" text-anchor="end" class="footer">Framework text remains authoritative where visual shorthand is necessarily concise.</text>
+  <text x="42" y="682" class="footer">TrustSurface Framework · Figure TSF-02 · Supporting diagram · Draft</text>
+  <text x="1158" y="682" text-anchor="end" class="footer">Framework text remains authoritative where visual shorthand is necessarily concise.</text>
 </svg>
