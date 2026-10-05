@@ -77,6 +77,32 @@ ThreatScope Check, the .au Domain Observatory (.auDO), and the Domain Governance
 
 They are not normative dependencies and do not automatically change the framework. Evidence from those projects may justify a future private impact analysis; framework change still requires an explicit canonical decision and controlled release path.
 
+## Protected change path
+
+The canonical default branch is protected by the active repository ruleset `Protect canonical main`.
+
+The protected change path is:
+
+1. create a working branch from the current canonical state;
+2. make and review the proposed change on that branch;
+3. open a pull request targeting the default branch;
+4. merge the accepted pull request into the canonical branch.
+
+The ruleset applies to the repository default branch and:
+
+- blocks branch deletion;
+- blocks non-fast-forward updates, including force pushes;
+- requires changes to reach the canonical branch through a pull request;
+- requires zero approving reviews;
+- does not require code-owner review, last-push approval, review-thread resolution, or automated status checks;
+- defines no bypass actors.
+
+Requiring a pull request while requiring zero approvals is deliberate. TrustSurface is currently stewarded through a practical single-steward workflow. The pull request provides attributable change history, review context, and an explicit merge event without creating a mandatory second-person dependency.
+
+Automated status checks are not required because this repository currently has no CI or build workflow to gate. Signed commits and linear history are also not mandated; the existing merge-commit based workflow is retained.
+
+If the stewardship model, automated validation surface, or release process changes materially, these exceptions should be reassessed. Direct modification of the protected canonical branch, destructive branch operations, and force pushes are not part of the normal change path.
+
 ## Current stop state — September 2026
 
 The v1.2 stocktake and release package is complete.
